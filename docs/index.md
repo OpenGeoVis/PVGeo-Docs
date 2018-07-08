@@ -7,7 +7,7 @@
 
 
 ??? question "Suggestions?"
-    If you have an idea for a macro, plugin, or would like to see how we would address a geoscientific visualization problem with ParaView, please post your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) or become involved with the *PVGeo* community discussions on [**Slack**](http://slack.pvgeo.org/).
+    If you have an idea for a file reader, data filter, ParaView plugin, or would like to see how we would address a geoscientific visualization problem with ParaView, please post your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) or become involved with the *PVGeo* community discussions on [**Slack**](http://slack.pvgeo.org/).
 
 ??? tip "How to use *PVGeo*"
     To download and use the *PVGeo* code library, follow the installation instructions on the [**Getting Started Page**](overview/getting-started#install-pvgeo). If you are interested in development, all code is published on the GitHub repository *PVGeo* linked to this page. Click the 'PVGeo on GitHub' link on the right side of the menu bar at the top to find all of the code or you can follow [**this link**](https://github.com/OpenGeoVis/PVGeo). Also take a look at the [**Development Guide**](dev-guide/contributing/)
