@@ -225,6 +225,9 @@ def _getClassMarkdown(clas, module):
         USED = _getMems(base, base.__bases__[0], methods, USED, name=(HEAD % 'Inherreted from: `%s`' % base.__name__))
         base = base.__bases__[0]
 
+    if base is vtk.util.vtkAlgorithm.VTKPythonAlgorithmBase:
+        methods.append('To see all of the methods inherreted from `VTKPythonAlgorithmBase` and `vtkAlgorithm`, please reference the VTK documentation found [**here**](https://www.vtk.org/doc/nightly/html/classvtkPythonAlgorithm.html) and [**here**](https://www.vtk.org/doc/nightly/html/classvtkAlgorithm.html) respectively.')
+
     methods = "\n\n".join((met for met in methods))
     # ident one more level to be nested in class admonition
     methods = re.sub( '^',' '*4, methods , flags=re.MULTILINE)

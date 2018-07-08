@@ -1,21 +1,19 @@
 # *PVGeo*
+![Open Source](https://img.shields.io/badge/open--source-yes-brightgreen.svg) [![PyPI](https://img.shields.io/pypi/v/PVGeo.svg)](https://pypi.org/project/PVGeo/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b9e8d0ef37a4f70a2d02c0d53ed096f)](https://www.codacy.com/app/banesullivan/PVGeo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OpenGeoVis/PVGeo&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/OpenGeoVis/PVGeo.svg?branch=master)](https://travis-ci.org/OpenGeoVis/PVGeo) [![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master) [![GitHub contributors](https://img.shields.io/github/contributors/OpenGeoVis/PVGeo.svg)](https://GitHub.com/OpenGeoVis/PVGeo/graphs/contributors/)
+
+*PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library:
 
 <script async defer src="http://slack.pvgeo.org/slackin.js?large"></script>
 
-Welcome to the *PVGeo* website! Through visualization, we can bring value to data and hold the products of geoscience in a more intuitive light to interested parties. *PVGeo* is a code repository for visualizing geophysical data and this website documents the entire code base and includes several examples and tutorials of how to use the ParaView plugins delivered in this repo for common tasks in the visualization of geophysical data.
-
-
-??? warning "Pre-Release Notice"
-    This is a Beta release of the *PVGeo* code base and documentation. The plugins and Python modules might be changed in backward-incompatible ways and are not subject to any deprecation policy. The current documentation is a work in progress and we are trying our best to get everything fully documented by end of June 2018.
 
 ??? question "Suggestions?"
-    If you have an idea for a macro, plugin, or would like to see how we would address a geoscientific visualization problem with ParaView, please post your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues).
+    If you have an idea for a macro, plugin, or would like to see how we would address a geoscientific visualization problem with ParaView, please post your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) or become involved with the *PVGeo* community discussions on [**Slack**](http://slack.pvgeo.org/).
 
-??? tip "Where to get the code"
-    All code is published on the GitHub repository *PVGeo* linked to this page. Click the 'PVGeo on GitHub' link on the right side of the menu bar at the top to find all of the code or you can follow [**this link**](https://github.com/OpenGeoVis/PVGeo).
+??? tip "How to use *PVGeo*"
+    To download and use the *PVGeo* code library, follow the installation instructions on the [**Getting Started Page**](overview/getting-started#install-pvgeo). If you are interested in development, all code is published on the GitHub repository *PVGeo* linked to this page. Click the 'PVGeo on GitHub' link on the right side of the menu bar at the top to find all of the code or you can follow [**this link**](https://github.com/OpenGeoVis/PVGeo). Also take a look at the [**Development Guide**](dev-guide/contributing/)
 
 ??? tip "How to explore this documentation"
-    *On a Desktop:* There are six main sections to this website shown in the navigation tab at the top of the page. Use these tabs to explore the different aspects of the project! Use the sidebar to the right to explore the contents of the current page and use the sidebar to the left to find all the different pages for this active section/tab. Here is an overview of each section:
+    *On a Desktop:* There are six main sections to this website shown in the navigation tab at the top of the page. Use these tabs to explore the different aspects of the project! Use the sidebar to the right to explore the contents of the current page and use the sidebar to the left to find all the different pages for this active section/tab. Here is a list of the available sections:
 
     - **Overview:** An introduction to the project with installation details on how to get started.
     - **Plugin Suites:** A guide to all of the plugins we have implemented for use directly in ParaView. This section has all the information you will need to understand how to use our plugins and how we group them together into what we call *suites*. The code docs for the `PVGeo` module are included here.
@@ -36,7 +34,7 @@ Check out the [**Demo Page**](http://demo.pvgeo.org) to see video demos and inte
 -------
 
 ## About the Authors
-The *PVGeo* code library is managed by [**Bane Sullivan**](http://banesullivan.com), graduate student in the Hydrological Science and Engineering interdisciplinary program at the Colorado School of Mines under Whitney Trainor-Guitton. If you have questions please inquire with [info@pvgeo.org](mailto:info@pvgeo.org) or join the *PVGeo* community on Slack: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
+The *PVGeo* code library is managed by [**Bane Sullivan**](http://banesullivan.com), graduate student in the Hydrological Science and Engineering interdisciplinary program at the Colorado School of Mines under Whitney Trainor-Guitton. If you have questions please inquire with [**info@pvgeo.org**](mailto:info@pvgeo.org) or join the *PVGeo* community on Slack: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
 
 
 !!! info "Thank you to our contributors!"
