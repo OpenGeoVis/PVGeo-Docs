@@ -7,7 +7,7 @@ In order to effectively communicate our geoscientific findings, we often need to
 Would not it be great to send your client or interested parties an interactive 3D scene of your Geophysical findings like the example below?
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="http://tunnels.viewer.pvgeo.org/" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        <iframe src="http://tunnels.pvgeo.org/" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
 
@@ -23,9 +23,9 @@ The vtk.js library has an open-source [standalone scene viewer](https://kitware.
 Here are some samples to demonstrate the web viewer which we host on [viewer.pvgeo.org](http://viewer.pvgeo.org). We have included a few of our scenes and one of the vtk.js sample scenes for you to demo:
 
 - [Fluvial Channels](http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qnahdwedjwndo7t/fluvsim_channels.vtkjs?dl=0)
-- [Volcano](http://volcano.viewer.pvgeo.org)
-- [Ripple](http://ripple.viewer.pvgeo.org)
-- [Tunnels](http://tunnels.viewer.pvgeo.org)
+- [Volcano](http://volcano.pvgeo.org)
+- [Ripple](http://ripple.pvgeo.org)
+- [Tunnels](http://tunnels.pvgeo.org)
 - [vtk.js Sample Scene](http://viewer.pvgeo.org/?fileURL=https://data.kitware.com/api/v1/file/587003c38d777f05f44a5c93/download)
 
 
