@@ -27,113 +27,82 @@ Take a look at Section 2.1 of **The ParaView Tutorial** for details of the appli
 
 ## Install *PVGeo*
 
-To clone and use the plugins distributed in the repo for ParaView, you'll need [Python 2](https://www.python.org/downloads/) with the SciPy and NumPy modules [installed](https://docs.python.org/2/installing/index.html), and [ParaView](https://www.paraview.org/download/) installed on your computer. Note that this repository will only work with builds of ParaView that have Python.
-
-### Windows Users
-If you're on Windows, see [**this**](https://git-for-windows.github.io) for GitHub and [**this**](https://devtidbits.com/2011/07/01/cygwin-walkthrough-and-beginners-guide-is-it-linux-for-windows-or-a-posix-compatible-alternative-to-powershell/) guide for using the Unix command line on windows.
-
-Download and use [Cygwin](https://devtidbits.com/2011/07/01/cygwin-walkthrough-and-beginners-guide-is-it-linux-for-windows-or-a-posix-compatible-alternative-to-powershell/) for the command line operation of the scripts in this repo. When installing Cygwin, *make sure to install the `bash`, `dos2unix`, `git`, and `python2-setuptools` packages*. Now you can use the Cygwin terminal as the command line just like you are on a Unix based operating system!
-
-!!! tip "Tip: Windows Users"
-    Some Windows use have found that it is necessary to make sure the line endings for all of the shell scripts are LF and not CRLF after cloning.
-
-Also, be sure to place/install ParaView and this repository to a location that has general read/write privileges for all users such as on your `D:\\` drive. You will encounter all types of issues running the scripts and simply accessing the code via Cygwin if you need admin privileges to access where it is all saved. *Note: the install scripts will need access to the directory where ParaView is installed*
-
-
-### Cloning the Repository
-Clone the repository from your command line by navigating to the directory you would like to save all of the code from this repo.
-
-!!! tip "Tip: Windows Users"
-    Windows users, you are going to want to clone to a folder that has general read/write privileges such as your `D:\\` drive
-
-From your command line:
+To begin using the *PVGeo* python package, create a new virtual environment and install *PVGeo* through pip.
 
 ```bash
-# Clone this repository
-git clone https://github.com/OpenGeoVis/PVGeo
+$ conda create -n PVGeoEnv python=2.7
 
-# Go in the cloned repository
-cd PVGeo
+# Install vtk through conda as this is OS-independent
+# Best of luck, Windows users...
+# Mac/Linux users can replace this with `pip install vtk`
+$ conda install -n PVGeoEnv vtk
 ```
-
-### Installing the PVGeo Repository
-Now to get started using the plugins and python modules included in this repository, we need to set up some environmental variables. For Mac users this is a breeze but for windows users this is a bit more involved. Be sure to never move the directory containing *PVGeo* code (if it is not in a convenient location then you must move it before continuing the install).
-
-#### MacOS X Paths
-If you are on MacOS X, then your life is easy! Simply run the script `installMac.sh`.
 
 ```bash
-sh ./installMac.sh
+$ source activate PVGeoEnv
+$ pip install PVGeo
 ```
 
-Now test that the install worked by opening ParaView (close it and reopen if needed). Check that the various categories for the PVGeo filters are in the **Filters** menu such as **PVGeo General Filters**. Then open the **Python Shell** and import the modules delivered in this repo by executing `import PVGeo` and `import pvmacros`. Errors should not arise but if they do, post to the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) and the errors will be *immediately* addressed.
+Test the install (non-Windows):
+```bash
+$ python -m PVGeo test
+```
 
-#### Windows Paths
-Setting up environmental variables is a bit more involved for Windows. First you need to open **Control Center** and search for **Advanced system settings**. Click **Environment variables**. In the section **User variables for Name** add the following variable by clicking **New...**:
+### Installing to ParaView
 
-- Variable Name: `PV_PLUGIN_PATH` then select **Browse Directory...** and navigate to the directory where you cloned *PVGeo* and select the `plugins` directory.
+To use the *PVGeo* library as plugins in ParaView, we must link the virtual environment that you installed *PVGeo* to ParaView's python environment and load a series of plugin files that wrap the *PVGeo* code base with ParaView's Graphical User Interface.
+
+!!! warning
+    This will only work for ParaView version 5.5.3 and above! But wait... version 5.5.3 does not exist yet! You must download the nightly-build version of ParaView [found here](https://www.paraview.org/download/)
+
+#### Linking *PVGeo*
+First, lets link *PVGeo*'s virtual environment to ParaView by setting up a `PYTHONPATH` and a `PV_PLUGIN_PATH` environmental variables. First, retrieve the needed paths from *PVGeo*. Do this by executing the following from your command line:
+
+```bash
+$ python -m PVGeo install
+```
+
+That script will output the paths you need to set in the environmental variables moving forward. If you are on a Mac OS X computer then that script will output a shell command for you to execute for the install. If you are on a Mac, execute that command and skip to [Loading the Plugins](#loading-the-plugins)
+
+Setting up environmental variables is a bit involved for Windows. First you need to open **Control Center** and search for **Advanced system settings**. Click **Environment variables**. In the section **User variables for Name** add the following variable by clicking **New...**:
+
+- Variable Name: `PV_PLUGIN_PATH` then copy/paste the `PV_PLUGIN_PATH` output from above.
 
 Now we need to edit the `PYTHONPATH` variable that should already exist in your environment. This can get messy/tricky so please strictly follow these instructions:
 
-1. Copy the value in the `PV_PLUGIN_PATH` variable but *BE SURE **NOT** TO INCLUDE THE `plugins` DIRECTORY*. So basically this is the entire path leading up to the `plugins` directory.
+1. Copy the `PYTHONPATH` output from above.
 
 2. Edit the `PYTHONPATH` variable by selecting it then click **Edit...**.
 
-3. Pay attention to what that path Currently is because we need to reselect it. So if you path is currently `c:\python27\lib\site-packages` then click **Browse Directory...** and reselect that *exact* directory.
+3. Pay attention to what that path currently is because we need to appended it. For example, your path might currently be `c:\python27\lib\site-packages`. Simply append this path by typing a semicolon (;) then pasting the `PYTHONPATH` variable
 
-4. Append the **Variable value**. At the end of your re-selected path, type a semi-colon `;` and then add the path to the *PVGeo* repository which you copied in the first step by clicking paste. This is critical to be able to import outside Python modules in `pvpython`.
+4. Now test that the install worked by opening ParaView (close it and reopen if needed). Open the **Python Shell** and import the modules delivered in this repo by executing `import PVGeo` and `import pvmacros`. Errors should not arise but if they do, post to the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) and the errors will be *immediately* addressed.
 
-5. Now test that the install worked by opening ParaView (close it and reopen if needed). Check that the various categories for the PVGeo filters are in the **Filters** menu such as **PVGeo General Filters**.. Then open the **Python Shell** and import the `PVGeo` module by executing `import PVGeo`.
+
+#### Loading the Plugins
+
+Now you must load the plugin files through ParaView's Plugin Manager. Select *Tools -> Manage Plugins* then select *Load New* on the bottom right of the popup dialog. Navigate to the directory declared in `PV_PLUGIN_PATH` and load each of the `.py` files. Once the files are loaded, expand them in the plugin manager and be sure to select *Auto Load*.
+
+![Plugin Manager](plugin-manager.png) <!-- .element width="50%" -->
+
+Now test that the install worked by ensuring the various categories for the PVGeo filters are in the **Filters** menu such as **PVGeo General Filters**. Errors should not arise but if they do, post to the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) and the errors will be *immediately* addressed.
+
 
 !!! help
-    If an error arises: First, please double check your paths. If you are still having trouble, feel free to join the *PVGeo* community on Slack and ask for help: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
+    If an error arises or you are having trouble, feel free to join the *PVGeo* community on Slack and ask for help: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
 
     You can also post to the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) if you think you are encountering a bug.
 
 
 
-### Update the PVGeo Repository
-We have included a script that will update the repository from GitHub, and since the repo is already linked to ParaView, all changes to the repo will be directory reflected in ParaView. This script is simply executed by:
+### Update *PVGeo*
 
 ```bash
-## Run this to update *PVGeo* in the future:
-sh ./updatePVGeo.sh
+$ pip install --upgrade PVGeo
 ```
+
 
 --------------
 
 ## Using Outside Modules
-ParaView's Python environment, `pvpython`, can be a bit tricky to start using outside Python modules like SciPy or SimPEG. On Mac OS X, using Python modules installed via pip or anaconda should work simply with an `import ...` statement if you have your Python paths set up well. (Mac users: if you have trouble importing SciPy or other modules used in this repo let me know and I will develop a solution). Windows users: this should have been resolved if you followed the install instructions outlined [above](#windows-paths).
-
-
-!!! info "Required Modules"
-    These are all of the non-standard modules that filters, readers, and macros might use in this repo. We recommend opening the Python Shell from ParaView (Tools->Python Shell) and testing the import of each of these modules. This list will be regularly updated.
-
-    - [SciPy](https://www.scipy.org/install.html)
-    - [NumPy](http://www.numpy.org) (you may need to update ParaView's version to the latest version for SciPy to be happy)
-
-    ??? info "List of All Other Required Modules"
-        Most of these modules come with standard distributions of Python or they come in the ParaView software platform ready for use. This list is just for completeness.
-
-        - paraview and [vtk](https://www.vtk.org/download/) (included in ParaView)
-        - struct
-        - csv
-        - ast
-        - datetime
-        - util
-        - os
-        - json
-        - zipfile
-        - re
-        - time
-        - errno
-        - math
-        - gzip
-        - shutil
-        - argparse
-        - hashlib
-        - zlib
-        - pickle
-        - inspect
-        - textwrap
-        - warnings
+If you installed *PVGeo* according to the instructions above, then any python package installed through pip in that virtual environment will be accessible in ParaView. For some further reading on using virtual environments with ParaView, see [this blog post](https://blog.kitware.com/using-pvpython-and-virtualenv/)
