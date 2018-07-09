@@ -58,7 +58,7 @@ To use the *PVGeo* library as plugins in ParaView, we must link the virtual envi
 First, lets link *PVGeo*'s virtual environment to ParaView by setting up a `PYTHONPATH` and a `PV_PLUGIN_PATH` environmental variables. First, retrieve the needed paths from *PVGeo*. Do this by executing the following from your command line:
 
 ```bash
-$ python -m PVGeo install
+(PVGeoEnv) $ python -m PVGeo install
 ```
 
 That script will output the paths you need to set in the environmental variables moving forward. If you are on a Mac OS X computer then that script will output a shell command for you to execute for the install. If you are on a Mac, execute that command and skip to [Loading the Plugins](#loading-the-plugins)
@@ -97,7 +97,7 @@ Now test that the install worked by ensuring the various categories for the PVGe
 ### Update *PVGeo*
 
 ```bash
-$ pip install --upgrade PVGeo
+(PVGeoEnv) $ pip install --upgrade PVGeo
 ```
 
 
