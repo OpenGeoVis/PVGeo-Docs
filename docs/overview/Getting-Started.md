@@ -10,16 +10,18 @@ Since ParaView is an open source application, anyone can download the program an
 For further help, check out the [documentation](https://www.paraview.org/documentation/) provided by Kitware. In particular, the two worth looking through for a quick tour of ParaView are the **The ParaView Guide** and **The ParaView Tutorial.** One is a tutorial of the ParaView software and shows the user how to create sources, apply filters, and more. The other is a guide on how to do scripting, macros, and more intense use of the application.
 
 ### Install ParaView
-Open the downloaded installer and follow the prompts then drag the application into your applications folder.
+
+!!! warning
+    This will only work for ParaView version 5.5.3 and above! But wait... version 5.5.3 does not exist yet! You must download the **nightly-build** version of ParaView [found here](https://www.paraview.org/download/)
+
+Open the downloaded installer from [**ParaView's website**](https://www.paraview.org/download/) and follow the prompts with the installer.
 
 Tour around software:
 Take a look at Section 2.1 of **The ParaView Tutorial** for details of the application’s GUI environment. Chapter 2 of the tutorial as a whole does an excellent job touring the software and its workflow for those unfamiliar with the software and its general capabilities.
 
-??? tip "Tip: Auto Apply"
-    Enable Auto Apply in the preferences for interactive slicers and so you don't always have to click apply. (*Note:* sometimes you may want this off when working with large datasets)
 
 ??? tip "Tip: State Files"
-    One convenient feature is to save the state of the ParaView environment. This saves all the options you selected for all the filters you applied to visualize some data. Select File->Save State… (*Note:* this saves the absolute path of the files loaded into ParaView, so be sure to select **Search for Files Under Directory...** when opening these state files)
+    One convenient feature is to save the state of the ParaView environment. This saves all the options you selected for all the filters you applied to visualize some data. Select *File->Save State…* (*Note:* this saves the absolute path of the files loaded into ParaView, so be sure to select *Search for Files Under Directory...* when opening these state files).
 
 
 ----------
@@ -27,14 +29,13 @@ Take a look at Section 2.1 of **The ParaView Tutorial** for details of the appli
 
 ## Install *PVGeo*
 
-To begin using the *PVGeo* python package, create a new virtual environment and install *PVGeo* through pip.
+We highly recomend using Anaconda to manage you python virtual environments and we know installation via Anaconda python distrubutions will work on Mac, Windows, and Linux operating systems. To begin using the *PVGeo* python package, create a new virtual environment and install *PVGeo* through pip.
 
 ```bash
 $ conda create -n PVGeoEnv python=2.7
 
 # Install vtk through conda as this is OS-independent
 # Best of luck, Windows users...
-# Mac/Linux users can replace this with `pip install vtk`
 $ conda install -n PVGeoEnv vtk
 ```
 
@@ -52,8 +53,6 @@ $ python -m PVGeo test
 
 To use the *PVGeo* library as plugins in ParaView, we must link the virtual environment that you installed *PVGeo* to ParaView's python environment and load a series of plugin files that wrap the *PVGeo* code base with ParaView's Graphical User Interface.
 
-!!! warning
-    This will only work for ParaView version 5.5.3 and above! But wait... version 5.5.3 does not exist yet! You must download the nightly-build version of ParaView [found here](https://www.paraview.org/download/)
 
 #### Linking *PVGeo*
 First, lets link *PVGeo*'s virtual environment to ParaView by setting up a `PYTHONPATH` and a `PV_PLUGIN_PATH` environmental variables. First, retrieve the needed paths from *PVGeo*. Do this by executing the following from your command line:
