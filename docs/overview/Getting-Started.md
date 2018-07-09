@@ -41,12 +41,12 @@ $ conda install -n PVGeoEnv vtk
 
 ```bash
 $ source activate PVGeoEnv
-$ pip install PVGeo
+(PVGeoEnv) $ pip install PVGeo
 ```
 
 Test the install (non-Windows):
 ```bash
-$ python -m PVGeo test
+(PVGeoEnv) $ python -m PVGeo test
 ```
 
 ### Installing to ParaView
