@@ -9,8 +9,8 @@ More documentation is soon to come. We want to do it right: with tutorials, exam
 
 ### Readers
 - [ ] **Open Mining Format:** All file types and data types found [**here**](https://github.com/GMSGDataExchange/omf)
-- [x] [**UBC Tensor Meshes**](../plugin-suites/ubc/tensor-grids.md): both 2D and 3D implemented
-- [x] [**UBC OcTree Mesh**](../plugin-suites/ubc/octree.md): fully implemented but we need test mesh-model file pairs
+- [x] [**UBC Tensor Meshes**](../examples/ubc/tensor-grids.md): both 2D and 3D implemented
+- [x] [**UBC OcTree Mesh**](../examples/ubc/octree.md): fully implemented but we need test mesh-model file pairs
 - [ ] **Well logs:** Readers for common formats (LAS) and easy ways to project well logs in XYZ space. [Details here](http://www.cwls.org/las/)
 
 <!---
@@ -22,9 +22,9 @@ More documentation is soon to come. We want to do it right: with tutorials, exam
 - [ ] **Extract Array:** This will allow you to extract any array from any data structure as vtkPolyData.
 - [ ] **Transpose Grid:** Transpose or swap axii of grid data sets (vtkImageData and vtkRectilinearGrid)
 - [x] **Reshape Table:** Adding ability to reshape using Fortran ordering on the currently available filter.
-- [x] **[Voxelize Points](../plugin-suites/filters-general/voxelize-points.md):** This will take a point set and generate voxels of some specified size at every point or estimate an appropriate voxel size if the points are uniformly spaced.
-- [x] **[Many Slices Along Points](../plugin-suites/filters-general/many-slices-along-points.md):** Generate many slices of dataset along a line at every point on that line (normal is the vector from that point to the next).
-- [x] **[Append Model to UBC Mesh](../plugin-suites/ubc/add-model.md):** This will load a model file and tag it on to vtkStructuredGrid loaded from a UBC Mesh reader. Think of it as appending models as attributes to the 3D mesh.
+- [x] **[Voxelize Points](../examples/filters-general/voxelize-points.md):** This will take a point set and generate voxels of some specified size at every point or estimate an appropriate voxel size if the points are uniformly spaced.
+- [x] **[Many Slices Along Points](../examples/filters-general/many-slices-along-points.md):** Generate many slices of dataset along a line at every point on that line (normal is the vector from that point to the next).
+- [x] **[Append Model to UBC Mesh](../examples/ubc/add-model.md):** This will load a model file and tag it on to vtkStructuredGrid loaded from a UBC Mesh reader. Think of it as appending models as attributes to the 3D mesh.
 
 <!---
 **Structure Point Set:** This will take scattered point data and create connectivity/structure either in the form of hexahedrons or quads. More info to come.

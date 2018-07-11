@@ -1,5 +1,5 @@
-# About Plugin Suites
-We are deploying *PVGeo* in various sub-packages we call suites. These suites consists of a series of reader or filter plugins (or both) for a general area of geoscientific processing or visualization. For example, we have created a suite called *UBC Mesh Tools* which contains file readers for the UBC Mesh types and filters for processes related to the UBC mesh formats. Another example of a suite is *Model Building*; this is a suite of various plugins that allow a user to create various types of models interactively within ParaView. Take a look at the navigation pane to the left to explore the different plugin suites.
+# About Examples
+We are deploying *PVGeo* in various sub-packages we call suites. These suites consists of a series of reader or filter plugins (or both) for a general area of geoscientific processing or visualization. For example, we have created a suite called *UBC Mesh Tools* which contains file readers for the UBC Mesh types and filters for processes related to the UBC mesh formats. Another example of a suite is *Model Building*; this is a suite of various plugins that allow a user to create various types of models interactively within ParaView. Take a look at the navigation pane to the left to explore the different Examples.
 
 
 ## The Plugin Framework

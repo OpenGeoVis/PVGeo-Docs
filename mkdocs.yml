@@ -67,49 +67,50 @@ pages:
     - Getting Started: overview/getting-started.md
     - Features to Come: overview/upcoming.md
 
-# Each of the different plugin suites:
-- Plugin Suites:
-    - About Plugin Suites: plugin-suites/about-plugin-suites.md
-    - Base Classes: plugin-suites/base.md
+# Each of the different Examples:
+- Examples:
+    - About Examples: examples/about-examples.md
+    - Base Classes: examples/base.md
     - General Filters:
-        - Voxelize Points: plugin-suites/filters-general/voxelize-points.md
-        - Many Slices Along Points: plugin-suites/filters-general/many-slices-along-points.md
-        - Many Slices Along Axis: plugin-suites/filters-general/many-slices-along-axis.md
-        - Slice Through Time: plugin-suites/filters-general/slice-through-time.md
-        - Normalize Array: plugin-suites/filters-general/normalize-array.md
-        - Array Math: plugin-suites/filters-general/array-math.md
-        - Reshape Table: plugin-suites/filters-general/reshape-table.md
-        - Combine Tables: plugin-suites/filters-general/combine-tables.md
-        - Extract Points: plugin-suites/filters-general/extract-points.md
-        - Points to PolyData: plugin-suites/filters-general/points-to-polydata.md
-        - Rotate Points: plugin-suites/filters-general/rotate-points.md
-        - Rotation Tool: plugin-suites/filters-general/rotation-tool.md
-        - Add Cell Connectivity to Points: plugin-suites/filters-general/add-cell-connectivity-to-points.md
-        - Points to Tube: plugin-suites/filters-general/points-to-tube.md
+        - Voxelize Points: examples/filters-general/voxelize-points.md
+        - Many Slices Along Points: examples/filters-general/many-slices-along-points.md
+        - Many Slices Along Axis: examples/filters-general/many-slices-along-axis.md
+        - Slice Through Time: examples/filters-general/slice-through-time.md
+        - Normalize Array: examples/filters-general/normalize-array.md
+        - Array Math: examples/filters-general/array-math.md
+        - Reshape Table: examples/filters-general/reshape-table.md
+        - Combine Tables: examples/filters-general/combine-tables.md
+        - Extract Points: examples/filters-general/extract-points.md
+        - Points to PolyData: examples/filters-general/points-to-polydata.md
+        - Rotate Points: examples/filters-general/rotate-points.md
+        - Rotation Tool: examples/filters-general/rotation-tool.md
+        - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
+        - Points to Tube: examples/filters-general/points-to-tube.md
     - General Readers:
-        - Binary Packed Data: plugin-suites/readers-general/binary-packed-data.md
-        - Madagascar SSRSF: plugin-suites/readers-general/madagascar-ssrsf.md
-        - Delimited Text: plugin-suites/readers-general/delimited-text.md
-        - XYZ Files: plugin-suites/readers-general/xyz-reader.md
+        - Binary Packed Data: examples/readers-general/binary-packed-data.md
+        - Madagascar SSRSF: examples/readers-general/madagascar-ssrsf.md
+        - Delimited Text: examples/readers-general/delimited-text.md
+        - XYZ Files: examples/readers-general/xyz-reader.md
     - UBC Mesh Tools:
-        - Read Tensor Meshes: plugin-suites/ubc/tensor-grids.md
-        - Read OcTree: plugin-suites/ubc/octree.md
-        - Append Model: plugin-suites/ubc/add-model.md
+        - Read Tensor Meshes: examples/ubc/tensor-grids.md
+        - Read OcTree: examples/ubc/octree.md
+        - Append Model: examples/ubc/add-model.md
     - GSLIB & SGeMS:
-        - SGeMS Grid: plugin-suites/gslib/sgems-grid.md
-        - GSLIB Table: plugin-suites/gslib/gslib.md
+        - SGeMS Grid: examples/gslib/sgems-grid.md
+        - GSLIB Table: examples/gslib/gslib.md
     - Model Building:
-        - Create Rectilinear Grid: plugin-suites/model-building/create-rectilinear-grid.md
-        - Create Unifrom Grid: plugin-suites/model-building/create-uniform-grid.md
-        - Create Earth Source: plugin-suites/model-building/create-earth-source.md
+        - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md
+        - Create Unifrom Grid: examples/model-building/create-uniform-grid.md
+        - Create Earth Source: examples/model-building/create-earth-source.md
     - Grids Tools:
-        - Table to Uniform Grid: plugin-suites/grids/table-to-uniform-grid.md
-        - Flip Grid Axii: plugin-suites/grids/reverse-grid-axii.md
-        - Translate Origin of Grid: plugin-suites/grids/translate-origin-of-grid.md
+        - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
+        - Flip Grid Axii: examples/grids/reverse-grid-axii.md
+        - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
     - Tunneling:
-        - Animate TBM: plugin-suites/tunneling/animate-tbm.md
+        - Animate TBM: examples/tunneling/animate-tbm.md
 
-
+- Docs:
+    - docs-fwd.md
 
 - PV Macros:
     - About pvmacros: pvmacros/about-pvmacros.md
@@ -118,18 +119,16 @@ pages:
     - Vis:
         - Camera: pvmacros/vis/camera.md
 
-- Examples:
-    - Editing the Axes: examples/edit-axes.md
-    - Editing the Render View: examples/edit-render-view.md
-    - Save Camera Views: examples/save-camera-locations.md
-    - Understand VTK Data Types: examples/understand-vtk.md
-
 - Resources:
     - Color Maps: cmaps.md
     - Scripts:
         - About Scripts: scripts/about-scripts.md
         - Example Script: scripts/example-script.md
     - Entering Virtual Reality: virtual-reality/entering-virtual-reality.md
+    - Editing the Axes: resources/edit-axes.md
+    - Editing the Render View: resources/edit-render-view.md
+    - Save Camera Views: resources/save-camera-locations.md
+    - Understand VTK Data Types: resources/understand-vtk.md
 
 - Development Guide:
     - Contributing: dev-guide/contributing.md
