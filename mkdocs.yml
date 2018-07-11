@@ -110,7 +110,7 @@ pages:
         - Animate TBM: examples/tunneling/animate-tbm.md
 
 - Docs:
-    - docs-fwd.md
+    - Docs: docs-fwd.md
 
 - PV Macros:
     - About pvmacros: pvmacros/about-pvmacros.md
