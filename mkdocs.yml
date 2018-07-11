@@ -83,7 +83,7 @@ pages:
         - Combine Tables: plugin-suites/filters-general/combine-tables.md
         - Extract Points: plugin-suites/filters-general/extract-points.md
         - Points to PolyData: plugin-suites/filters-general/points-to-polydata.md
-        - Rotate Coordinates: plugin-suites/filters-general/rotate-coordinates.md
+        - Rotate Points: plugin-suites/filters-general/rotate-points.md
         - Rotation Tool: plugin-suites/filters-general/rotation-tool.md
         - Add Cell Connectivity to Points: plugin-suites/filters-general/add-cell-connectivity-to-points.md
         - Points to Tube: plugin-suites/filters-general/points-to-tube.md

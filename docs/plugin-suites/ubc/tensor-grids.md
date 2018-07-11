@@ -25,4 +25,4 @@ For example files to use with this reader, download the example from [the GIFtoo
 
 ## Code Docs
 
-{class:PVGeo.ubc.ubcTensorMeshReader}
+{class:PVGeo.ubc.TensorMeshReader}

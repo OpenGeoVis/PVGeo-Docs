@@ -31,4 +31,4 @@ To use the plugin:
 
 ## Code Docs
 
-{class:PVGeo.ubc.ubcOcTreeReader}
+{class:PVGeo.ubc.OcTreeReader}

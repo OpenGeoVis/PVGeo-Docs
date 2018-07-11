@@ -8,4 +8,4 @@
 
 ## Code Docs
 
-{class:PVGeo.filters_general.RotateCoordinates}
+{class:PVGeo.filters_general.RotatePoints}

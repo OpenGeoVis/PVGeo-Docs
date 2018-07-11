@@ -7,6 +7,6 @@ These filters allows you to choose a UBC model file to append as an attribute to
 
 ## Code Docs
 
-{class:PVGeo.ubc.ubcTensorMeshAppender}
+{class:PVGeo.ubc.TensorMeshAppender}
 
-{class:PVGeo.ubc.ubcOcTreeAppender}
+{class:PVGeo.ubc.OcTreeAppender}
