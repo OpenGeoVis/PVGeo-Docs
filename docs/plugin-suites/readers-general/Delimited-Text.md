@@ -10,9 +10,3 @@ This reader will take in any delimited text file and make a vtkTable from it. Th
 - [Table to Points](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters#Table_To_Points)
 - [Table to Structured Grid](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters#Table_To_Structured_Grid)
 - [Normalize Array](../filters-general/normalize-array.md)
-
------
-
-## Code Docs
-
-{class:PVGeo.readers_general.DelimitedTextReader}

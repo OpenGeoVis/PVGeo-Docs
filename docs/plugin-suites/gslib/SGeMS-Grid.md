@@ -74,10 +74,3 @@ and here is the [FLUVSIM object-based model](http://www.trainingimages.org/uploa
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qnahdwedjwndo7t/fluvsim_channels.vtkjs?dl=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
-
-
------
-## Code Docs
-
-
-{class:PVGeo.gslib.SGeMSGridReader}

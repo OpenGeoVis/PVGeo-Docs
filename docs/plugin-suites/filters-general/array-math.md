@@ -4,9 +4,3 @@
 Use `np.correlate()` on `mode=\'same\'` on two selected arrays from one input.
 
 More features to come!
-
------
-
-## Code Docs
-
-{class:PVGeo.filters_general.ArrayMath}
