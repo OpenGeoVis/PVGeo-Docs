@@ -2,9 +2,11 @@
     This example will demonstrate how to to powerful a mathematical operation between to input arrays for any given source.
 
 ## Overview
+
 This filter allows the user to select two input data arrays on which to perform math operations. The input arrays are used in their order of selection for the operations.
 
 ## ParaView Example
+
 !!! failure "Description to come!"
     There are a lot of pages in the documentation and we are trying to fill all content as soon as possible. Stay tuned for updates to this page
 
@@ -13,6 +15,7 @@ This filter allows the user to select two input data arrays on which to perform 
 
 
 ## Python Example
+
 Take a look at `ArrayMath`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.ArrayMath).
 
 ```py

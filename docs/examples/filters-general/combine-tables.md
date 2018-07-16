@@ -4,6 +4,7 @@
 
 
 ## ParaView Example
+
 !!! failure "Description to come!"
     There are a lot of pages in the documentation and we are trying to fill all content as soon as possible. Stay tuned for updates to this page
 
@@ -12,6 +13,7 @@
 
 
 ## Python Example
+
 Take a look at `CombineTables`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.CombineTables).
 
 ```py
