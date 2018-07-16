@@ -72,39 +72,39 @@ pages:
     - About Examples: examples/about-examples.md
     - Base Classes: examples/base.md
     - General Filters:
-        - Voxelize Points: examples/filters-general/voxelize-points.md
-        - Many Slices Along Points: examples/filters-general/many-slices-along-points.md
-        - Many Slices Along Axis: examples/filters-general/many-slices-along-axis.md
-        - Slice Through Time: examples/filters-general/slice-through-time.md
-        - Normalize Array: examples/filters-general/normalize-array.md
+        - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
         - Array Math: examples/filters-general/array-math.md
-        - Reshape Table: examples/filters-general/reshape-table.md
         - Combine Tables: examples/filters-general/combine-tables.md
         - Extract Points: examples/filters-general/extract-points.md
+        - Many Slices Along Axis: examples/filters-general/many-slices-along-axis.md
+        - Many Slices Along Points: examples/filters-general/many-slices-along-points.md
+        - Normalize Array: examples/filters-general/normalize-array.md
         - Points to PolyData: examples/filters-general/points-to-polydata.md
+        - Points to Tube: examples/filters-general/points-to-tube.md
+        - Reshape Table: examples/filters-general/reshape-table.md
         - Rotate Points: examples/filters-general/rotate-points.md
         - Rotation Tool: examples/filters-general/rotation-tool.md
-        - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
-        - Points to Tube: examples/filters-general/points-to-tube.md
+        - Slice Through Time: examples/filters-general/slice-through-time.md
+        - Voxelize Points: examples/filters-general/voxelize-points.md
     - General Readers:
         - Binary Packed Data: examples/readers-general/binary-packed-data.md
-        - Madagascar SSRSF: examples/readers-general/madagascar-ssrsf.md
         - Delimited Text: examples/readers-general/delimited-text.md
+        - Madagascar SSRSF: examples/readers-general/madagascar-ssrsf.md
         - XYZ Files: examples/readers-general/xyz-reader.md
     - UBC Mesh Tools:
-        - Read Tensor Meshes: examples/ubc/tensor-grids.md
-        - Read OcTree: examples/ubc/octree.md
         - Append Model: examples/ubc/add-model.md
+        - Read OcTree: examples/ubc/octree.md
+        - Read Tensor Meshes: examples/ubc/tensor-grids.md
     - GSLIB & SGeMS:
-        - SGeMS Grid: examples/gslib/sgems-grid.md
         - GSLIB Table: examples/gslib/gslib.md
+        - SGeMS Grid: examples/gslib/sgems-grid.md
     - Model Building:
+        - Create Earth Source: examples/model-building/create-earth-source.md
         - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md
         - Create Unifrom Grid: examples/model-building/create-uniform-grid.md
-        - Create Earth Source: examples/model-building/create-earth-source.md
     - Grids Tools:
-        - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
         - Flip Grid Axii: examples/grids/reverse-grid-axii.md
+        - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
         - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
     - Tunneling:
         - Animate TBM: examples/tunneling/animate-tbm.md
