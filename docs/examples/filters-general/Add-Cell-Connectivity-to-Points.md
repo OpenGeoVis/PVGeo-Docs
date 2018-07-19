@@ -27,7 +27,7 @@ def path1(y):
 
 x, y = path1(np.arange(0.0, 200.0, 25.0))
 zo = np.linspace(9.0, 11.0, num=len(y))
-coords = np.hstack((x,y,zo))
+coords = np.vstack((x,y,zo)).T
 # Shuffle points to demonstrate value of Nearest Neighbor
 np.random.shuffle(coords)
 
@@ -63,7 +63,7 @@ def path1(y):
 
 x, y = path1(np.arange(0.0, 200.0, 25.0))
 zo = np.linspace(9.0, 11.0, num=len(y))
-coords = np.hstack((x,y,zo))
+coords = np.vstack((x,y,zo)).T
 # Shuffle points to demonstrate value of Nearest Neighbor
 np.random.shuffle(coords)
 
