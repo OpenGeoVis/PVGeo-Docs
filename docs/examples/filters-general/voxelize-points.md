@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to connect a set of points defined on a regular grid to create a `vtkUnstructuredGrid` which can be use to perform volumetric operations.
+    This example will demonstrate how to connect a set of points defined on a regular grid to create a `vtkUnstructuredGrid` which can be used to perform volumetric operations.
 
 ## Overview
 
