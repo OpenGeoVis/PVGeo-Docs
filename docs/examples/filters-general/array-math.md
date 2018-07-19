@@ -25,33 +25,26 @@ from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
 from PVGeo.filters_general import ArrayMath
 
-# Create some input table
-table = vtk.vtkTable()
+# Create some input data. This can be any `vtkDataObject`
+input = vtk.vtkTable()
 # Populate the tables
 n = 400
 arr0 = np.random.random(n)
 arr1 = np.random.random(n)
-table.AddColumn(_helpers.numToVTK(arr0, 'Array 0'))
-table.AddColumn(_helpers.numToVTK(arr1, 'Array 1'))
+input.AddColumn(_helpers.numToVTK(arr0, 'Array 0'))
+input.AddColumn(_helpers.numToVTK(arr1, 'Array 1'))
 ```
 
 ```py
 # Use the filter:
-f = ArrayMath()
-f.SetInputDataObject(table)
+f = ArrayMath(operation='add', newName='foo')
 f.SetInputArrayToProcess(0, 0, 0, 6, 'Array 0') # field 6 is row data
 f.SetInputArrayToProcess(1, 0, 0, 6, 'Array 1') # field 6 is row data
-
-# Use native functionality
-f.SetOperation('add')
-f.SetNewArrayName('test')
-f.Update()
-
 # Now get the result
-output = f.GetOutput()
+output = f.Apply(input)
 
 wout = dsa.WrapDataObject(output)
-arr = wout.RowData['test']
+arr = wout.RowData['foo']
 assert(np.allclose(arr, arr0+arr1))
 
 ```

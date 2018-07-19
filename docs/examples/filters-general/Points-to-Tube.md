@@ -26,28 +26,19 @@ from PVGeo.filters_general import PointsToPolyData, PointsToTube
 ######### GENERATE SOME POINT DATA #########
 
 def path1(y):
-    # Equation: x = a(y-h)^2 + k
-    k = 110.0
-    h = 0.0
-    a = - k / 160.0**2
-    x = a*(y-h)**2 + k
+    """Equation: x = a(y-h)^2 + k"""
+    a = - 110.0 / 160.0**2
+    x = a*y**2 + 110.0
     idxs = np.argwhere(x>0)
     return x[idxs][:,0], y[idxs][:,0]
 
-
-y = np.arange(0.0, 200.0, 25.0)
-x, y = path1(y)
+x, y = path1(np.arange(0.0, 200.0, 25.0))
 zo = np.linspace(9.0, 11.0, num=len(y))
-
-coords = np.zeros((len(y), 3))
-
-coords[:,0] = x
-coords[:,1] = y
-coords[:,2] = zo
-
+coords = np.hstack((x,y,zo))
+# Shuffle points to demonstrate value of Nearest Neighbor
 np.random.shuffle(coords)
 
-# Shuffle points to demonstrate value of Nearest Neighbor
+# Make a VTK data object for the filter to use
 vtkPoints = PointsToPolyData(coords)
 
 ############################################

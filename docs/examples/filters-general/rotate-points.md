@@ -21,7 +21,7 @@ import numpy as np
 from PVGeo.filters_general import PointsToPolyData, RotatePoints
 
 ##############
-# Create some input points
+# Create some input points as `vtkPolyData`
 RTOL = 0.00001 # As high as rotation precision can get
 x = np.array([0.0,1.0,0.0])
 y = np.array([0.0,0.0,1.0])
@@ -30,11 +30,11 @@ x = np.reshape(x, (len(x), -1))
 y = np.reshape(y, (len(y), -1))
 z = np.reshape(z, (len(z), -1))
 pts = np.concatenate((x, y, z), axis=1)
-vtkpoints = PointsToPolyData(pts)
+pdi = PointsToPolyData(pts)
 ##############
 
 # Use the filter:
-rotated = RotatePoints(angle=33.3).Apply(vtkpoints)
+rotated = RotatePoints(angle=33.3).Apply(pdi)
 
 print(rotated)
 ```
