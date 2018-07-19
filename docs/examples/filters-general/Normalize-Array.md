@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to perform a normalization or any custom mathematical operation on a single data array for an input data set.
 
 ## Overview
 

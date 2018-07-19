@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to slice an input data set that will move along an axis as time progresses.
 
 ## Overview
 

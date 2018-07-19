@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to extract the points and PointData of any input data set that has valid PointData into a `vtkPolyData` object.
 
 ## Overview
 

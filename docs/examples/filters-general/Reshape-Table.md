@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to reshape an input table as though it were a 2D array.
 
 ## Overview
 

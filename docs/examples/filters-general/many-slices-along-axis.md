@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to slice an input data set many times along an axis.
 
 ## Overview
 

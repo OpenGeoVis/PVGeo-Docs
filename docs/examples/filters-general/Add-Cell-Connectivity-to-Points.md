@@ -41,7 +41,13 @@ pdo.ShallowCopy(PointsToPolyData(coords))
 
 ### Apply the Filter
 
-Now that you have the points generated on the pipeline, lets go ahead and apply the **Add Cell Connectivity To Points** filter from *Filters->PVGeo: General Filters->Add Cell Connectivity To Points*. Go ahead and click *Apply*. The output data should look really wacky and incorrectly built; this is good. Remember that in the script given above we shuffle the points to demonstrate that the points make a useable line but we need to reconstruct the order of the points. We do this by selecting the *Use Nearest Nbr Approx* checkbox; this will ensure that a useable path is generate from the points. Go ahead and select the check box then reapply the filter. Now it looks good!
+Now that you have the points generated on the pipeline, lets go ahead and apply the **Add Cell Connectivity To Points** filter from *Filters->PVGeo: General Filters->Add Cell Connectivity To Points*. Go ahead and click *Apply*. The output data should look really wacky and incorrectly built like the image below; this is good.
+
+![Bad Connectivity](images/shuffled-cellconn.png)
+
+Remember that in the script given above we shuffle the points to demonstrate that the points make a useable line but we need to reconstruct the order of the points. We do this by selecting the *Use Nearest Nbr Approx* checkbox; this will ensure that a useable path is generate from the points. Go ahead and select the check box then reapply the filter. Now it looks good (see image below)!
+
+![Good Connectivity](images/cellconn.png)
 
 ## Python Example
 

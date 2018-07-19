@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to ...
+    This example will demonstrate how to rotate points in a `vtkPolyData` object around some origin on the XY plane.
 
 ## Overview
 
