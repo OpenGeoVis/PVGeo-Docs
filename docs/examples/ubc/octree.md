@@ -19,7 +19,7 @@ To use the plugin:
 - Select **File->Open...** in ParaView
 - Choose the mesh file for your OcTree (we have enabled extensions: `.mesh` `.msh` `.dat` `.txt`)
 - Select the **PVGeo: UBC OcTree Mesh File Format** reader when prompted.
-- *Optional:* Click the **...** button next to the **FileName Model** parameter field. You can select as many model files as you desire (each will be appended as separate attributes).
+- *Optional:* Click the **...** button next to the **File Name(s) Model** parameter field. You can select as many model files as you desire (each file will be appended as additional time steps for the same attribute defined by the **Data Name** parameter).
 - Click **Apply** and wait... the load for larger OcTrees takes about 30 seconds.
 
 !!! success "[Example Visualization](http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qybpnsn11lghnq9/OcTree.vtkjs?dl=0)"
