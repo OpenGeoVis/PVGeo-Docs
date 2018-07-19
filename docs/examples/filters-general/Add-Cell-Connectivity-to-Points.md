@@ -91,12 +91,6 @@ vtkPoints = PointsToPolyData(coords)
 
 ############################################
 
-# Use the filter
-f = AddCellConnToPoints()
-f.SetInputDataObject(vtkPoints)
-f.SetUseNearestNbr(True)
-f.Update()
-
-# Here is vtkPolyData containing the connected line:
-line = f.GetOutput()
+# Use the filter: Here is vtkPolyData containing the connected line:
+line = AddCellConnToPoints(nearestNbr=True).Apply(vtkPoints)
 ```

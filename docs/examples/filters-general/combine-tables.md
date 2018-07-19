@@ -41,13 +41,8 @@ arrs = [arr0, arr1, arr2]
 ##################################
 
 # Now use the `CombineTables` filter:
-f = CombineTables()
-f.SetInputDataObject(0, t0)
-f.SetInputDataObject(1, t1)
-f.Update()
+output = CombineTables().Apply(t0, t1)
 
-# Get the output:
-output = f.GetOutput()
 
 # Here I verify the result
 wpdi = dsa.WrapDataObject(output)

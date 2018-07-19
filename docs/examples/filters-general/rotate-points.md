@@ -34,11 +34,7 @@ vtkpoints = PointsToPolyData(pts)
 ##############
 
 # Use the filter:
-f = RotatePoints()
-f.SetInputDataObject(vtkpoints)
-f.SetRotationDegrees(33.3)
-f.Update()
+rotated = RotatePoints(angle=33.3).Apply(vtkpoints)
 
-rotated = f.GetOutput()
-
+print(rotated)
 ```

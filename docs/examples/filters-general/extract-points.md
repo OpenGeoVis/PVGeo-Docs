@@ -28,11 +28,8 @@ data = source.GetOutput()
 #####################################
 
 # Apply the filter:
-f = ExtractPoints()
-f.SetInputDataObject(data)
-f.Update()
+polyData = ExtractPoints().Apply(data)
 
 # Get and use the result:
-polyData = f.GetOutput()
 print(polyData)
 ```

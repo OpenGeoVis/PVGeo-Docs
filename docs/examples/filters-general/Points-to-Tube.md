@@ -52,14 +52,8 @@ vtkPoints = PointsToPolyData(coords)
 
 ############################################
 
-# Use the filter
-f = PointsToTube()
-f.SetInputDataObject(vtkPoints)
-f.SetUseNearestNbr(True)
-f.Update()
-
-# Here is vtkPolyData containing the connected line:
-tube = f.GetOutput()
+# Use the filter: here is vtkPolyData containing the connected line
+tube = PointsToTube(nearestNbr=True).Apply(vtkPoints)
 
 print(tube)
 ```

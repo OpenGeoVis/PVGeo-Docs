@@ -43,15 +43,12 @@ t0.AddColumn(_helpers.numToVTK(arrs[2], titles[2]))
 
 # Use the filter to reshape the table
 order = 'F'
-f = ReshapeTable()
-f.SetInputDataObject(0, t0)
-f.SetNumberOfColumns(ncols)
-f.SetNumberOfRows(nrows)
-f.SetOrder(order)
 newtitles = ['Title %d' % i for i in range(ncols)]
-f.SetNames(newtitles)
-f.Update()
-output =  f.GetOutput()
+output = ReshapeTable(order=order,
+                      ncols=ncols,
+                      nrows=nrows,
+                      names=newtitles).Apply(t0)
+
 
 # Check the output against NumPy
 wpdi = dsa.WrapDataObject(output)
