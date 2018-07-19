@@ -91,10 +91,11 @@ pages:
         - Delimited Text: examples/readers-general/delimited-text.md
         - Madagascar SSRSF: examples/readers-general/madagascar-ssrsf.md
         - XYZ Files: examples/readers-general/xyz-reader.md
-    - UBC Mesh Tools:
-        - Append Model: examples/ubc/add-model.md
-        - Read OcTree: examples/ubc/octree.md
-        - Read Tensor Meshes: examples/ubc/tensor-grids.md
+    - Grid Tools:
+        - Extract Topography: examples/grids/extract-topography.md
+        - Flip Grid Axii: examples/grids/reverse-grid-axii.md
+        - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
+        - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
     - GSLIB & SGeMS:
         - GSLIB Table: examples/gslib/gslib.md
         - SGeMS Grid: examples/gslib/sgems-grid.md
@@ -102,12 +103,12 @@ pages:
         - Create Earth Source: examples/model-building/create-earth-source.md
         - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md
         - Create Unifrom Grid: examples/model-building/create-uniform-grid.md
-    - Grids Tools:
-        - Flip Grid Axii: examples/grids/reverse-grid-axii.md
-        - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
-        - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
     - Tunneling:
         - Animate TBM: examples/tunneling/animate-tbm.md
+    - UBC Mesh Tools:
+        - Append Model: examples/ubc/add-model.md
+        - Read OcTree: examples/ubc/octree.md
+        - Read Tensor Meshes: examples/ubc/tensor-grids.md
 
 - Docs:
     - Docs: docs-fwd.md
