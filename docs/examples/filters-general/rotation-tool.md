@@ -16,6 +16,8 @@
 
 Take a look at `RotationTool`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.RotationTool).
 
+<!---
+
 ```py
 import numpy as np
 import vtk
@@ -25,3 +27,5 @@ from PVGeo.filters_general import RotationTool
 
 
 ```
+
+TODO --->
