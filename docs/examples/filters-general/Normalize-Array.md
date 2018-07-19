@@ -26,18 +26,18 @@ from PVGeo.filters_general import NormalizeArray
 
 ##################
 # Create some input data. this can be any `vtkDataObject`
-input = vtk.vtkTable()
+inp = vtk.vtkTable()
 # Populate the data
 n = 400
 title = 'Array 0'
 arr = np.random.random(n) # Table 0
-input.AddColumn(_helpers.numToVTK(arr, title))
+inp.AddColumn(_helpers.numToVTK(arr, title))
 ###################
 
 # Apply the filter
 f = NormalizeArray(normalization='feature_scale', newName='foo')
 f.SetInputArrayToProcess(0, 0, 0, 6, title) # field 6 is row data
-output = f.Apply(input)
+output = f.Apply(inp)
 
 # Check out the result
 wout = dsa.WrapDataObject(output)

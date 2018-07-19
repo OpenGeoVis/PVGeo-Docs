@@ -26,13 +26,13 @@ from PVGeo import _helpers
 from PVGeo.filters_general import ArrayMath
 
 # Create some input data. This can be any `vtkDataObject`
-input = vtk.vtkTable()
+inp = vtk.vtkTable()
 # Populate the tables
 n = 400
 arr0 = np.random.random(n)
 arr1 = np.random.random(n)
-input.AddColumn(_helpers.numToVTK(arr0, 'Array 0'))
-input.AddColumn(_helpers.numToVTK(arr1, 'Array 1'))
+inp.AddColumn(_helpers.numToVTK(arr0, 'Array 0'))
+inp.AddColumn(_helpers.numToVTK(arr1, 'Array 1'))
 ```
 
 ```py
@@ -41,7 +41,7 @@ f = ArrayMath(operation='add', newName='foo')
 f.SetInputArrayToProcess(0, 0, 0, 6, 'Array 0') # field 6 is row data
 f.SetInputArrayToProcess(1, 0, 0, 6, 'Array 1') # field 6 is row data
 # Now get the result
-output = f.Apply(input)
+output = f.Apply(inp)
 
 wout = dsa.WrapDataObject(output)
 arr = wout.RowData['foo']
