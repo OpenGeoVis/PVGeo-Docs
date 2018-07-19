@@ -25,4 +25,29 @@ from PVGeo import _helpers
 from PVGeo.filters_general import NormalizeArray
 
 
+# Create some input data
+t0 = vtk.vtkTable()
+
+# Populate the data
+n = 400
+title = 'Array 0'
+arr = np.random.random(n) # Table 0
+t0.AddColumn(_helpers.numToVTK(arr, title))
+
+# Apply the filter
+f = NormalizeArray()
+f.SetInputDataObject(t0)
+f.SetInputArrayToProcess(0, 0, 0, 6, title) # field 6 is row data
+# Set normalization type:
+#- See code docs for available options
+f.SetNormalization('feature_scale')
+#
+f.SetNewArrayName('Normalized')
+f.Update()
+
+# Now test the result
+output = f.GetOutput()
+wout = dsa.WrapDataObject(output)
+normArr = wout.RowData['Normalized']
+
 ```

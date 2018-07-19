@@ -25,5 +25,43 @@ from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
 from PVGeo.filters_general import ReshapeTable
 
+# Create some input table
+t0 = vtk.vtkTable()
+# Populate the tables
+arrs = [None, None, None]
+n = 400
+ncols = 2
+nrows = int(n * len(arrs) / ncols)
+titles = ('Array 0', 'Array 1', 'Array 2')
+arrs[0] = np.random.random(n)
+arrs[1] = np.random.random(n)
+arrs[2] = np.random.random(n)
+
+t0.AddColumn(_helpers.numToVTK(arrs[0], titles[0]))
+t0.AddColumn(_helpers.numToVTK(arrs[1], titles[1]))
+t0.AddColumn(_helpers.numToVTK(arrs[2], titles[2]))
+
+# Use the filter to reshape the table
+order = 'F'
+f = ReshapeTable()
+f.SetInputDataObject(0, t0)
+f.SetNumberOfColumns(ncols)
+f.SetNumberOfRows(nrows)
+f.SetOrder(order)
+newtitles = ['Title %d' % i for i in range(ncols)]
+f.SetNames(newtitles)
+f.Update()
+output =  f.GetOutput()
+
+# Check the output against NumPy
+wpdi = dsa.WrapDataObject(output)
+tarr = np.zeros((nrows, ncols))
+for i in range(ncols):
+    tarr[:,i] = wpdi.RowData[i]
+arrs = np.array(arrs).T
+arrs = arrs.flatten()
+arrs = np.reshape(arrs, (nrows, ncols), order=order)
+assert(tarr.shape == arrs.shape)
+assert(np.allclose(tarr, arrs))
 
 ```

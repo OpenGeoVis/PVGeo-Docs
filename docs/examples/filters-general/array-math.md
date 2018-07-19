@@ -52,7 +52,7 @@ output = f.GetOutput()
 
 wout = dsa.WrapDataObject(output)
 arr = wout.RowData['test']
-assert(np.allcose(arr, arr0+arr1))
+assert(np.allclose(arr, arr0+arr1))
 
 ```
 
@@ -68,5 +68,5 @@ f.Update()
 
 # Now get the result
 output = f.GetOutput()
-
+print(output)
 ```

@@ -19,10 +19,47 @@ Take a look at `PointsToTube`'s code docs [here](http://docs.pvgeo.org/en/latest
 
 ```py
 import numpy as np
-import vtk
-from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
-from PVGeo.filters_general import PointsToTube
+from PVGeo.filters_general import PointsToPolyData, PointsToTube
 
 
+############################################
+######### GENERATE SOME POINT DATA #########
+
+def path1(y):
+    # Equation: x = a(y-h)^2 + k
+    k = 110.0
+    h = 0.0
+    a = - k / 160.0**2
+    x = a*(y-h)**2 + k
+    idxs = np.argwhere(x>0)
+    return x[idxs][:,0], y[idxs][:,0]
+
+
+y = np.arange(0.0, 200.0, 25.0)
+x, y = path1(y)
+zo = np.linspace(9.0, 11.0, num=len(y))
+
+coords = np.zeros((len(y), 3))
+
+coords[:,0] = x
+coords[:,1] = y
+coords[:,2] = zo
+
+np.random.shuffle(coords)
+
+# Shuffle points to demonstrate value of Nearest Neighbor
+vtkPoints = PointsToPolyData(coords)
+
+############################################
+
+# Use the filter
+f = PointsToTube()
+f.SetInputDataObject(vtkPoints)
+f.SetUseNearestNbr(True)
+f.Update()
+
+# Here is vtkPolyData containing the connected line:
+tube = f.GetOutput()
+
+print(tube)
 ```

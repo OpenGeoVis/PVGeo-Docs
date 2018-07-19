@@ -84,8 +84,10 @@ coords[:,0] = x
 coords[:,1] = y
 coords[:,2] = zo
 
+np.random.shuffle(coords)
+
 # Shuffle points to demonstrate value of Nearest Neighbor
-vtkPoints = PointsToPolyData(np.random.shuffle(coords))
+vtkPoints = PointsToPolyData(coords)
 
 ############################################
 

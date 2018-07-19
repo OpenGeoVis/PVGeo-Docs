@@ -18,10 +18,27 @@ Take a look at `RotatePoints`'s code docs [here](http://docs.pvgeo.org/en/latest
 
 ```py
 import numpy as np
-import vtk
-from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
-from PVGeo.filters_general import RotatePoints
+from PVGeo.filters_general import PointsToPolyData, RotatePoints
 
+##############
+# Create some input points
+RTOL = 0.00001 # As high as rotation precision can get
+x = np.array([0.0,1.0,0.0])
+y = np.array([0.0,0.0,1.0])
+z = np.array([0.0,0.0,0.0])
+x = np.reshape(x, (len(x), -1))
+y = np.reshape(y, (len(y), -1))
+z = np.reshape(z, (len(z), -1))
+pts = np.concatenate((x, y, z), axis=1)
+vtkpoints = PointsToPolyData(pts)
+##############
+
+# Use the filter:
+f = RotatePoints()
+f.SetInputDataObject(vtkpoints)
+f.SetRotationDegrees(33.3)
+f.Update()
+
+rotated = f.GetOutput()
 
 ```

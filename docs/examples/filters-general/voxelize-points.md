@@ -26,10 +26,53 @@ Take a look at `VoxelizePoints`'s code docs [here](http://docs.pvgeo.org/en/late
 
 ```py
 import numpy as np
-import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import VoxelizePoints
+from PVGeo.filters_general import PointsToPolyData, VoxelizePoints
+
+
+# Make a mesh grid
+dd = 5
+x = y = z = np.arange(0, 100, dd)
+g = np.meshgrid(x, y, z)
+
+# Convert to XYZ points
+points = np.vstack(map(np.ravel, g)).T
+rand = np.random.random(len(points))
+vtkpoints = PointsToPolyData(points)
+vtkpoints.GetPointData().AddArray(_helpers.numToVTK(rand, 'Random'))
+
+# Use filter
+v = VoxelizePoints()
+v.SetInputDataObject(vtkpoints)
+v.SetEstimateGrid(False) # Cell size is explicitly set
+v.SetDeltaX(10)
+v.SetDeltaY(10)
+v.SetDeltaZ(10)
+v.Update()
+
+grid = v.GetOutput()
+wgrd = dsa.WrapDataObject(grid)
+celldata = wgrd.CellData['Random']
+
+# Checkout output:
+assert(grid.GetNumberOfCells() == 8*10**3)
+numPts = (len(x)+2)**3
+assert(grid.GetNumberOfPoints() == numPts)
+assert(np.allclose(celldata, rand))
+
+# Now check that we can set the spacing for every cell
+spac = np.full((len(points)), 10.0)
+v.SetDeltas(spac, spac, spac)
+v.Update()
+
+grid = v.GetOutput()
+wgrd = dsa.WrapDataObject(grid)
+celldata = wgrd.CellData['Random']
+
+assert(grid.GetNumberOfCells() == 8*10**3)
+assert(grid.GetNumberOfPoints() == numPts)
+assert(np.allclose(celldata, rand))
 
 
 ```

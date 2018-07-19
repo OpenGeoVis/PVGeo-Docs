@@ -18,10 +18,11 @@ Take a look at `PointsToPolyData`'s code docs [here](http://docs.pvgeo.org/en/la
 
 ```py
 import numpy as np
-import vtk
-from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
 from PVGeo.filters_general import PointsToPolyData
 
+# NumPy array of points for input
+points = np.random.random((100,3))
 
+vtkPoints = PointsToPolyData(points)
+print(vtkPoints)
 ```
