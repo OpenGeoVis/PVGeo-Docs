@@ -12,7 +12,7 @@ This filter adds a new cell data field to an input data source defining whether 
 
 First, lets generate some data on the ParaView pipeline. For this example, we need a topography data set and an input grid data set.
 
-{btn:https://dl.dropbox.com/s/ha8vrufdx1746gi/example.zip?dl=0}
+{btn:https://dl.dropbox.com/s/gw5v3tiq68oge3l/Example-Extract-Topo.zip?dl=0}
 
 ??? example "Data Description"
     Data File: 'topo.vtk'
