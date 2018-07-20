@@ -35,7 +35,6 @@ We highly recomend using Anaconda to manage you python virtual environments and 
 $ conda create -n PVGeoEnv python=2.7
 
 # Install vtk through conda as this is OS-independent
-# Best of luck, Windows users...
 $ conda install -n PVGeoEnv vtk
 ```
 
