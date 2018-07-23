@@ -1,20 +1,13 @@
 # About Examples
-We are deploying *PVGeo* in various sub-packages we call suites. These suites consists of a series of reader or filter plugins (or both) for a general area of geoscientific processing or visualization. For example, we have created a suite called *UBC Mesh Tools* which contains file readers for the UBC Mesh types and filters for processes related to the UBC mesh formats. Another example of a suite is *Model Building*; this is a suite of various plugins that allow a user to create various types of models interactively within ParaView. Take a look at the navigation pane to the left to explore the different Examples.
+`PVGeo` is a python module we are developing to contain the bulk of our code for file readers and filters. *PVGeo* is deployed in various sub-packages called *suites*. These *suites* consist of a series of reader, filter, source, or writer plugins (or any combination of those) for a general area of geoscientific processing and visualization.
+
+Take a look at the navigation pane to the left to explore the different suites in their drop down menu. Each feature (reader, filter, etc.) has its own page where you can find an overview of that feature, an example of how to use it directly in ParaView, and an example on how to use it in a standard Python environment.
+
+For example specific questions, concerns, or insights, please leave a comment at the bottom of that example's page for other users to find. If you think there may be a serious problem with an example, please open an issue on the [**Issues Page**](https://github.com/OpenGeoVis/PVGeo/issues) so that we can promptly fix it.
 
 
-## The Plugin Framework
-
-In developing the *PVGeo* repository, we decided to follow a framework of development that generates various sets of tools that can be used within ParaView or outside in other Python environments with the VTK Python library. This would allow for users of *PVGeo* to be able to use all of the functionality as plugins in ParaView with interactive user menus or outside of ParaView be able to integrate with there existing data processing suites using Python and VTK. This development framework also focuses heavily on the open source paradigm in that *PVGeo* contains many base classes for developers to inherit functionality to aid in the development of new features. Unfortunately, the development of plugins for the ParaView software platform may imply an ambitious programming endeavor, including creating CMakeLists, developing in lower level programming languages like C++, learning new libraries to create interactive GUI components, and building the plugins into the ParaView source code. However, the *PVGeo* module takes advantage of functionality by Kitware that facilitates the rapid development of readers, sources, filters, and writers: instantiations of the `VTKPythonAlgorithmBase` class in Python. Python is an accessible language, easy to learn, and popular among geoscientists using packages like: SimPEG, ObsPy, EarthPy, pyFLOWGO, GeoNotebook, and more. We choose to develop the *PVGeo* library to work well with other Python libraries by following the following framework:
-
-- **Extendable:** This software will harness the established and robust visualization platforms ParaView and VTK, extend their functionality, and remain open-source for contributions and integration into other Python powered geoscientific processing suites.
-- **Safe:** The software must preserve data integrity and precision.
-- **Dynamic:** The software must enable a dynamic link between external processing software and visualization libraries.
-- **Modular:** The software will be modular so that various visualization suites can be implemented separately but also work together. This software should be usable both within and outside of ParaView.
-- **Rapid development:** Through further subclasses of the `VTKPythonAlgorithmBase` class and the templates in *PVGeo*, it is easy to prototype and develop a plugin in a matter of minutes without the need to rebuild the software.
-- **Computational power:** VTK has NumPy wrapping to allow for the use of Python's complex numerical analysis libraries like SciPy and NumPy.
-- **Easy customization by end user:** since most geoscientists know and use Python, they can easily dive into the source code delivered in this repo to tailor it to their needs.
-- **Easy GUI component creation:** Graphical User Interface elements can be easily produced to pair with plugins.
-
+------
+## Types of Features
 
 ### Readers
 A reader takes data from files and puts them into the proper VTK and ParaView data structures so that we can visualize that data on the VTK or ParaView pipeline. ParaView comes with a plethora of native data format readers but there are still many more formats in the geosciences that have not been implemented. By creating formats for common geoscientific formats, we hope to make the process of getting data into the ParaView pipeline as simple as possible.
@@ -30,6 +23,5 @@ Or for another filter, maybe we might have a series of scattered points that we 
 A source takes input parameters from a user and generates a data object for visualization or export. In *PVGeo*, we have implemented the *Model Building* suite with many sources that allow for a user to specify attributes of a data set such as a model discretization and have a data source appear in the rendering environment alongside their other data for that scene.
 
 
-
-### About `PVGeo`
-`PVGeo` is a python module we are developing to modulize all functionality common throughout the plugins. This module will contain the bulk of our code for file readers and visual filters. We are publishing the plugins code base in this manner so that we can easily update/change the code with minor deprecation issues.
+### Writers
+These features have not yet been deployed but they will enable users to save data from VTK data structures in ParaView to common geoscientific data formats.
