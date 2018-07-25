@@ -18,8 +18,8 @@
     - **Overview:** An introduction to the project with installation details on how to get started.
     - **Examples:** A guide to all of the plugins we have implemented for use directly in ParaView. This section has all the information you will need to understand how to use our plugins and how we group them together into what we call *suites*. This section has high level explanations and examples while the [docs website](http://docs.pvgeo.org) has the code documentation.
     - **Docs:** This tab will forward you to the [code docs website](http://docs.pvgeo.org)
-    - **PV Macros:** A guide on how to use all of the macros developed in the `pvmacros` module. This section contains all of the code docs for the `pvmacros` module as well.
-    - **Resources:** A conglomerate of additional resources that are helpful when using ParaView for geoscientific applications.
+    - **PV Macros:** A guide on how to use all of the macros developed in the `pvmacros` module.
+    - **Resources:** A conglomerate of additional resources that are helpful when using ParaView and VTK for geoscientific applications.
     - **Development Guide:** This is an all encompassing guid on how to start making your own plugins as well as how to contribute to the *PVGeo* repository.
 
 
