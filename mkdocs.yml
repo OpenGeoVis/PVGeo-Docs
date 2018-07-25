@@ -1,6 +1,6 @@
 site_name: PVGeo
 site_author: Bane Sullivan
-site_description: "Welcome to the documentation for the PVGeo code repository. PVGeo is a code base tailored to the visualization of spatially referenced data in the geosciences on the ParaView software platform. "
+site_description: "PVGeo is a code base tailored to the visualization of spatially referenced data in the geosciences on the ParaView software platform. "
 repo_url: https://github.com/OpenGeoVis/PVGeo
 repo_name: PVGeo on GitHub
 site_url: http://pvgeo.org/
