@@ -121,14 +121,15 @@ pages:
         - Camera: pvmacros/vis/camera.md
 
 - Resources:
+    - External References: resources/references.md
     - Color Maps: cmaps.md
-    - Scripts:
-        - About Scripts: scripts/about-scripts.md
-        - Example Script: scripts/example-script.md
     - Entering Virtual Reality: virtual-reality/entering-virtual-reality.md
     - Editing the Axes: resources/edit-axes.md
     - Editing the Render View: resources/edit-render-view.md
     - Save Camera Views: resources/save-camera-locations.md
+    - Scripts:
+        - About Scripts: scripts/about-scripts.md
+        - Example Script: scripts/example-script.md
     - Understand VTK Data Types: resources/understand-vtk.md
 
 - Development Guide:
