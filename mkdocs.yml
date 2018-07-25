@@ -65,7 +65,8 @@ pages:
     - Home: index.md
     - Why PVGeo?: overview/why-pvgeo.md
     - Getting Started: overview/getting-started.md
-    - Features to Come: overview/upcoming.md
+    - Featured: overview/featured.md
+    - Upcoming: overview/upcoming.md
 
 # Each of the different Examples:
 - Examples:
