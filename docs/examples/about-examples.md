@@ -1,7 +1,7 @@
 # About Examples
 `PVGeo` is a python module we are developing to contain the bulk of our code for file readers, filters, and other algorithms. *PVGeo* is deployed in various sub-packages called *suites*. These *suites* consist of a set of reader, filter, source, or writer algorithms (or any combination of those) for a general area of geoscientific processing and visualization.
 
-Take a look at the navigation pane to the left to explore the different suites in their drop down menu. Each feature (reader, filter, etc.) has its own page where you can find an overview of that feature, an example of how to use it directly in ParaView, and an example on how to use it in a standard Python environment.
+Take a look at the [**Contents Page**](contents.md) for an outline and synopsis of each example or look at the navigation pane to the left to explore the different suites in their drop down menu. Each feature (reader, filter, etc.) has its own page where you can find an overview of that feature, an example of how to use it directly in ParaView, and an example on how to use it in a standard Python environment.
 
 For example specific questions, concerns, or insights, please leave a comment at the bottom of that example's page for other users to find. If you think there may be a serious problem with an example, please open an issue on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) so that we can promptly fix it.
 

@@ -71,6 +71,7 @@ pages:
 # Each of the different Examples:
 - Examples:
     - About Examples: examples/about-examples.md
+    - Contents: examples/contents.md
     - Base Classes: examples/base.md
     - General Filters:
         - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
@@ -103,7 +104,7 @@ pages:
     - Model Building:
         - Create Earth Source: examples/model-building/create-earth-source.md
         - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md
-        - Create Unifrom Grid: examples/model-building/create-uniform-grid.md
+        - Create Uniform Grid: examples/model-building/create-uniform-grid.md
     - Tunneling:
         - Animate TBM: examples/tunneling/animate-tbm.md
     - UBC Mesh Tools:
