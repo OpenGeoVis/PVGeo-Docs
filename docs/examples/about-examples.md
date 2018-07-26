@@ -33,12 +33,10 @@ A reader takes data from files and puts them into the proper VTK and ParaView da
 
 
 ### ParaView Usage
-The *PVGeo* readers aren't directly available in the GUI menus of ParaView but rather a dialog will appear for you to select the desired file reader when selecting **File -> Open...** within ParaView like the image below:
+The *PVGeo* readers aren't directly available in the GUI menus of ParaView but rather a dialog will appear for you to select the desired file reader when selecting **File -> Open...** within ParaView like the screen recording below:
 
-<video style="width:75%" controls Autoplay=autoplay playbackRate=2.0 loop=true>
-  <source src="../videos/reader.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe src="https://player.vimeo.com/video/281726394" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/281726394">PVGeo: UBC OcTree Reader</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 
 ### Python Usage
@@ -77,10 +75,8 @@ Or for another filter, maybe we might have a series of scattered points that we 
 
 Within ParaView, filters are available for selection directly from the GUI menus when an input data source is selected on the pipeline. All of the *PVGeo* filters are available under their own categories in the **Filters** menu.  
 
-<video style="width:75%" controls Autoplay=autoplay playbackRate=2.0 loop=true>
-  <source src="../videos/filter.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe src="https://player.vimeo.com/video/281725448" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/281725448">PVGeo: Extract Topography Filter</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ### Python Usage
 
@@ -124,10 +120,8 @@ A source takes input parameters from a user and generates a data object for visu
 
 Within ParaView, sources are available for selection directly from the GUI menus. All of the *PVGeo* sources are available under their own categories in the **Sources** menu.  
 
-<video style="width:75%" controls Autoplay=autoplay>
-  <source src="../videos/source.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe src="https://player.vimeo.com/video/281726486" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/281726486">PVGeo: Tensor Mesh Source</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 
 ### Python Usage

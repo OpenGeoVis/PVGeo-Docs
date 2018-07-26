@@ -8,7 +8,10 @@ Also see [Add Model](add-model.md)
 
 <!--- TODO --->
 
-We tested this model using the OcTree mesh found in [**this example**](http://giftoolscookbook.readthedocs.io/en/latest/content/AtoZ/DCIP/index.html) on the [**GIFtoolsCookbook website**](http://giftoolscookbook.readthedocs.io/en/latest/index.html):
+<iframe src="https://player.vimeo.com/video/281726394" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/281726394">PVGeo: UBC OcTree Reader</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+We tested this reader using the OcTree mesh found in [**this example**](http://giftoolscookbook.readthedocs.io/en/latest/content/AtoZ/DCIP/index.html) on the [**GIFtoolsCookbook website**](http://giftoolscookbook.readthedocs.io/en/latest/index.html):
 
 - Mesh file: `CompleteTask/octree_mesh.txt`
 - Model file: `CompleteTask/active_cells_topo.txt`

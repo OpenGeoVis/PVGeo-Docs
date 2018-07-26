@@ -10,6 +10,9 @@ This filter adds a new cell data field to an input data source defining whether 
 
 ## ParaView Example
 
+<iframe src="https://player.vimeo.com/video/281725448" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/281725448">PVGeo: Extract Topography Filter</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 First, lets generate some data on the ParaView pipeline. For this example, we need a topography data set and an input grid data set.
 
 {btn:https://dl.dropbox.com/s/gw5v3tiq68oge3l/Example-Extract-Topo.zip?dl=0}

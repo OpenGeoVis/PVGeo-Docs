@@ -41,6 +41,10 @@ The Stanford Geostatistical Modeling Software (SGeMS) ASCII format is much like 
 
 
 ## ParaView Example
+
+<iframe src="https://player.vimeo.com/video/261083571" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/261083571">PVGeo: SGeMS Grid Reader</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 For example files to use with this reader, download any of the 2D or 3D files from [this website](http://www.trainingimages.org/training-images-library.html) and load them into ParaView using the 'Read SGeMS File to Uniform Grid' file reader. A 2D or 3D block of data should automatically be built and visualized.
 
 Here is the [Walker Lake Exhaustive DEM Categorized](http://www.trainingimages.org/uploads/3/4/0/5/3405352/a_wlreferencecat.zip) with a categorized color scale and the surface warped by categorization to give it an interesting 3D representation:
