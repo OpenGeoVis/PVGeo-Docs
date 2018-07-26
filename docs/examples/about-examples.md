@@ -35,7 +35,10 @@ A reader takes data from files and puts them into the proper VTK and ParaView da
 ### ParaView Usage
 The *PVGeo* readers aren't directly available in the GUI menus of ParaView but rather a dialog will appear for you to select the desired file reader when selecting **File -> Open...** within ParaView like the image below:
 
-![Reader Dialogs](images/reader-dialogs.png)
+<video style="width:75%" controls Autoplay=autoplay playbackRate=2.0 loop=true>
+  <source src="../videos/reader.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
 ### Python Usage
@@ -73,6 +76,11 @@ Or for another filter, maybe we might have a series of scattered points that we 
 ### ParaView Usage
 
 Within ParaView, filters are available for selection directly from the GUI menus when an input data source is selected on the pipeline. All of the *PVGeo* filters are available under their own categories in the **Filters** menu.  
+
+<video style="width:75%" controls Autoplay=autoplay playbackRate=2.0 loop=true>
+  <source src="../videos/filter.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ### Python Usage
 
@@ -115,6 +123,11 @@ A source takes input parameters from a user and generates a data object for visu
 ### ParaView Usage
 
 Within ParaView, sources are available for selection directly from the GUI menus. All of the *PVGeo* sources are available under their own categories in the **Sources** menu.  
+
+<video style="width:75%" controls Autoplay=autoplay>
+  <source src="../videos/source.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
 ### Python Usage
