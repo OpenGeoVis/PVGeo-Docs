@@ -23,6 +23,10 @@
     - **Development Guide:** This is an all encompassing guid on how to start making your own plugins as well as how to contribute to the *PVGeo* repository.
 
 
+??? failure "Web renderings not working?"
+    If the web renderings like the one below in the [demo section](#demo) of this page are not working, then please make sure to enable javascript in your web browser.
+
+
 ## Demo
 Check out the [**Demo Page**](http://demo.pvgeo.org) to see video demos and interactive demos like the scene below. This is an example of three data sets visually integrated using our framework within ParaView then exported to a shareable format. Go ahead, click it and move it around!
 

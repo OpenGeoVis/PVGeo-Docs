@@ -72,7 +72,7 @@ pages:
 - Examples:
     - About Examples: examples/about-examples.md
     - Contents: examples/contents.md
-    - Base Classes: examples/base.md
+    #- Base Classes: examples/base.md
     - General Filters:
         - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
         - Array Math: examples/filters-general/array-math.md
