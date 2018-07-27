@@ -12,6 +12,9 @@
 
 <!--- TODO --->
 
+<iframe src="https://player.vimeo.com/video/282010041" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/282010041">PVGeo: Many Slices Along Axis Filter</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 ## Python Example
 
 Take a look at `ManySlicesAlongAxis`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.ManySlicesAlongAxis).
