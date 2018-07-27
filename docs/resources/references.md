@@ -24,7 +24,6 @@ Here we have compiled a list of resources and reference material for learning ho
 ## ParaView
 
 - [The ParaView Guide](https://www.paraview.org/paraview-guide/)
-
 - [ParaViewWeb: Using ParaView’s Visualization and Data Analysis Capabilities within Web Applications | Kitware Blog](https://blog.kitware.com/paraviewweb-using-paraviews-visualization-and-data-analysis-capabilities-within-web-applications/)
-
-- [ParaView: Proxy Hints And Annotations](https://www.paraview.org/ParaView/Doc/Nightly/www/cxx-doc/ProxyHints.html)
+- [Proxy Hints And Annotations](https://www.paraview.org/ParaView/Doc/Nightly/www/cxx-doc/ProxyHints.html)
+- [ServerManager XML Hints](https://www.paraview.org/Wiki/ServerManager_XML_Hints)
