@@ -16,14 +16,14 @@ This filter allows the user to select two input data arrays on which to perform 
 
 ## Python Example
 
-Take a look at `ArrayMath`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.ArrayMath).
+Take a look at `ArrayMath`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ArrayMath).
 
 ```py
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import ArrayMath
+from PVGeo.filters import ArrayMath
 
 # Create some input data. This can be any `vtkDataObject`
 inp = vtk.vtkTable()

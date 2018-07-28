@@ -22,7 +22,7 @@ import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import CombineTables
+from PVGeo.filters import CombineTables
 
 ##################################
 # Create some input data

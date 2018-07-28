@@ -66,7 +66,7 @@ Take a look at `ExtractTopography`'s code docs [here](http://docs.pvgeo.org/en/l
 <!---
 ```py
 import numpy as np
-from PVGeo.filters_general import PointsToPolyData
+from PVGeo.filters import PointsToPolyData
 from PVGeo.grids import CreateTensorMesh, ExtractTopography
 
 

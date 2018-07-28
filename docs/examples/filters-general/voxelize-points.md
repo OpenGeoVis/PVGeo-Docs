@@ -23,13 +23,13 @@ Below is a demonstration of this filter transforming point data (XYZ + attribute
 
 ## Python Example
 
-Take a look at `VoxelizePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.VoxelizePoints).
+Take a look at `VoxelizePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.VoxelizePoints).
 
 ```py
 import numpy as np
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import PointsToPolyData, VoxelizePoints
+from PVGeo.filters import PointsToPolyData, VoxelizePoints
 
 
 # Make a mesh grid

@@ -14,11 +14,11 @@
 
 ## Python Example
 
-Take a look at `RotatePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.RotatePoints).
+Take a look at `RotatePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.RotatePoints).
 
 ```py
 import numpy as np
-from PVGeo.filters_general import PointsToPolyData, RotatePoints
+from PVGeo.filters import PointsToPolyData, RotatePoints
 
 ##############
 # Create some input points as `vtkPolyData`

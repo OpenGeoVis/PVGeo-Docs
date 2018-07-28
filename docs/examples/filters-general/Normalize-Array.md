@@ -15,14 +15,14 @@ This filter allow the user to select an array from the input data set to be norm
 
 ## Python Example
 
-Take a look at `NormalizeArray`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.NormalizeArray).
+Take a look at `NormalizeArray`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.NormalizeArray).
 
 ```py
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import NormalizeArray
+from PVGeo.filters import NormalizeArray
 
 ##################
 # Create some input data. this can be any `vtkDataObject`

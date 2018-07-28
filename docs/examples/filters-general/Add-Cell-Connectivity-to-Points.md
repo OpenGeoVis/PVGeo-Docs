@@ -16,7 +16,7 @@ First, lets generate some data on the ParaView pipeline. For this example, we wa
 
 ```py
 import numpy as np
-from PVGeo.filters_general import PointsToPolyData
+from PVGeo.filters import PointsToPolyData
 
 def path1(y):
     """Equation: x = a(y-h)^2 + k"""
@@ -51,11 +51,11 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ## Python Example
 
-Take a look at `AddCellConnToPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.AddCellConnToPoints).
+Take a look at `AddCellConnToPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.AddCellConnToPoints).
 
 ```py
 import numpy as np
-from PVGeo.filters_general import PointsToPolyData, AddCellConnToPoints
+from PVGeo.filters import PointsToPolyData, AddCellConnToPoints
 
 ############################################
 ######### GENERATE SOME POINT DATA #########

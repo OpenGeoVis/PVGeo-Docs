@@ -16,11 +16,11 @@ Since this is a convenience function and not as algorithm/plugin, there is not a
 
 ## Python Example
 
-Take a look at `PointsToPolyData`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.PointsToPolyData).
+Take a look at `PointsToPolyData`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.PointsToPolyData).
 
 ```py
 import numpy as np
-from PVGeo.filters_general import PointsToPolyData
+from PVGeo.filters import PointsToPolyData
 
 # NumPy array of points for input
 points = np.random.random((100,3))

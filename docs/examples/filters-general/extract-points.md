@@ -14,11 +14,11 @@
 
 ## Python Example
 
-Take a look at `ExtractPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.ExtractPoints).
+Take a look at `ExtractPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ExtractPoints).
 
 ```py
 import PVGeo
-from PVGeo.filters_general import ExtractPoints
+from PVGeo.filters import ExtractPoints
 
 #####################################
 # Have some input data source with valid PointData

@@ -16,14 +16,14 @@ This filter will take a `vtkTable` object and reshape it. This filter essentiall
 
 ## Python Example
 
-Take a look at `ReshapeTable`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters_general.ReshapeTable).
+Take a look at `ReshapeTable`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ReshapeTable).
 
 ```py
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 from PVGeo import _helpers
-from PVGeo.filters_general import ReshapeTable
+from PVGeo.filters import ReshapeTable
 
 # Create some input table
 t0 = vtk.vtkTable()
