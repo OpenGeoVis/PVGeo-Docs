@@ -139,3 +139,4 @@ pages:
     - Repo Structure: dev-guide/repo-structure.md
     - Build Your Own Plugins: dev-guide/build-your-own-plugins.md
     - Style Guide: dev-guide/style.md
+    - Templates: dev-guide/templates.md
