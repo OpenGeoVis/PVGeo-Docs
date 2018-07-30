@@ -20,6 +20,10 @@ Here we have compiled a list of resources and reference material for learning ho
 
 - [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
 
+- [ParaView/Simple ParaView 3 Python Filters - KitwarePublic](https://www.paraview.org/Wiki/ParaView/Simple_ParaView_3_Python_Filters)
+
+- [Streaming in VTK : Time | The Kitware Blog](https://blog.kitware.com/streaming-in-vtk-time/)
+
 
 ## ParaView
 
