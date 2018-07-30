@@ -1,3 +1,5 @@
+# Points to PolyData
+
 !!! info
     This example will demonstrate how to use the `PointsToPolyData` function to convert a 2D NumPy array of points (n by 3) into `vtkPolyData` containing those points.
 

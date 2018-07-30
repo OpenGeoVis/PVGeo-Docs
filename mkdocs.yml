@@ -138,3 +138,4 @@ pages:
     - Contributing: dev-guide/contributing.md
     - Repo Structure: dev-guide/repo-structure.md
     - Build Your Own Plugins: dev-guide/build-your-own-plugins.md
+    - Style Guide: dev-guide/style.md
