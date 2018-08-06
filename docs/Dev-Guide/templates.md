@@ -1,9 +1,9 @@
 Here are a few templates for various types of algorithms to provide a place to start developing your own readers, filters, writers, and sources!
 
-## readers
+## Readers
 
 
-## filters
+## Filters
 
 
 ## Writers
