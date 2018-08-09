@@ -16,7 +16,7 @@ This filter will take a `vtkTable` object and reshape it. This filter essentiall
 
 ## Python Example
 
-Take a look at `ReshapeTable`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ReshapeTable).
+{lookup:PVGeo.filters.tables.ReshapeTable}
 
 ```py
 import numpy as np

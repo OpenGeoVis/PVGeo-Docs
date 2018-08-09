@@ -47,3 +47,6 @@ The GSLIB file format has headers lines followed by the data as a space delimite
 - [Table to Points](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters#Table_To_Points)
 - [Table to Structured Grid](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters#Table_To_Structured_Grid)
 - [Normalize Array](../filters-general/normalize-array.md)
+
+
+{lookup:PVGeo.gslib.gslib.GSLibReader}

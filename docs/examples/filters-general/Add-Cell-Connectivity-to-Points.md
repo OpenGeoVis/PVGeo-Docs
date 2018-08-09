@@ -51,7 +51,7 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ## Python Example
 
-Take a look at `AddCellConnToPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.AddCellConnToPoints).
+{lookup:PVGeo.filters.poly.AddCellConnToPoints}
 
 ```py
 import numpy as np

@@ -14,7 +14,7 @@
 
 ## Python Example
 
-Take a look at `ExtractPoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ExtractPoints).
+{lookup:PVGeo.filters.xyz.ExtractPoints}
 
 ```py
 import PVGeo

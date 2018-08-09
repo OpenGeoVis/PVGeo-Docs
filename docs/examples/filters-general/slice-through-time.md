@@ -14,7 +14,7 @@
 
 ## Python Example
 
-Take a look at `SliceThroughTime`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.SliceThroughTime).
+{lookup:PVGeo.filters.slicing.SliceThroughTime}
 
 <!---
 

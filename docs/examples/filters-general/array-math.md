@@ -16,7 +16,7 @@ This filter allows the user to select two input data arrays on which to perform 
 
 ## Python Example
 
-Take a look at `ArrayMath`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.ArrayMath).
+{lookup:PVGeo.filters.poly.ArrayMath}
 
 ```py
 import numpy as np

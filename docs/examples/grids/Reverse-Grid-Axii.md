@@ -14,7 +14,7 @@ This filter will flip ImageData on any of the three cartesian axes. A checkbox i
 
 ## Python Example
 
-Take a look at `ReverseImageDataAxii`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/Grid-Tools.html#PVGeo.grids.ReverseImageDataAxii).
+{lookup:PVGeo.grids.reverse_axii.ReverseImageDataAxii}
 
 ```py
 import numpy as np

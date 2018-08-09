@@ -14,7 +14,7 @@
 
 ## Python Example
 
-Take a look at `CombineTables`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.CombineTables).
+{lookup:PVGeo.filters.tables.CombineTables}
 
 ```py
 import numpy as np

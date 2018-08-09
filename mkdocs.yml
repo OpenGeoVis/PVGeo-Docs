@@ -38,7 +38,8 @@ extra_css:
 
 markdown_extensions:
     # Make sure parent directory is in pyhton path when building docs
-    - download_button # Adds ability to have full width download buttons
+    - md_pvgeo_extension
+
 
     - smarty
     - toc:

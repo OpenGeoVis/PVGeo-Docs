@@ -46,7 +46,7 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ## Python Example
 
-Take a look at `PointsToTube`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.PointsToTube).
+{lookup:PVGeo.filters.poly.PointsToTube}
 
 ```py
 import numpy as np

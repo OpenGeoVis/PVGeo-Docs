@@ -23,7 +23,7 @@ Below is a demonstration of this filter transforming point data (XYZ + attribute
 
 ## Python Example
 
-Take a look at `VoxelizePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.VoxelizePoints).
+{lookup:PVGeo.filters.voxelize.VoxelizePoints}
 
 ```py
 import numpy as np

@@ -14,7 +14,7 @@
 
 ## Python Example
 
-Take a look at `RotatePoints`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.RotatePoints).
+{lookup:PVGeo.filters.xyz.RotatePoints}
 
 ```py
 import numpy as np

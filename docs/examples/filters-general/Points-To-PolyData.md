@@ -18,7 +18,7 @@ Since this is a convenience function and not as algorithm/plugin, there is not a
 
 ## Python Example
 
-Take a look at `PointsToPolyData`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/General-Filters.html#PVGeo.filters.PointsToPolyData).
+{lookup:PVGeo.filters.xyz.PointsToPolyData}
 
 ```py
 import numpy as np

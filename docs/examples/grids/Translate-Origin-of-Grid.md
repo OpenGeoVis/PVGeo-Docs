@@ -15,7 +15,7 @@ This filter will translate the origin of `vtkImageData` to any specified Corner 
 
 ## Python Example
 
-Take a look at `TranslateGridOrigin`'s code docs [here](http://docs.pvgeo.org/en/latest/suites/Grid-Tools.html#PVGeo.grids.TranslateGridOrigin).
+{lookup:PVGeo.grids.trans_origin.TranslateGridOrigin}
 
 ```py
 import numpy as np
