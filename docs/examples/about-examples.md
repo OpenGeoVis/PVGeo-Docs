@@ -138,6 +138,7 @@ output = PVGeo.suite.Source(**kwargs).Apply()
 *PVGeo* writers take VTK data structures and write them out to the disk in a non-VTK formats that might be a standard for geoscientific data.
 PVGeo readers are often deployed with their complimentary writer equivalents such that data can be imported to the pipeline using readers, transformed using filters, then output to the same format in memory for use in an external processing library.
 
+### ParaView Usage
 Demonstrated in the following video, a user can select *File -> Save Data* in ParaView with a selected dataset then choose one of *PVGeo*'s writers.
 Skip to *1 minute* in the video to pick up where we left off using the *Extract Topography* filter to save a `vtkRectilinearGrid` and its attributes to the UBC Tensor Mesh/Model formats.
 
