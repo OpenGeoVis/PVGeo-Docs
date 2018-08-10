@@ -78,6 +78,7 @@ pages:
         - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
         - Array Math: examples/filters-general/array-math.md
         - Combine Tables: examples/filters-general/combine-tables.md
+        - Extract Array: examples/filters-general/extract-array.md
         - Extract Points: examples/filters-general/extract-points.md
         - Many Slices Along Axis: examples/filters-general/many-slices-along-axis.md
         - Many Slices Along Points: examples/filters-general/many-slices-along-points.md
@@ -97,11 +98,12 @@ pages:
     - Grid Tools:
         - Extract Topography: examples/grids/extract-topography.md
         - Flip Grid Axii: examples/grids/reverse-grid-axii.md
+        - Surfer Grids: examples/grids/surfer-grid.md
         - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
         - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
     - GSLIB & SGeMS:
-        - GSLIB Table: examples/gslib/gslib.md
-        - SGeMS Grid: examples/gslib/sgems-grid.md
+        - GSLib Tables: examples/gslib/gslib.md
+        - SGeMS Grids: examples/gslib/sgems-grid.md
     - Model Building:
         - Create Earth Source: examples/model-building/create-earth-source.md
         - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md

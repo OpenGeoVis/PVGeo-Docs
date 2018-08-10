@@ -1,7 +1,6 @@
-# SGeMS Grid
+# Read SGeMS Grid
 
-## Overview
-The Stanford Geostatistical Modeling Software (SGeMS) ASCII format is much like the [GSLIB](gslib.md)) file format. The reader we have developed for this format assumes the data to be defined on a regularly spaced grid and that the first line of the file will specify the dimensions of that grid. The output of this file reader is a vtkImageData object which is essentially a regularly spaced grid with varying dimensionality along each axis. The reader will only work if the format of the file strictly follows what is below. If your SGeMS file does not strictly follow the uniform grid format below then we recommend use the [GSLIB](gslib.md) file reader.
+The Stanford Geostatistical Modeling Software (SGeMS) ASCII format is much like the [GSLIB](gslib.md)) file format. The reader we have developed for this format assumes the data to be defined on a regularly spaced grid and that the first line of the file will specify the dimensions of that grid.
 
 ??? note "The SGeMS File Format"
     The general format is the same as the [GSLIB format](gslib.md) except that the header line has three integer values to specify the extent of the gridded data.
@@ -38,9 +37,11 @@ The Stanford Geostatistical Modeling Software (SGeMS) ASCII format is much like 
     ...
     ```
 
+## Reader
 
+The output of this file reader is a `vtkImageData` object which is essentially a regularly spaced grid with varying dimensionality along each axis. The reader will only work if the format of the file strictly follows what is below. If your SGeMS file does not strictly follow the uniform grid format below then we recommend use the [GSLIB](gslib.md) file reader.
 
-## ParaView Example
+### ParaView Example
 
 <iframe src="https://player.vimeo.com/video/261083571" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/261083571">PVGeo: SGeMS Grid Reader</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
@@ -70,7 +71,7 @@ and here is the [FLUVSIM object-based model](http://www.trainingimages.org/uploa
 
 
 ------
-## Python Example
+### Python Example
 
 
 {lookup:PVGeo.gslib.sgems.SGeMSGridReader}
@@ -119,3 +120,11 @@ reader.UpdateTimeStep(25)
 # the grid object is now updated to the 25th time step
 
 ```
+
+
+
+## Writer
+
+The SGeMS Grid writer takes `vtkImageData` objects as an input and saves them to the SGeMS Grid file format.
+
+{lookup:PVGeo.gslib.write.WriteImageDataToSGeMS}
