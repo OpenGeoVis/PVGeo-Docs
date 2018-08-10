@@ -1,5 +1,6 @@
 # About Examples
-`PVGeo` is a python module we are developing to contain the bulk of our code for file readers, filters, and other algorithms. *PVGeo* is deployed in various sub-packages called *suites*. These *suites* consist of a set of reader, filter, source, or writer algorithms (or any combination of those) for a general area of geoscientific processing and visualization.
+*PVGeo* is deployed in various sub-packages called *suites*. These *suites* consist of a set of reader, filter, source, or writer algorithms (or any combination of those) for a general area of geoscientific processing and visualization.
+The following sections on this page demonstrate general procedures and syntax to use each type of algorithm within ParaView or directly in a Python environment.
 
 Take a look at the [**Contents Page**](contents.md) for an outline and synopsis of each example or look at the navigation pane to the left to explore the different suites in their drop down menu. Each feature (reader, filter, etc.) has its own page where you can find an overview of that feature, an example of how to use it directly in ParaView, and an example on how to use it in a standard Python environment.
 
@@ -35,8 +36,7 @@ A reader takes data from files and puts them into the proper VTK and ParaView da
 ### ParaView Usage
 The *PVGeo* readers aren't directly available in the GUI menus of ParaView but rather a dialog will appear for you to select the desired file reader when selecting **File -> Open...** within ParaView like the screen recording below:
 
-<iframe src="https://player.vimeo.com/video/281726394" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/281726394">PVGeo: UBC OcTree Reader</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/281726394?loop=1&autoplay=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ### Python Usage
@@ -68,6 +68,7 @@ output = PVGeo.suite.Reader(fileName='fname.txt', **kwargs).Apply()
 
 ## Filter Algorithms
 A filter modifies, transforms, combines, analyses, processes, etc. data in VTK data structures on either a VTK or ParaView pipeline. Filters provide a means for changing how we visualize data or create a means of generating topology for an input data source to better represent that data in a 3D rendering environment.
+
 For example, we have developed a filter called [***Voxelize Points***](filters-general/voxelize-points.md) which takes a set of scattered points sampled on a rectilinear reference frame and generates voxels for every point such that the volume of data made by the points is filled with topologically connected cells.
 Or for another filter, maybe we might have a series of scattered points that we know represent the center of a tunnel or tube that represents a well. We can use a filter to transform those points into a connected line that we then construct a cylinder around. This allows us to save out minimal data (just XYZ points as opposed to complex geometries that make up the tunnel) to our hard drive while still having complex visualizations from that data.
 
@@ -75,8 +76,7 @@ Or for another filter, maybe we might have a series of scattered points that we 
 
 Within ParaView, filters are available for selection directly from the GUI menus when an input data source is selected on the pipeline. All of the *PVGeo* filters are available under their own categories in the **Filters** menu.  
 
-<iframe src="https://player.vimeo.com/video/281725448" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/281725448">PVGeo: Extract Topography Filter</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/281725448?loop=1&autoplay=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### Python Usage
 
@@ -120,8 +120,7 @@ A source takes input parameters from a user and generates a data object for visu
 
 Within ParaView, sources are available for selection directly from the GUI menus. All of the *PVGeo* sources are available under their own categories in the **Sources** menu.  
 
-<iframe src="https://player.vimeo.com/video/281726486" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/281726486">PVGeo: Tensor Mesh Source</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/281726486?loop=1&autoplay=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ### Python Usage
@@ -136,4 +135,24 @@ output = PVGeo.suite.Source(**kwargs).Apply()
 
 ---
 ## Writer Algorithms
-These features have not yet been deployed but they will enable users to save data from VTK data structures in ParaView to common geoscientific data formats.
+*PVGeo* writers take VTK data structures and write them out to the disk in a non-VTK formats that might be a standard for geoscientific data.
+PVGeo readers are often deployed with their complimentary writer equivalents such that data can be imported to the pipeline using readers, transformed using filters, then output to the same format in memory for use in an external processing library.
+
+Demonstrated in the following video, a user can select *File -> Save Data* in ParaView with a selected dataset then choose one of *PVGeo*'s writers.
+Skip to *1 minute* in the video to pick up where we left off using the *Extract Topography* filter to save a `vtkRectilinearGrid` and its attributes to the UBC Tensor Mesh/Model formats.
+
+
+<iframe src="https://player.vimeo.com/video/284294249?loop=1&autoplay=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+### Python Usage
+Writers can be used like any algorithm in *PVGeo* and are typically called to immediately produce an output like below:
+
+```py
+import PVGeo
+# PSEUDOCODE: Typical use of a PVGeo source:
+output = PVGeo.suite.Source(**kwargs).Apply()
+```
+
+??? warning "Writers: No Time Support Currently"
+    At the moment, the writers do not properly sink data on a time varying pipeline. This is a bug we are working to fix!
