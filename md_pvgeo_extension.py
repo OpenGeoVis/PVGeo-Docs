@@ -16,7 +16,7 @@ if sys.version_info[0] >= 3:
 else:
     from urllib import urlopen
 
-print('fetching docs inventory...')
+print('INFO    -  Fetching docs inventory...')
 inv_lines = urlopen('http://pvgeo.readthedocs.io/en/latest/objects.inv').read().split(b'\n')
 inv = [ln for ln in inv_lines if b'#' not in ln[0:1]]
 raw_inv = zlib.decompress(b'\n'.join(inv))
