@@ -16,7 +16,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 
 ### Mathematical Operations
 
-- [Array Math](./filters-general/array-math.md): Perform a mathematical operation bewteen two arrays in a given data set
+- [Array Math](./filters-general/array-math.md): Perform a mathematical operation between two arrays in a given data set
 - [Normalize Array](./filters-general/normalize-array.md): Perform a mathematical operation on a single array in a given dataset
 
 ### Slicing
@@ -29,6 +29,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 
 - [Combine Tables](./filters-general/combine-tables.md): Combine two tables with the same number of rows
 - [Reshape Table](./filters-general/reshape-table.md): Treat a table as a 2D array and reshape it to a differently sized 2D array
+- [Extract Array](./filters-general/extract-array.md): Extract any data array fom a dataset to create a `vtkTable` containing that array.
 
 
 -----
@@ -47,6 +48,8 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 -----
 ## Grid Tools
 
+- [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
+
 ### Subsetting
 
 - [Extract Topography](./grids/extract-topography.md): Use a topography surface to add an active cells field to an input dataset
@@ -56,6 +59,9 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 - [Flip Grid Axii](./grids/reverse-grid-axii.md): Reverse data along any axis of an input grid
 - [Table to Uniform Grid](./grids/table-to-uniform-grid.md): Generate a uniform grid from a table
 - [Translate Origin of Grid](./grids/translate-origin-of-grid.md): Translate the corner / origin of an input grid
+
+### Surfer
+
 
 
 -----

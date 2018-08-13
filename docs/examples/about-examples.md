@@ -76,7 +76,7 @@ Or for another filter, maybe we might have a series of scattered points that we 
 
 Within ParaView, filters are available for selection directly from the GUI menus when an input data source is selected on the pipeline. All of the *PVGeo* filters are available under their own categories in the **Filters** menu.  
 
-<iframe src="https://player.vimeo.com/video/281725448?loop=1&autoplay=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/282010041?loop=1&autoplay=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### Python Usage
 
@@ -85,7 +85,7 @@ Filters are typically used in a manner that parameters are set and an input data
 ```py
 import PVGeo
 # PSEUDOCODE: Typical use of a PVGeo filter:
-output = PVGeo.suite.Filter(**kwargs).Apply(input)
+output = PVGeo.suite.Filter(**kwargs).Apply(inputDataObject)
 ```
 
 ```py
@@ -100,7 +100,7 @@ It is also worth noting that filter algorithms can be used as their own entities
 import PVGeo
 # PSEUDOCODE: Typical use of a PVGeo filter:
 filt = PVGeo.suite.Filter(**kwargs)
-output = filt.Apply(input)
+output = filt.Apply(inputDataObject)
 
 # Change a parameter of the filter
 filt.SetParameter(True) # PSEUDOCODE
@@ -140,19 +140,22 @@ PVGeo readers are often deployed with their complimentary writer equivalents suc
 
 ### ParaView Usage
 Demonstrated in the following video, a user can select *File -> Save Data* in ParaView with a selected dataset then choose one of *PVGeo*'s writers.
-Skip to *1 minute* in the video to pick up where we left off using the *Extract Topography* filter to save a `vtkRectilinearGrid` and its attributes to the UBC Tensor Mesh/Model formats.
+The first *1 minute* in the video demonstrates the *Extract Topography* then the video shows how to save a `vtkRectilinearGrid` and its attributes to the UBC Tensor Mesh/Model formats using a PVGeo writer.
 
 
 <iframe src="https://player.vimeo.com/video/284294249?loop=1&autoplay=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ### Python Usage
-Writers can be used like any algorithm in *PVGeo* and are typically called to immediately produce an output like below:
+Writers can be used like any algorithm in *PVGeo* and are typically called to immediately write out a data object like below.
 
 ```py
 import PVGeo
-# PSEUDOCODE: Typical use of a PVGeo source:
-output = PVGeo.suite.Source(**kwargs).Apply()
+# PSEUDOCODE: Typical use of a PVGeo writer:
+writer = PVGeo.suite.Writer(**kwargs)
+filename = 'test-writer.grd'
+writer.SetFileName(filename)
+writer.Write(inputDataObject)
 ```
 
 ??? warning "Writers: No Time Support Currently"
