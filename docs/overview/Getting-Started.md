@@ -38,6 +38,9 @@ $ conda create -n PVGeoEnv python=2.7
 $ conda install -n PVGeoEnv vtk
 ```
 
+!!! warning "Use Python 2.7!!!"
+    If you'd like to link PVGeo to ParaView, you must use a **Python 2.7** virtual environment.
+
 ```bash
 $ source activate PVGeoEnv
 (PVGeoEnv) $ pip install PVGeo
