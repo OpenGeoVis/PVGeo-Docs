@@ -60,6 +60,21 @@ First, lets link *PVGeo*'s virtual environment to ParaView by setting up a `PYTH
 (PVGeoEnv) $ python -m PVGeo install
 ```
 
+!!! warning "You Should Upgrade ParaView's NumPy"
+    Unfortunately, ParaView ships with a very old version of NumPy by default (v1.8.1) and PVGeo requires NumPy v1.10.x or later. Until ParaView upgrades its NumPy version, you must go into ParaView's application contents, delete NumPy, and create a new symbolic link to the NumPy installed in the `PVGeoEnv` virtual environment.
+
+    If you do not do this, some algorithms will crash ParaView when used or some I/O opertions might be a bit slow.
+
+    **Steps:**
+
+    1. Locate your installation of ParaView (`/Applications/ParaView 5.5.xxx/Contents` or `C:\Program Files\ParaView 5.5.xxxx\`)
+    2. Navigate to the local Python site-packages:
+        - Mac: `.../Contents/Python`
+        - Windows: `...\bin\Lib\site-packages\`
+    3. Delete the local version of NumPy (the `numpy` directory)
+    4. Use the PYTHONPATH variable from the above code to find the NumPy installed along PVGeo.
+    5. Create a shortcut or symbolic link for numpy within ParaView's python site-packages to the numpy folder in `PVGeoEnv`'s site-packages
+
 That script will output the paths you need to set in the environmental variables moving forward. If you are on a Mac OS X computer then that script will output a shell command for you to execute for the install. If you are on a Mac, execute that command and skip to [Loading the Plugins](#loading-the-plugins)
 
 Setting up environmental variables is a bit involved for Windows. First you need to open **Control Center** and search for **Advanced system settings**. Click **Environment variables**. In the section **User variables for Name** add the following variable by clicking **New...**:
@@ -72,7 +87,7 @@ Now we need to edit the `PYTHONPATH` variable that should already exist in your 
 
 2. Edit the `PYTHONPATH` variable by selecting it then click **Edit...**.
 
-3. Pay attention to what that path currently is because we need to appended it. For example, your path might currently be `c:\python27\lib\site-packages`. Simply append this path by typing a semicolon (;) then pasting the `PYTHONPATH` variable
+3. Pay attention to what that path currently is because we need to **prepend** it. For example, your path might currently be `c:\python27\lib\site-packages`. Simply prepend this path by pasting the `PYTHONPATH` variable at the beginning, then typing a semicolon (;).
 
 4. Now test that the install worked by opening ParaView (close it and reopen if needed). Open the **Python Shell** and import the modules delivered in this repo by executing `import PVGeo` and `import pvmacros`. Errors should not arise but if they do, post to the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) and the errors will be *immediately* addressed.
 
