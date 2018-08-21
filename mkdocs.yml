@@ -29,7 +29,7 @@ theme:
         primary: 'blue-grey'
         accent: 'red'
     custom_dir: custom_theme
-    favicon: 'img/globe_small.png'
+    favicon: 'img/PVGeo_icon.png'
     logo: 'img/globe_small.png'
 
 extra_css:
@@ -61,7 +61,7 @@ markdown_extensions:
 plugins:
     - search
 
-pages:
+nav:
 - Overview:
     - Home: index.md
     - Why PVGeo?: overview/why-pvgeo.md
@@ -116,7 +116,7 @@ pages:
         - Read Tensor Meshes: examples/ubc/tensor-grids.md
 
 - Docs:
-    - Docs: docs-fwd.md
+    - Docs: http://docs.pvgeo.org
 
 - PV Macros:
     - About pvmacros: pvmacros/about-pvmacros.md
