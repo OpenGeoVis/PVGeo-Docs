@@ -1,3 +1,6 @@
+!!! warning
+    PVGeo is compatible only with the nightly build of ParaView at this time. You must download the **nightly-build** version of ParaView [found here](https://www.paraview.org/download/)
+
 !!! info
     If you have an idea for a macro, plugin, or would like to see how we would address a geoscientific visualization problem with ParaView, please post your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) or get involved with the *PVGeo* community on Slack to discuss adding new features: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
 
@@ -12,7 +15,7 @@ For further help, check out the [documentation](https://www.paraview.org/documen
 ### Install ParaView
 
 !!! warning
-    This will only work for ParaView version 5.5.3 and above! But wait... version 5.5.3 does not exist yet! You must download the **nightly-build** version of ParaView [found here](https://www.paraview.org/download/)
+    PVGeo is compatible only with the nightly build of ParaView at this time. You must download the **nightly-build** version of ParaView [found here](https://www.paraview.org/download/)
 
 Open the downloaded installer from [**ParaView's website**](https://www.paraview.org/download/) and follow the prompts with the installer.
 
@@ -52,6 +55,9 @@ Test the install (non-Windows):
 ```
 
 ### Installing to ParaView
+
+!!! warning
+    PVGeo is compatible only with the nightly build of ParaView at this time. You must download the **nightly-build** version of ParaView [found here](https://www.paraview.org/download/)
 
 To use the *PVGeo* library as plugins in ParaView, we must link the virtual environment that you installed *PVGeo* to ParaView's python environment and load a series of plugin files that wrap the *PVGeo* code base with ParaView's Graphical User Interface.
 
