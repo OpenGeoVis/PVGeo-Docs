@@ -48,7 +48,6 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 -----
 ## Grid Tools
 
-- [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
 
 ### Subsetting
 
@@ -62,6 +61,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 
 ### Surfer
 
+- [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
 
 
 -----
