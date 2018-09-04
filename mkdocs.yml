@@ -143,3 +143,5 @@ nav:
     - Build Your Own Plugins: dev-guide/build-your-own-plugins.md
     - Style Guide: dev-guide/style.md
     - Templates: dev-guide/templates.md
+    - Snippets:
+        Composite Writer: dev-guide/snippets/composite-data-writers.md
