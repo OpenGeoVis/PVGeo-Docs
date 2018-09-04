@@ -58,7 +58,7 @@ class PVGeoExtensionPreprocessor(Preprocessor):
 
     def _genlink(self, name):
         try:
-            return ["Take a look at `%s`'s code docs [**here**](%s)." % (name.split('.')[-1], LOOKUP[name])]
+            return ["[**Take a look at `%s`'s code docs here**](%s)" % (name.split('.')[-1], LOOKUP[name])]
         except KeyError:
             print('%s: not found in docs inventory' % name)
             return ['']
