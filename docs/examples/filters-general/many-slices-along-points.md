@@ -55,4 +55,4 @@ We can also apply a **Slice Along Poly Line** filter that is native to ParaView 
     </div>
 
 
-{lookup:PVGeo.filters.slicing.ManySlicesAlongPoints}
+!!! info "{lookup:PVGeo.filters.slicing.ManySlicesAlongPoints}"

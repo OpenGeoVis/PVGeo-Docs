@@ -14,7 +14,7 @@
 
 ## Python Example
 
-{lookup:PVGeo.filters.tables.ExtractArray}
+!!! info "{lookup:PVGeo.filters.tables.ExtractArray}"
 
 
 ```py

@@ -31,7 +31,7 @@ Another example is to use one of the data files from [this website](http://www.t
 
 ## Python Example
 
-{lookup:PVGeo.grids.table2grid.TableToGrid}
+!!! info "{lookup:PVGeo.grids.table2grid.TableToGrid}"
 
 ```py
 import numpy as np

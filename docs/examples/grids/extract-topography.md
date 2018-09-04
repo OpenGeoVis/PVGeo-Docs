@@ -58,7 +58,7 @@ The resulting grid with cells above the topography extracted will look like the 
 
 ## Python Example
 
-{lookup:PVGeo.grids.extract_topo.ExtractTopography}
+!!! info "{lookup:PVGeo.grids.extract_topo.ExtractTopography}"
 
 !!! failure "Description to come!"
     There are a lot of pages in the documentation and we are trying to fill all content as soon as possible. Stay tuned for updates to this page

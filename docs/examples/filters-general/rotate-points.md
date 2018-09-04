@@ -14,7 +14,7 @@
 
 ## Python Example
 
-{lookup:PVGeo.filters.xyz.RotatePoints}
+!!! info "{lookup:PVGeo.filters.xyz.RotatePoints}"
 
 ```py
 import numpy as np

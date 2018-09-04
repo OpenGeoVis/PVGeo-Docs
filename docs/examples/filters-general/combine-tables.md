@@ -14,7 +14,7 @@
 
 ## Python Example
 
-{lookup:PVGeo.filters.tables.CombineTables}
+!!! info "{lookup:PVGeo.filters.tables.CombineTables}"
 
 ```py
 import numpy as np

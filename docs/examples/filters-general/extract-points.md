@@ -14,7 +14,7 @@
 
 ## Python Example
 
-{lookup:PVGeo.filters.xyz.ExtractPoints}
+!!! info "{lookup:PVGeo.filters.xyz.ExtractPoints}"
 
 ```py
 import PVGeo

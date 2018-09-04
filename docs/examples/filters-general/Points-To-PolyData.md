@@ -18,7 +18,7 @@ Since this is a convenience function and not as algorithm/plugin, there is not a
 
 ## Python Example
 
-{lookup:PVGeo.filters.xyz.PointsToPolyData}
+!!! info "{lookup:PVGeo.filters.xyz.PointsToPolyData}"
 
 ```py
 import numpy as np

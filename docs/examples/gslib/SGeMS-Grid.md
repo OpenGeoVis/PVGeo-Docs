@@ -74,7 +74,7 @@ and here is the [FLUVSIM object-based model](http://www.trainingimages.org/uploa
 ### Python Example
 
 
-{lookup:PVGeo.gslib.sgems.SGeMSGridReader}
+!!! info "{lookup:PVGeo.gslib.sgems.SGeMSGridReader}"
 
 For this example, please download one of the above data files to use or use you own SGeMS grid file and be sure to change the filename
 ```py

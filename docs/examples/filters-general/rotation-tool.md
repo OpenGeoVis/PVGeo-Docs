@@ -3,7 +3,7 @@ The `RotationTool` is not necessarily an algorithm or plugin but a class full of
 
 ## Python Example
 
-{lookup:PVGeo.filters.xyz.RotationTool}
+!!! info "{lookup:PVGeo.filters.xyz.RotationTool}"
 
 <!---
 

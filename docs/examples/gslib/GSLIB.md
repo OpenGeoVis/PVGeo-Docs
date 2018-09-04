@@ -11,7 +11,7 @@ The GSLIB file format has headers lines followed by the data as a space delimite
 
 The output of this reader is a `vtkTable` of the input data. The table will have all the same columns as the input file with the column/data names set to their respective names from the input file.
 
-{lookup:PVGeo.gslib.gslib.GSLibReader}
+!!! info "{lookup:PVGeo.gslib.gslib.GSLibReader}"
 
 ??? note "The GSLIB File Format"
     Check out [this site][format1] and [this site][format2] for more information on the specifics of the file format. The general format is as follows:
