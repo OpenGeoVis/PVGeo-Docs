@@ -24,7 +24,7 @@ notifications:
 
 after_success:
     # Set configuration for repository and deploy documentation
-    - REMOTE="https://${GH_TOKEN}@github.com/PVGeo/PVGeo-Website"
+    - REMOTE="https://${GH_TOKEN}@github.com/OpenGeoVis/PVGeo-Website"
     - git config --global user.name "${GH_NAME}"
     - git config --global user.email "${GH_EMAIL}"
     - git remote set-url origin ${REMOTE}
