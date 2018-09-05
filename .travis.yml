@@ -28,5 +28,5 @@ after_success:
     - git config --global user.name "${GH_NAME}"
     - git config --global user.email "${GH_EMAIL}"
     - git remote set-url origin ${REMOTE}
-    - python -m mkdocs gh-deploy
+    - python -m mkdocs --force gh-deploy
     - python -m mkdocs --version
