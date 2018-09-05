@@ -1,0 +1,30 @@
+language: python
+os:
+    - linux
+python:
+    - 3.6
+sudo: false
+install:
+    - pip install -r requirements.txt
+script:
+    - mkdocs build
+notifications:
+  email:
+    recipients:
+      - info@pvgeo.org
+    on_success: never
+    on_failure: never
+  slack:
+    on_success: never
+    on_failure: change
+    rooms:
+      - pvgeo:m3aUlu4IVCCVrPnbTuX1C3J5#robots
+
+after_success:
+    # Set configuration for repository and deploy documentation
+    - REMOTE="https://${GH_TOKEN}@github.com/PVGeo/PVGeo-Website"
+    - git config --global user.name "${GH_NAME}"
+    - git config --global user.email "${GH_EMAIL}"
+    - git remote set-url origin ${REMOTE}
+    - mkdocs gh-deploy --force
+    - mkdocs --version
