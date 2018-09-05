@@ -1,12 +1,10 @@
 # *PVGeo*
+
 [![Documentation Status](https://readthedocs.org/projects/pvgeo/badge/?version=latest)](http://docs.pvgeo.org/en/latest/?badge=latest)
 [![PyPI](https://img.shields.io/pypi/v/PVGeo.svg)](https://pypi.org/project/PVGeo/)
-[![Slack Bage](http://slack.pvgeo.org/badge.svg)](http://slack.pvgeo.org)
+[![Slack Bage](https://img.shields.io/badge/Slack-PVGeo-4B0082.svg?logo=slack)](http://slack.pvgeo.org)
 [![Build Status](https://travis-ci.org/OpenGeoVis/PVGeo.svg?branch=master)](https://travis-ci.org/OpenGeoVis/PVGeo)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/it085qovtnb0mcgr/branch/master?svg=true)](https://ci.appveyor.com/project/banesullivan/pvgeo/branch/master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b9e8d0ef37a4f70a2d02c0d53ed096f)](https://www.codacy.com/app/banesullivan/PVGeo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OpenGeoVis/PVGeo&amp;utm_campaign=Badge_Grade)
-[![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master)
-[![Open Source](https://img.shields.io/badge/open--source-yes-brightgreen.svg)](https://opensource.com/resources/what-open-source)
 
 *PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library:
 
@@ -44,19 +42,19 @@ Check out the [**Demo Page**](http://demo.pvgeo.org) to see video demos and inte
 
 -------
 
-## About the Authors
+## About the Authors [![GitHub contributors](https://img.shields.io/github/contributors/OpenGeoVis/PVGeo.svg)](https://GitHub.com/OpenGeoVis/PVGeo/graphs/contributors/) [![Open Source](https://img.shields.io/badge/open--source-yes-brightgreen.svg)](https://opensource.com/resources/what-open-source)
+
 The *PVGeo* code library is managed by [**Bane Sullivan**](http://banesullivan.com), graduate student in the Hydrological Science and Engineering interdisciplinary program at the Colorado School of Mines under Whitney Trainor-Guitton. If you have questions please inquire with [**info@pvgeo.org**](mailto:info@pvgeo.org) or join the *PVGeo* community on Slack: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
 
 
 !!! info "Thank you to our contributors!"
     It is important to note the project is open source and that many features in this repository were made possible by contributors volunteering their time. Please take a look at the [**Contributors Page**](https://github.com/OpenGeoVis/PVGeo/graphs/contributors) to learn more about the developers of *PVGeo*.
 
-    [![GitHub contributors](https://img.shields.io/github/contributors/OpenGeoVis/PVGeo.svg)](https://GitHub.com/OpenGeoVis/PVGeo/graphs/contributors/)
-
 ------
 
 ## Documentation
-All documentation for the code produced from this project is included on the [docs website](http://docs.pvgeo.org). This website contains a high level explanation of all of the produced plugins (filters, readers, sources, and sinks) and macros with detailed use examples with other overarching project documentation. Use the menu bar at the top to explore this website and to find all the examples for plugins, macros, and more as you need. There are also details on how to [**build your own plugins**](./dev-guide/build-your-own-plugins.md), how to [**export data scenes**](./pvmacros/export/exportvtkjs.md), and transferring your complex data scenes into [**virtual reality**](./virtual-reality/entering-virtual-reality.md).
+
+All documentation for the code produced from this project is included on the [**docs website**](http://docs.pvgeo.org). This website contains a high level explanation of all of the produced plugins (filters, readers, sources, and sinks) and macros with detailed use examples with other overarching project documentation. Use the menu bar at the top to explore this website and to find all the examples for plugins, macros, and more as you need. There are also details on how to [**build your own plugins**](./dev-guide/build-your-own-plugins.md), how to [**export data scenes**](./pvmacros/export/exportvtkjs.md), and transferring your complex data scenes into [**virtual reality**](./virtual-reality/entering-virtual-reality.md).
 
 The purpose of including all this extra documentation is to provide a convenient location for geoscientists to learn how to tailor ParaView to their needs because data representation and communication are an integral part of success in science. To efficiently represent our spatial data is the first step to becoming successful and productive geoscientists. This is the principle behind why we are publishing this documentation along with the code in the repository. Not only do we want to communicate the effort and motivation for this project efficiently, but we want to empower others to communicate their scientific endeavors through spatial visualizations effectively.
 
