@@ -8,7 +8,8 @@ install:
     - pip install -r requirements.txt
 script:
     - export PYTHONPATH="$PWD:$PYTHONPATH"
-    - mkdocs build
+    - python -m mkdocs --version
+    - python -m mkdocs build
 notifications:
   email:
     recipients:
@@ -27,5 +28,5 @@ after_success:
     - git config --global user.name "${GH_NAME}"
     - git config --global user.email "${GH_EMAIL}"
     - git remote set-url origin ${REMOTE}
-    - mkdocs gh-deploy --force
-    - mkdocs --version
+    - python -m mkdocs gh-deploy
+    - python -m mkdocs --version

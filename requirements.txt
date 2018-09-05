@@ -3,5 +3,5 @@ scipy==1.1.0
 vtk==8.1.0
 colour-runner==0.0.5
 codecov==2.0.15
-mkdocs>=1.0.1
+mkdocs>=1.0.3
 mkdocs-material>=3.0.3
