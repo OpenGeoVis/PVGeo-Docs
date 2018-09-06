@@ -45,7 +45,7 @@ Check out the [**Demo Page**](http://demo.pvgeo.org) to see video demos and inte
 
 -------
 
-## About the Authors [![GitHub contributors](https://img.shields.io/github/contributors/OpenGeoVis/PVGeo.svg)](https://GitHub.com/OpenGeoVis/PVGeo/graphs/contributors/) [![Open Source](https://img.shields.io/badge/open--source-yes-brightgreen.svg)](https://opensource.com/resources/what-open-source)
+## About the Authors [![GitHub contributors](https://img.shields.io/github/contributors/OpenGeoVis/PVGeo.svg?logo=github&logoColor=white)](https://GitHub.com/OpenGeoVis/PVGeo/graphs/contributors/) [![Open Source](https://img.shields.io/badge/open--source-yes-brightgreen.svg)](https://opensource.com/resources/what-open-source)
 
 The *PVGeo* code library is managed by [**Bane Sullivan**](http://banesullivan.com), graduate student in the Hydrological Science and Engineering interdisciplinary program at the Colorado School of Mines under Whitney Trainor-Guitton. If you have questions please inquire with [**info@pvgeo.org**](mailto:info@pvgeo.org) or join the *PVGeo* community on Slack: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
 
