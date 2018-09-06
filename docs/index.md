@@ -1,12 +1,13 @@
 # *PVGeo*
 
 [![Vimeo](https://img.shields.io/badge/demos-grey.svg?logo=vimeo)](https://vimeo.com/user82050125)
-[![Website Build](https://img.shields.io/travis/OpenGeoVis/PVGeo-Website/master.svg?label=website)](https://travis-ci.org/OpenGeoVis/PVGeo-Website)
 [![Documentation Status](https://readthedocs.org/projects/pvgeo/badge/?version=latest)](http://docs.pvgeo.org/en/latest/?badge=latest)
 [![PyPI](https://img.shields.io/pypi/v/PVGeo.svg?logo=python)](https://pypi.org/project/PVGeo/)
-[![Slack Bage](https://img.shields.io/badge/Slack-PVGeo-4B0082.svg?logo=slack)](http://slack.pvgeo.org)
 [![Build Status](https://img.shields.io/travis/OpenGeoVis/PVGeo/master.svg?label=build&logo=travis)](https://travis-ci.org/OpenGeoVis/PVGeo)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/it085qovtnb0mcgr/branch/master?svg=true)](https://ci.appveyor.com/project/banesullivan/pvgeo/branch/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b9e8d0ef37a4f70a2d02c0d53ed096f)](https://www.codacy.com/app/banesullivan/PVGeo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OpenGeoVis/PVGeo&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master)
+
 
 *PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library:
 
