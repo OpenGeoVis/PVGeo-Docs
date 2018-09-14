@@ -1,7 +1,6 @@
 # *PVGeo*
 
 [![Vimeo](https://img.shields.io/badge/demos-grey.svg?logo=vimeo)](https://vimeo.com/user82050125)
-![Twitter Follow](https://img.shields.io/twitter/follow/pyPVGeo.svg?style=social&label=Follow)
 [![Documentation Status](https://readthedocs.org/projects/pvgeo/badge/?version=latest)](http://docs.pvgeo.org/en/latest/?badge=latest)
 [![PyPI](https://img.shields.io/pypi/v/PVGeo.svg?logo=python)](https://pypi.org/project/PVGeo/)
 [![Build Status](https://img.shields.io/travis/OpenGeoVis/PVGeo/master.svg?label=build&logo=travis)](https://travis-ci.org/OpenGeoVis/PVGeo)
@@ -10,9 +9,9 @@
 [![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master)
 
 
-*PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library:
+*PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library and follow us on Twitter to keep up:
 
-<script async defer src="http://slack.pvgeo.org/slackin.js?large"></script>
+<script async defer src="http://slack.pvgeo.org/slackin.js?large"></script> <a href="https://twitter.com/pyPVGeo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @pyPVGeo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ??? question "Suggestions?"
