@@ -1,6 +1,7 @@
 # *PVGeo*
 
 [![Vimeo](https://img.shields.io/badge/demos-grey.svg?logo=vimeo)](https://vimeo.com/user82050125)
+![Twitter Follow](https://img.shields.io/twitter/follow/pyPVGeo.svg?style=social&label=Follow)
 [![Documentation Status](https://readthedocs.org/projects/pvgeo/badge/?version=latest)](http://docs.pvgeo.org/en/latest/?badge=latest)
 [![PyPI](https://img.shields.io/pypi/v/PVGeo.svg?logo=python)](https://pypi.org/project/PVGeo/)
 [![Build Status](https://img.shields.io/travis/OpenGeoVis/PVGeo/master.svg?label=build&logo=travis)](https://travis-ci.org/OpenGeoVis/PVGeo)
