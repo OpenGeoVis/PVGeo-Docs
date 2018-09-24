@@ -18,7 +18,7 @@
 
 ```py
 import numpy as np
-from PVGeo.filters import PointsToPolyData, RotatePoints
+from PVGeo import pointsToPolyData, RotatePoints
 
 ##############
 # Create some input points as `vtkPolyData`
@@ -30,7 +30,7 @@ x = np.reshape(x, (len(x), -1))
 y = np.reshape(y, (len(y), -1))
 z = np.reshape(z, (len(z), -1))
 pts = np.concatenate((x, y, z), axis=1)
-pdi = PointsToPolyData(pts)
+pdi = pointsToPolyData(pts)
 ##############
 
 # Use the filter:

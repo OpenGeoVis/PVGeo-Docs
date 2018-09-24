@@ -7,8 +7,12 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 ### Point/Line Sets
 
 - [Add Cell Connectivity to Points](./filters-general/add-cell-connectivity-to-points.md): Generates a line of a series of points
+- [Append Cell Centers](./filters-general/append-cell-centers.md): Get the cell center coordinates as a 3-tuple array
+- [Convert Units](./filters-general/convert-units.md): Convert the units of the spatial reference
+- [Extract Cell Centers](./filters-general/extract-cell-centers.md): Extract the point data for a dataset's cell centers
 - [Extract Points](./filters-general/extract-points.md): Extract points and attributes form a dataset with valid point data
-- [Points to PolyData](./filters-general/points-to-polydata.md): A helper to generate `vtkPolyData` for visualization from a 2D NumPy array of points
+- [Iterate Over Points](./filters-general/iterate-over-points.md): Use a series of points for time varying a data scene
+- [Longitude/Latitude to UTM](./filters-general/lonlat-to-utm.md): Change reference frames
 - [Points to Tube](./filters-general/points-to-tube.md): Generates a tube/cylinder from a series of points
 - [Rotate Points](./filters-general/rotate-points.md): Rotates the point data on an XY plane.
 - [Rotation Tool](./filters-general/rotation-tool.md): A set of helpers for coordinate rotations
@@ -18,18 +22,21 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 
 - [Array Math](./filters-general/array-math.md): Perform a mathematical operation between two arrays in a given data set
 - [Normalize Array](./filters-general/normalize-array.md): Perform a mathematical operation on a single array in a given dataset
+- [Percent Threshold](./filters-general/percent-threshold.md): Threshold based on percentiles
 
 ### Slicing
 
 - [Many Slices Along Axis](./filters-general/many-slices-along-axis.md): Generate *N* slices of a dataset along a specified axis
 - [Many Slices Along Points](./filters-general/many-slices-along-points.md): Generate *N* slices of a dataset along a series of points
 - [Slice Through Time](./filters-general/slice-through-time.md): Generate a slice of a dataset that translates through time (animated)
+- [Slide Slice Along Points](./filters-general/slide-slice-along-points.md): Use a slider bar to move a slice along a series of points
 
 ### Table Operations
 
 - [Combine Tables](./filters-general/combine-tables.md): Combine two tables with the same number of rows
-- [Reshape Table](./filters-general/reshape-table.md): Treat a table as a 2D array and reshape it to a differently sized 2D array
 - [Extract Array](./filters-general/extract-array.md): Extract any data array fom a dataset to create a `vtkTable` containing that array.
+- [Reshape Table](./filters-general/reshape-table.md): Treat a table as a 2D array and reshape it to a differently sized 2D array
+- [Split Table On Array](./filters-general/split-table-on-array.md): Split a table based on values in a given array
 
 
 -----
@@ -59,8 +66,9 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 - [Table to Uniform Grid](./grids/table-to-uniform-grid.md): Generate a uniform grid from a table
 - [Translate Origin of Grid](./grids/translate-origin-of-grid.md): Translate the corner / origin of an input grid
 
-### Surfer
+### File IO
 
+- [ESRI Grid Reader](./grids/esri-grid.md): Reader for ESRI's ASCII grid format
 - [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
 
 

@@ -21,7 +21,7 @@ This filter allow the user to select an array from the input data set to be norm
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import NormalizeArray
 
 ##################
@@ -31,7 +31,7 @@ inp = vtk.vtkTable()
 n = 400
 title = 'Array 0'
 arr = np.random.random(n) # Table 0
-inp.AddColumn(_helpers.numToVTK(arr, title))
+inp.AddColumn(PVGeo.convertArray(arr, title))
 ###################
 
 # Apply the filter

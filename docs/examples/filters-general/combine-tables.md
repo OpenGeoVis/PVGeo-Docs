@@ -20,7 +20,7 @@
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import CombineTables
 
 ##################################
@@ -32,10 +32,10 @@ n = 100
 titles = ('Array 0', 'Array 1', 'Array 2')
 arr0 = np.random.random(n) # Table 0
 arr1 = np.random.random(n) # Table 0
-t0.AddColumn(_helpers.numToVTK(arr0, titles[0]))
-t0.AddColumn(_helpers.numToVTK(arr1, titles[1]))
+t0.AddColumn(PVGeo.convertArray(arr0, titles[0]))
+t0.AddColumn(PVGeo.convertArray(arr1, titles[1]))
 arr2 = np.random.random(n) # Table 1
-t1.AddColumn(_helpers.numToVTK(arr2, titles[2]))
+t1.AddColumn(PVGeo.convertArray(arr2, titles[2]))
 arrs = [arr0, arr1, arr2]
 
 ##################################

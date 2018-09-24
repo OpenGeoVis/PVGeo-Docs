@@ -22,7 +22,7 @@ This filter will take a `vtkTable` object and reshape it. This filter essentiall
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import ReshapeTable
 
 # Create some input table
@@ -37,9 +37,9 @@ arrs[0] = np.random.random(n)
 arrs[1] = np.random.random(n)
 arrs[2] = np.random.random(n)
 
-t0.AddColumn(_helpers.numToVTK(arrs[0], titles[0]))
-t0.AddColumn(_helpers.numToVTK(arrs[1], titles[1]))
-t0.AddColumn(_helpers.numToVTK(arrs[2], titles[2]))
+t0.AddColumn(PVGeo.convertArray(arrs[0], titles[0]))
+t0.AddColumn(PVGeo.convertArray(arrs[1], titles[1]))
+t0.AddColumn(PVGeo.convertArray(arrs[2], titles[2]))
 
 # Use the filter to reshape the table
 order = 'F'

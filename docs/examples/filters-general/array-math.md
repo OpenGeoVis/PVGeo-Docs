@@ -22,7 +22,7 @@ This filter allows the user to select two input data arrays on which to perform 
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import ArrayMath
 
 # Create some input data. This can be any `vtkDataObject`
@@ -31,8 +31,8 @@ inp = vtk.vtkTable()
 n = 400
 arr0 = np.random.random(n)
 arr1 = np.random.random(n)
-inp.AddColumn(_helpers.numToVTK(arr0, 'Array 0'))
-inp.AddColumn(_helpers.numToVTK(arr1, 'Array 1'))
+inp.AddColumn(PVGeo.convertArray(arr0, 'Array 0'))
+inp.AddColumn(PVGeo.convertArray(arr1, 'Array 1'))
 ```
 
 ```py

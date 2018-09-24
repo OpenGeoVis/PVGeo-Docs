@@ -36,7 +36,7 @@ Another example is to use one of the data files from [this website](http://www.t
 ```py
 import numpy as np
 import vtk
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.grids import TableToGrid
 
 ###############################
@@ -49,9 +49,9 @@ titles = ('Array 0', 'Array 1', 'Array 2')
 arrs[0] = np.random.random(n)
 arrs[1] = np.random.random(n)
 arrs[2] = np.random.random(n)
-table.AddColumn(_helpers.numToVTK(arrs[0], titles[0]))
-table.AddColumn(_helpers.numToVTK(arrs[1], titles[1]))
-table.AddColumn(_helpers.numToVTK(arrs[2], titles[2]))
+table.AddColumn(PVGeo.convertArray(arrs[0], titles[0]))
+table.AddColumn(PVGeo.convertArray(arrs[1], titles[1]))
+table.AddColumn(PVGeo.convertArray(arrs[2], titles[2]))
 ###############################
 
 # Use filter

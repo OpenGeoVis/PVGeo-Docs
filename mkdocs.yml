@@ -76,19 +76,26 @@ nav:
     #- Base Classes: examples/base.md
     - General Filters:
         - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
+        - Append Cell Centers: examples/filters-general/append-cell-centers.md
         - Array Math: examples/filters-general/array-math.md
         - Combine Tables: examples/filters-general/combine-tables.md
+        - Convert Units: examples/filters-general/convert-units.md
         - Extract Array: examples/filters-general/extract-array.md
+        - Extract Cell Centers: examples/filters-general/extract-cell-centers.md
         - Extract Points: examples/filters-general/extract-points.md
+        - Iterate Over Points: examples/filters-general/iterate-over-points.md
+        - Longitude/Latitude to UTM: examples/filters-general/lonlat-to-utm.md
         - Many Slices Along Axis: examples/filters-general/many-slices-along-axis.md
         - Many Slices Along Points: examples/filters-general/many-slices-along-points.md
         - Normalize Array: examples/filters-general/normalize-array.md
-        - Points to PolyData: examples/filters-general/points-to-polydata.md
+        - Percent Threshold: examples/filters-general/percent-threshold.md
         - Points to Tube: examples/filters-general/points-to-tube.md
         - Reshape Table: examples/filters-general/reshape-table.md
         - Rotate Points: examples/filters-general/rotate-points.md
         - Rotation Tool: examples/filters-general/rotation-tool.md
         - Slice Through Time: examples/filters-general/slice-through-time.md
+        - Slide Slice Along Points: examples/filters-general/slide-slice-along-points.md
+        - Split Table On Array: examples/filters-general/split-table-on-array.md
         - Voxelize Points: examples/filters-general/voxelize-points.md
     - General Readers:
         - Binary Packed Data: examples/readers-general/binary-packed-data.md
@@ -96,6 +103,7 @@ nav:
         - Madagascar SSRSF: examples/readers-general/madagascar-ssrsf.md
         - XYZ Files: examples/readers-general/xyz-reader.md
     - Grid Tools:
+        - ESRI Grid Reader: examples/grids/esri-grid.md
         - Extract Topography: examples/grids/extract-topography.md
         - Flip Grid Axii: examples/grids/reverse-grid-axii.md
         - Surfer Grids: examples/grids/surfer-grid.md
@@ -104,6 +112,8 @@ nav:
     - GSLIB & SGeMS:
         - GSLib Tables: examples/gslib/gslib.md
         - SGeMS Grids: examples/gslib/sgems-grid.md
+    - Interface:
+        - Points to PolyData: examples/interface/points-to-polydata.md
     - Model Building:
         - Create Earth Source: examples/model-building/create-earth-source.md
         - Create Rectilinear Grid: examples/model-building/create-rectilinear-grid.md

@@ -20,7 +20,7 @@ This filter will translate the origin of `vtkImageData` to any specified Corner 
 ```py
 import numpy as np
 import vtk
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.grids import TranslateGridOrigin
 
 ###############################
@@ -33,7 +33,7 @@ idi.SetOrigin(100, 100, 100)
 n = 400
 title = 'Array 0'
 arr = np.random.random(n)
-idi.GetPointData().AddArray(_helpers.numToVTK(arr, title))
+idi.GetPointData().AddArray(PVGeo.convertArray(arr, title))
 ###############################
 
 # Use the filter

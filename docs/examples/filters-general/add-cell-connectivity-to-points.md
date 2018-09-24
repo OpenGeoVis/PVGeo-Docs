@@ -16,7 +16,7 @@ First, lets generate some data on the ParaView pipeline. For this example, we wa
 
 ```py
 import numpy as np
-from PVGeo.filters import PointsToPolyData
+from PVGeo import pointsToPolyData
 
 def path1(y):
     """Equation: x = a(y-h)^2 + k"""
@@ -32,7 +32,7 @@ coords = np.vstack((x,y,zo)).T
 np.random.shuffle(coords)
 
 pdo = self.GetOutput()
-pdo.ShallowCopy(PointsToPolyData(coords))
+pdo.ShallowCopy(pointsToPolyData(coords))
 ```
 
 !!! note
@@ -55,7 +55,7 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ```py
 import numpy as np
-from PVGeo.filters import PointsToPolyData, AddCellConnToPoints
+from PVGeo import pointsToPolyData, AddCellConnToPoints
 
 ############################################
 ######### GENERATE SOME POINT DATA #########
@@ -74,7 +74,7 @@ coords = np.vstack((x,y,zo)).T
 np.random.shuffle(coords)
 
 # Make a VTK data object for the filter to use
-vtkPoints = PointsToPolyData(coords)
+vtkPoints = pointsToPolyData(coords)
 
 ############################################
 

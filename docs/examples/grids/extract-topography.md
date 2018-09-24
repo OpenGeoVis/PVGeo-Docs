@@ -66,7 +66,7 @@ The resulting grid with cells above the topography extracted will look like the 
 <!---
 ```py
 import numpy as np
-from PVGeo.filters import PointsToPolyData
+from PVGeo import pointsToPolyData
 from PVGeo.grids import CreateTensorMesh, ExtractTopography
 
 

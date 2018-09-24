@@ -11,7 +11,7 @@ The `RotationTool` is not necessarily an algorithm or plugin but a class full of
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import RotationTool
 
 

@@ -1,5 +1,5 @@
 !!! info
-    This example will demonstrate how to slice an input data set that will move along an axis as time progresses.
+    This example will demonstrate how to slice an input data set and use a slider bar to slide that slice along a series of points
 
 ## Overview
 
@@ -14,7 +14,7 @@
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.slicing.SliceThroughTime}"
+!!! info "{lookup:PVGeo.filters.slicing.SlideSliceAlongPoints}"
 
 <!---
 
@@ -23,7 +23,7 @@ import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
 import PVGeo
-from PVGeo.filters import SliceThroughTime
+from PVGeo.filters import SlideSliceAlongPoints
 
 
 ```

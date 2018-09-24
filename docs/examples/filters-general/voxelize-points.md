@@ -28,8 +28,8 @@ Below is a demonstration of this filter transforming point data (XYZ + attribute
 ```py
 import numpy as np
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
-from PVGeo.filters import PointsToPolyData, VoxelizePoints
+import PVGeo
+from PVGeo import pointsToPolyData, VoxelizePoints
 
 
 # Make a mesh grid
@@ -40,8 +40,8 @@ g = np.meshgrid(x, y, z)
 # Convert to XYZ points
 points = np.vstack(map(np.ravel, g)).T
 rand = np.random.random(len(points))
-vtkpoints = PointsToPolyData(points)
-vtkpoints.GetPointData().AddArray(_helpers.numToVTK(rand, 'Random'))
+vtkpoints = pointsToPolyData(points)
+vtkpoints.GetPointData().AddArray(PVGeo.convertArray(rand, 'Random'))
 
 # Use filter
 v = VoxelizePoints()

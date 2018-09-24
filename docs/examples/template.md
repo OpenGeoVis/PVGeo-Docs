@@ -21,7 +21,7 @@ Take a look at `XXXXX`'s code docs [here](http://docs.pvgeo.org).
 import numpy as np
 import vtk
 from vtk.numpy_interface import dataset_adapter as dsa
-from PVGeo import _helpers
+import PVGeo
 from PVGeo.filters import CombineTables
 
 ##################################
