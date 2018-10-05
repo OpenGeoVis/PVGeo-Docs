@@ -106,6 +106,7 @@ nav:
         - ESRI Grid Reader: examples/grids/esri-grid.md
         - Extract Topography: examples/grids/extract-topography.md
         - Flip Grid Axii: examples/grids/reverse-grid-axii.md
+        - Landsat Rasters: examples/grids/raster.md
         - Surfer Grids: examples/grids/surfer-grid.md
         - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
         - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md

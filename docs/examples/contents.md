@@ -69,6 +69,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 ### File IO
 
 - [ESRI Grid Reader](./grids/esri-grid.md): Reader for ESRI's ASCII grid format
+- [Landsat Rasters](./grids/raster.md): Read Landsat imagery/bands via XML metadata file
 - [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
 
 
