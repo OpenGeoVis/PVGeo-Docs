@@ -91,11 +91,6 @@ simply install VTK through `pip`:
 (PVGeoEnv27) $ pip install vtk
 ```
 
-Test the install (non-Windows):
-```bash
-(PVGeoEnv27) $ python -m PVGeo test
-```
-
 
 ## Install PVGeo to ParaView
 
