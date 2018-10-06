@@ -55,13 +55,14 @@ The *PVGeo* code library is managed by [**Bane Sullivan**](http://banesullivan.c
 
 ------
 
+<!--
+
 ## Documentation
 
 All documentation for the code produced from this project is included on the [**docs website**](http://docs.pvgeo.org). This website contains a high level explanation of all of the produced plugins (filters, readers, sources, and sinks) and macros with detailed use examples with other overarching project documentation. Use the menu bar at the top to explore this website and to find all the examples for plugins, macros, and more as you need. There are also details on how to [**build your own plugins**](./dev-guide/build-your-own-plugins.md), how to [**export data scenes**](./pvmacros/export/exportvtkjs.md), and transferring your complex data scenes into [**virtual reality**](./virtual-reality/entering-virtual-reality.md).
 
 The purpose of including all this extra documentation is to provide a convenient location for geoscientists to learn how to tailor ParaView to their needs because data representation and communication are an integral part of success in science. To efficiently represent our spatial data is the first step to becoming successful and productive geoscientists. This is the principle behind why we are publishing this documentation along with the code in the repository. Not only do we want to communicate the effort and motivation for this project efficiently, but we want to empower others to communicate their scientific endeavors through spatial visualizations effectively.
 
-<!--
 ### Plugin Documentation
 There is a page dedicated to every plugin and on these pages, you will find implementation details, parameters, code quirks, and general usage information. We are working to have an example for every reader and filter so that users can get a feel for what is going on and how they might apply these plugins to address their needs. Since almost all geoscientific data is proprietary, these tutorials will likely come late so that we can find good open data sets and models that users can find outside of this repo for free.
 
@@ -69,3 +70,6 @@ There is a page dedicated to every plugin and on these pages, you will find impl
 Each macro produced in `pvmacros` will have a distinct purpose, be it to export isometric screenshots of any data scene or create various types of slices through a data volume. The macros will have broad applications and be formatted to work with generally any data scene or data of specific formats so that they can be easily expanded upon to complete specific tasks. For the macros, we will try to immediately have sample data and a tutorial upon publishing with documentation of what we are doing and why.
 
 -->
+
+
+<a class="twitter-timeline" data-height="750" data-theme="light" href="https://twitter.com/pyPVGeo?ref_src=twsrc%5Etfw">Tweets by pyPVGeo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
