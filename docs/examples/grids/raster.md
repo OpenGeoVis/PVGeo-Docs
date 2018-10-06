@@ -22,10 +22,17 @@ Go ahead and load up all the data! If you only want a few bands, then select the
 
 ### Use RGB
 
-If your raster has enough bands for RGB data, then select the *Create Colors* checkbox, display by the new *Colors* array and turn off *Map Scalars* in the properties to display a true color image.
+If your raster has enough bands for RGB data, then select the a *Color Scheme* from the drop down menu.
+This will add a new RGB data array for your raster set. To see the RGB values in the Render View, turn off *Map Scalars* in the properties to display a true color image.
 
 !!! warning
-    *Create Colors* is an experimental feature at the moment. We recommend selecting the bands you need then using PVGeo's `ArraysToRGBA` filter.
+    *Color Scheme* uses predefined color schemes for the raster set's sattelite which ``espatools`` manages on the backend. You may need to load all data arrays/bands for this to work. We recommend selecting the bands you need then using PVGeo's `ArraysToRGBA` filter.
+
+Select a *Color Scheme*:
+
+<div style="text-align: center;"><img src="docs/examples/grids/images/raster-color-scheme.png" alt="menu" width="50%"></div>
+
+Be sure to turn off *Map Scalars* to see the RGB values:
 
 <div style="text-align: center;"><img src="docs/examples/grids/images/raster-map-scalars.png" alt="menu" width="50%"></div>
 
