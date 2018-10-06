@@ -78,6 +78,7 @@ nav:
         - Add Cell Connectivity to Points: examples/filters-general/add-cell-connectivity-to-points.md
         - Append Cell Centers: examples/filters-general/append-cell-centers.md
         - Array Math: examples/filters-general/array-math.md
+        - Arrays to RGBA: examples/filters-general/arrays-to-rgba.md
         - Combine Tables: examples/filters-general/combine-tables.md
         - Convert Units: examples/filters-general/convert-units.md
         - Extract Array: examples/filters-general/extract-array.md
@@ -110,6 +111,7 @@ nav:
         - Surfer Grids: examples/grids/surfer-grid.md
         - Table to Uniform Grid: examples/grids/table-to-uniform-grid.md
         - Translate Origin of Grid: examples/grids/translate-origin-of-grid.md
+        - Write Cell Centers: examples/grids/write-cell-centers.md
     - GSLIB & SGeMS:
         - GSLib Tables: examples/gslib/gslib.md
         - SGeMS Grids: examples/gslib/sgems-grid.md
@@ -123,8 +125,11 @@ nav:
         - Animate TBM: examples/tunneling/animate-tbm.md
     - UBC Mesh Tools:
         - Append Model: examples/ubc/add-model.md
+        - Read Gravity Observations: examples/ubc/grav-obs.md
+        - Read Magnetics Observations: examples/ubc/mag-obs.md
         - Read OcTree: examples/ubc/octree.md
         - Read Tensor Meshes: examples/ubc/tensor-grids.md
+        - Read Topography: examples/ubc/topo.md
 
 - Docs:
     - Docs: http://docs.pvgeo.org

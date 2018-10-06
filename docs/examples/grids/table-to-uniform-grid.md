@@ -1,5 +1,5 @@
 !!! warning
-    This filter documentation is deprecated
+    This filter documentation is deprecated. Please use `TableToTimeGrid`
 
 !!! bug
     This filter has some quirks and we are working to completely overhaul it to have correct SEPlib axial conventions (d1=z, d2=x, d3=y) and to be more robust. This documentation is very deprecated.

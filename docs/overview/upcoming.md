@@ -11,7 +11,7 @@ More documentation is soon to come. We want to do it right: with tutorials, exam
 - [ ] **Open Mining Format:** Project files containg all data types. More info found [**here**](https://github.com/GMSGDataExchange/omf). *NOTE: We opened a [**pull request for omf**](https://github.com/GMSGDataExchange/omf/pull/27) that needs to be addressed and finished before further progress on this.*
 - [ ] **Well logs:** Readers for common formats (LAS) and easy ways to project well logs in XYZ space. [Details here](http://www.cwls.org/las/)
 - [ ] **ESRI shape files:** Details [**here**](https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf) and [**here**](https://en.wikipedia.org/wiki/Shapefile)
-- [ ] **ESRI Grid:** Details [**here**](https://en.wikipedia.org/wiki/Esri_grid) and [**here**](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/esri-grid-format.htm)
+- [x] [**ESRI Grid**](../examples/grids/esri-grid.md): 2D ESRI ASCII and binary grid data files
 - [x] [**UBC Tensor Meshes**](../examples/ubc/tensor-grids.md): both 2D and 3D implemented with time series capabilities
 - [x] [**UBC OcTree Mesh**](../examples/ubc/octree.md): fully implemented but we need test mesh-model file pairs with time series capabilities
 

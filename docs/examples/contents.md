@@ -21,6 +21,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 ### Mathematical Operations
 
 - [Array Math](./filters-general/array-math.md): Perform a mathematical operation between two arrays in a given data set
+- [Arrays to RGBA](./filters-general/arrays-to-rgba.md): Use a datasets arrays to create RGB colors and transparency
 - [Normalize Array](./filters-general/normalize-array.md): Perform a mathematical operation on a single array in a given dataset
 - [Percent Threshold](./filters-general/percent-threshold.md): Threshold based on percentiles
 
@@ -71,6 +72,7 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 - [ESRI Grid Reader](./grids/esri-grid.md): Reader for ESRI's ASCII grid format
 - [Landsat Rasters](./grids/raster.md): Read Landsat imagery/bands via XML metadata file
 - [Surfer Grids](./grids/surfer-grid.md): Reader and writer for the Surfer grid format.
+- [Write Cell Centers](./grids/write-cell-centers.md): Write cell center coordinates with cell data arrays
 
 
 -----
@@ -94,6 +96,18 @@ Here is an outline of all the *PVGeo* example pages categorized by suite then by
 -----
 ## UBC Mesh Tools
 
+
+### Meshes and Models
+
 - [Append Model](./ubc/add-model.md): Add a model attribute to a UBC style grid (supports time series)
 - [Read OcTree](./ubc/octree.md): Read an UBC OcTree grid file and a single time series model files
 - [Read Tensor Meshes](./ubc/tensor-grids.md): Read an UBC Tensor Mesh grid file and a single time series model files
+
+### Data Files
+
+- [Read Gravity Observations](./ubc/grav-obs.md): Read raw gravity gradient observations file
+- [Read Magnetics Observations](./ubc/mag-obs.md): Read raw magnetics observations file
+- [Read Topography](./ubc/topo.md): Read XYZ topography file in UBC format
+
+
+-----
