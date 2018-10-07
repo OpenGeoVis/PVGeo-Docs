@@ -8,7 +8,10 @@ source: PV_Composite_Writer.py
 
     See the [**source**](#__source) section for the resulting output.
 
-The functionality using decorated `VTKPythonAlgorithmBase` classes as ParaView plugins has a composite support option for the `smdomain` input property that is incredibly simple to use with filter algorithms yet can be tricky to use for writer algorithms.
+The functionality using decorated `VTKPythonAlgorithmBase` classes as ParaView
+plugins has a composite support option for the `smdomain` input property that is
+incredibly simple to use with filter algorithms yet can be tricky to use for
+writer algorithms.
 
 ```py hl_lines="3"
 @smproxy.writer(...)
@@ -18,7 +21,15 @@ class MyWriter(VTKPythonAlgorithmBase):
        ...
 ```
 
-The provided snippet in the [**source**](#__source) section of this page provides a simple base class for a user to inherit functionality which is a modification of PVGeo’s `WriterBase` algorithm ({lookup:PVGeo.base.WriterBase}). In this example I demonstrate the use of this base class through creating a writer algorithm that will save out XYZ+attribute data of the cell centers and cell data for any given input datasets. This solution handles altering the given filename to save out each object in the composite dataset separately by saving each block out in `PerformWriteOut`  method that is repeatedly called by `RequestData` explicitly.
+The provided snippet in the [**source**](#__source) section of this page
+provides a simple base class for a user to inherit functionality which is a
+modification of PVGeo’s `WriterBase` algorithm ({lookup:PVGeo.base.WriterBase}).
+In this example I demonstrate the use of this base class through creating a
+writer algorithm that will save out XYZ+attribute data of the cell centers and
+cell data for any given input datasets. This solution handles altering the given
+filename to save out each object in the composite dataset separately by saving
+each block out in `PerformWriteOut`  method that is repeatedly called by
+`RequestData` explicitly.
 
 !!! note
     Note that we must use the `composite_data_supported=True` flag for the `@smproxy.writer(...)` declaration as well as append allowable input types within the algorithms `FillInputPortInformation` method.
