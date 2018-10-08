@@ -46,7 +46,7 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.poly.PointsToTube}"
+!!! info "{lookup:PVGeo.filters.xyz.PointsToTube}"
 
 ```py
 import numpy as np

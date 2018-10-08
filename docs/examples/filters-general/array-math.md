@@ -16,7 +16,7 @@ This filter allows the user to select two input data arrays on which to perform 
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.poly.ArrayMath}"
+!!! info "{lookup:PVGeo.filters.math.ArrayMath}"
 
 ```py
 import numpy as np

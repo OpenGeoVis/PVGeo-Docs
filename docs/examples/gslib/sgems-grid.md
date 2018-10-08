@@ -127,4 +127,4 @@ reader.UpdateTimeStep(25)
 
 The SGeMS Grid writer takes `vtkImageData` objects as an input and saves them to the SGeMS Grid file format.
 
-{lookup:PVGeo.gslib.write.WriteImageDataToSGeMS}
+{lookup:PVGeo.gslib.sgems.WriteImageDataToSGeMS}

@@ -15,7 +15,7 @@ This filter allow the user to select an array from the input data set to be norm
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.poly.NormalizeArray}"
+!!! info "{lookup:PVGeo.filters.math.NormalizeArray}"
 
 ```py
 import numpy as np

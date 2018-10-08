@@ -23,6 +23,6 @@ UBC Tensor Mesh 2D/3D models are defined using a 2-file format. The "mesh" file 
 For example files to use with this reader, download the example from [the GIFtools Cookbook website](http://giftoolscookbook.readthedocs.io/en/latest/content/AtoZ/NS/index.html) and load the 3D mesh model into ParaView by selecting **File->Open...** and choose `TKC_finermesh.msh` as the mesh file to open using the **Read UBC Mesh 2D/3D Two-File Format** reader. Once the reader is on the pipeline, edit the FileName Model Parameter by choosing `CompleteTask/TKCgeologyImage_mod_sus.mod` as the model file. A 3D volume of data should automatically be built and visualized of the model from this example. Go ahead and slice through the model.
 
 
-!!! info "{lookup:PVGeo.ubc.tensor_mesh.TensorMeshReader}"
+!!! info "{lookup:PVGeo.ubc.tensor.TensorMeshReader}"
 
-!!! info "{lookup:PVGeo.ubc.tensor_mesh.TensorMeshAppender}"
+!!! info "{lookup:PVGeo.ubc.tensor.TensorMeshAppender}"

@@ -51,7 +51,7 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.poly.AddCellConnToPoints}"
+!!! info "{lookup:PVGeo.filters.xyz.AddCellConnToPoints}"
 
 ```py
 import numpy as np

@@ -3,4 +3,4 @@
 
 <!--- TODO --->
 
-!!! info "{lookup:PVGeo.model_build.evenModel.CreateUniformGrid}"
+!!! info "{lookup:PVGeo.model_build.grids.CreateUniformGrid}"

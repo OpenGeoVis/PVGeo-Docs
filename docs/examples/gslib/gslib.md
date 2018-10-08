@@ -60,4 +60,4 @@ The output of this reader is a `vtkTable` of the input data. The table will have
 
 The GSLib format writer takes `vtkTable`s as an input and saves them to the GSLib file format.
 
-{lookup:PVGeo.gslib.write.WriteTableToGSLib}
+{lookup:PVGeo.gslib.gslib.WriteTableToGSLib}

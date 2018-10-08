@@ -14,7 +14,7 @@
 
 ## Python Example
 
-!!! info "{lookup:PVGeo.filters.poly.PercentThreshold}"
+!!! info "{lookup:PVGeo.filters.math.PercentThreshold}"
 
 <!---
 
