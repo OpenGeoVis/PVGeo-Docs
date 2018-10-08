@@ -12,20 +12,22 @@ Overall, the ``LandsatReader`` in PVGeo is meant for direct use in ParaView and 
 
 ## Example
 
-Download any Landsat data from [USGS' Earth Explorer](https://earthexplorer.usgs.gov) and open the XML file adjacent to the data files using PVGeo's Landsat Reader in ParaView.
+Download any Landsat data from [**USGS' Earth Explorer**](https://earthexplorer.usgs.gov) and open the XML file adjacent to the data files using PVGeo's Landsat Reader in ParaView.
 
 For this example, we downloaded Landsat 8 imagery over Golden & Boulder, Colorado. This raster set is from Path 34 Row 32 during June 27, 2018. The demonstrated dataset comes as a `.tar.gz` compressed dataset which contains 10 bands (`.tif` files) and a few metadata files (`.txt` and `.xml` files). `espatools` is built to parse the `.xml` metadata file to read all of the bands for that dataset and provide a convenient and intuitive means of accessing that metadata along side the raw data in a Python environment. Using PVGeo in ParaView, you can select *File->Open...* and select the `.xml` metadata file and PVGeo will know to use the `LandsatReader` to read all of the bands.
+
 
 ### Select your bands
 Go ahead and load up all the data! If you only want a few bands, then select them from the checklist like the image below:
 
-Select your bands usign the checkboxes. We usually load all of the bands but if you want to conserve memory and have faster file reads, definitely only select the bands you desire.
+Select your bands using the checkboxes. We usually load all of the bands but if you want to conserve memory and have faster file reads, definitely only select the bands you desire.
 
 <div style="text-align: center;"><img src="docs/examples/grids/images/raster-menu.png" alt="menu" width="50%"></div>
 
 After loading you can select any of the bands as data arrays to display in the Render View. Here is an example of Band 3 from our sample dataset:
 
 <div style="text-align: center;"><img src="docs/examples/grids/images/raster-band3.png" alt="band3"></div>
+
 
 ### Use RGB Color Schemes
 
