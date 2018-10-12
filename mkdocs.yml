@@ -161,3 +161,6 @@ nav:
     - Templates: dev-guide/templates.md
     - Snippets:
         Composite Writer: dev-guide/snippets/composite-data-writers.md
+
+- HDF5:
+    - HDF5: http://hdf5.pvgeo.org
