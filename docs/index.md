@@ -8,8 +8,11 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b9e8d0ef37a4f70a2d02c0d53ed096f)](https://www.codacy.com/app/banesullivan/PVGeo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OpenGeoVis/PVGeo&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master)
 
+*PVGeo* is a python package that contains VTK powered tools for data visualization in geophysics which are wrapped for direct use within the application [**ParaView by Kitware**](https://www.paraview.org). These tools are tailored to data visualization in the geosciences with a heavy focus on structured data sets like 2D or 3D time-varying grids.
 
-*PVGeo* is a python package for visualizing geoscientific data and this website documents the entire code base. On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data. Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library and follow us on Twitter to keep up:
+On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data.
+
+Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library and follow us on Twitter to keep up:
 
 <script async defer src="http://slack.pvgeo.org/slackin.js?large"></script> <a href="https://twitter.com/pyPVGeo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @pyPVGeo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
