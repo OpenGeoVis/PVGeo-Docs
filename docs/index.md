@@ -8,7 +8,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b9e8d0ef37a4f70a2d02c0d53ed096f)](https://www.codacy.com/app/banesullivan/PVGeo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OpenGeoVis/PVGeo&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenGeoVis/PVGeo/branch/master)
 
-*PVGeo* is a python package that contains VTK powered tools for data visualization in geophysics which are wrapped for direct use within the application [**ParaView by Kitware**](https://www.paraview.org). These tools are tailored to data visualization in the geosciences with a heavy focus on structured data sets like 2D or 3D time-varying grids.
+*PVGeo* is a Python package that contains VTK powered tools for data visualization in geophysics which are wrapped for direct use within the application [**ParaView by Kitware**](https://www.paraview.org). These tools are tailored to data visualization in the geosciences with a heavy focus on structured data sets like 2D or 3D time-varying grids.
 
 On this website, we provide several examples and tutorials of how to use *PVGeo* in a python environment as well as how to use the ParaView plugins delivered along side the python package for common tasks in the visualization of geoscientific data.
 
