@@ -38,15 +38,12 @@ inp.AddColumn(PVGeo.convertArray(arr1, 'Array 1'))
 ```py
 # Use the filter:
 f = ArrayMath(operation='add', newName='foo')
-f.SetInputArrayToProcess(0, 0, 0, 6, 'Array 0') # field 6 is row data
-f.SetInputArrayToProcess(1, 0, 0, 6, 'Array 1') # field 6 is row data
 # Now get the result
-output = f.Apply(inp)
+output = f.Apply(inp, 'Array 0', 'Array 1')
 
 wout = dsa.WrapDataObject(output)
 arr = wout.RowData['foo']
 assert(np.allclose(arr, arr0+arr1))
-
 ```
 
 ```py

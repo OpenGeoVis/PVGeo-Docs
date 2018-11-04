@@ -36,8 +36,7 @@ inp.AddColumn(PVGeo.convertArray(arr, title))
 
 # Apply the filter
 f = NormalizeArray(normalization='feature_scale', newName='foo')
-f.SetInputArrayToProcess(0, 0, 0, 6, title) # field 6 is row data
-output = f.Apply(inp)
+output = f.Apply(inp, title)
 
 # Check out the result
 wout = dsa.WrapDataObject(output)

@@ -22,7 +22,7 @@ from PVGeo.filters import ExtractPoints
 
 #####################################
 # Have some input data source with valid PointData
-source = PVGeo.model_build.EarthSource()
+source = PVGeo.model_build.GlobeSource()
 source.Update()
 data = source.GetOutput()
 #####################################

@@ -27,9 +27,7 @@ grd = PVGeo.model_build.CreateTensorMesh().Apply()
 # Construct the filter
 filt = ExtractArray()
 # Define the array to extract
-filt.SetInputArrayToProcess(0, 0, 0, 1, 'Random Data')
-
 # Apply the filter on the input
-table = filt.Apply(grd)
+table = filt.Apply(grd, 'Random Data')
 print(table)
 ```

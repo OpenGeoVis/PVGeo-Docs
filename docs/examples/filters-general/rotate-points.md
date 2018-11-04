@@ -18,7 +18,8 @@
 
 ```py
 import numpy as np
-from PVGeo import pointsToPolyData, RotatePoints
+from PVGeo import pointsToPolyData
+from PVGeo.filters import RotatePoints
 
 ##############
 # Create some input points as `vtkPolyData`

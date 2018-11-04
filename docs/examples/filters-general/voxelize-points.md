@@ -29,7 +29,8 @@ Below is a demonstration of this filter transforming point data (XYZ + attribute
 import numpy as np
 from vtk.numpy_interface import dataset_adapter as dsa
 import PVGeo
-from PVGeo import pointsToPolyData, VoxelizePoints
+from PVGeo import pointsToPolyData
+from PVGeo.filters import VoxelizePoints
 
 
 # Make a mesh grid

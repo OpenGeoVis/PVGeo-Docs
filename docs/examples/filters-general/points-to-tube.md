@@ -50,7 +50,8 @@ Remember that in the script given above we shuffle the points to demonstrate tha
 
 ```py
 import numpy as np
-from PVGeo import pointsToPolyData, PointsToTube
+from PVGeo import pointsToPolyData
+from PVGeo.filters import PointsToTube
 
 
 ############################################
