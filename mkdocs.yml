@@ -14,12 +14,16 @@ google_analytics:
 extra:
   disqus: 'pvgeo'
   social: # check https://fontawesome.com/icons?d=gallery for more icons
+    - type: 'twitter'
+      link: 'https://twitter.com/pyPVGeo'
     - type: 'slack'
       link: 'http://slack.pvgeo.org'
     - type: 'github'
       link: 'https://github.com/OpenGeoVis'
     - type: 'envelope'
       link: 'mailto:info@pvgeo.org'
+    - type: 'vimeo'
+      link: 'https://vimeo.com/user82050125'
 
 theme:
     name: material
