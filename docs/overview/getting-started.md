@@ -1,8 +1,3 @@
-!!! warning
-    PVGeo is compatible only with version 5.6.x (the nightly build) of ParaView at this time.
-    You must download the **nightly-build** version of ParaView
-    [found here](https://www.paraview.org/download/)
-
 !!! info
     If you have an idea for a macro, plugin, or would like to see how we would
     address a geoscientific visualization problem with ParaView, please post
@@ -32,16 +27,11 @@ One is a tutorial of the ParaView software and shows the user how to create
 sources, apply filters, and more. The other is a guide on how to do scripting,
 macros, and more intense use of the application.
 
-### Install ParaView 5.6.x
-
-!!! warning
-    PVGeo is compatible only with version 5.6.x (the nightly build) of ParaView
-    at this time. You must download the **nightly-build** version of ParaView
-    [found here](https://www.paraview.org/download/)
+### Install ParaView
 
 Open the downloaded installer from
-[**ParaView's website**](https://www.paraview.org/download/) and follow the
-prompts with the installer.
+[**ParaView's website**](https://www.paraview.org/download/) for ParaView 5.6.x
+(or greater) and follow the prompts with the installer.
 
 Tour around software:
 Take a look at Section 2.1 of **The ParaView Tutorial** for details of the
@@ -94,10 +84,9 @@ simply install VTK through `pip`:
 
 ## Install PVGeo to ParaView
 
-!!! warning
-    PVGeo is compatible only with the nightly build of ParaView at this time.
-    You must download the **nightly-build** version of ParaView
-    [found here](https://www.paraview.org/download/)
+!!! warning "Use the latest release of ParaView"
+    PVGeo is compatible only with version 5.6.x (and greater) of ParaView.
+    You can find the ParaView downloads page [here](https://www.paraview.org/download/)
 
 To use the *PVGeo* library as plugins in ParaView, we must link the virtual
 environment that you installed *PVGeo* to ParaView's Python environment and
