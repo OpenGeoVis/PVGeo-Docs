@@ -15,6 +15,81 @@
 .btn:hover {
     background-color: #546E7A;
 }
+
+/*Below is the AGU announcement banner*/
+
+.alert {
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0px;
+    color: #fff;
+    background: #607D8B;
+    border-color: #607D8B;
+    z-index: 999;
+}
+.alert-info {
+    color: #fff;
+    background-color: #607D8B;
+    border-color: #fff;
+}
+.alert {
+    padding: 0px;
+    margin-bottom: 0px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    right: 12px;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 12;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #FFF;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    margin-right: 20px;
+}
+.alert p {
+    font-size: 16px;
+}
+.alert>p, .alert>ul {
+    margin-bottom: 10px;
+}
+.alert a {
+    color: #FFF;
+    font-size: 16px;
+}
+/*Above is the AGU announcement banner
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+*/
+
 </style>
+
+<div class="alert alert-info alert-dismissible" role="alert">
+  <a href="https://agu.confex.com/agu/fm18/meetingapp.cgi/Session/56864"><img src="https://fallmeeting.agu.org/2018/files/2018/02/CEN-FM18_logo-1.png"></img></a>
+  <button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">X</span></button>
+  <p><a href="https://agu.confex.com/agu/fm18/meetingapp.cgi/Session/56864">Attending AGU this week? Be sure to join the Tour of Open-Source Software Packages for the Geosciences on Friday. Click this or the image to learn more!</a>.</p>
+</div>
+
+
 
 {% extends "base.html" %}
