@@ -20,8 +20,9 @@ More documentation is soon to come. We want to do it right: with tutorials, exam
 -->
 
 ### Filters
-- [ ] **Extract Array:** This will allow you to extract any array from any data structure as vtkPolyData.
-- [ ] **Transpose Grid:** Transpose or swap axii of grid data sets (vtkImageData and vtkRectilinearGrid)
+
+- [ ] **Transpose Grid:** Transpose or swap axes of grid data sets (vtkImageData and vtkRectilinearGrid)
+- [x] **Extract Array:** This will allow you to extract any array from any data structure as a `vtkTable`.
 - [x] **Reshape Table:** Adding ability to reshape using Fortran ordering on the currently available filter.
 - [x] **[Voxelize Points](../examples/filters-general/voxelize-points.md):** This will take a point set and generate voxels of some specified size at every point or estimate an appropriate voxel size if the points are uniformly spaced.
 - [x] **[Many Slices Along Points](../examples/filters-general/many-slices-along-points.md):** Generate many slices of dataset along a line at every point on that line (normal is the vector from that point to the next).

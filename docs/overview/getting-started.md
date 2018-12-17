@@ -173,7 +173,7 @@ manager and be sure to select *Auto Load*.
     (PVGeoEnv27) $ python -m PVGeo install echo
     ```
 
-![Plugin Manager](plugin-manager.png) <!-- .element width="50%" -->
+![Plugin Manager](./images/plugin-manager.png) <!-- .element width="50%" -->
 
 Now test that the install worked by ensuring the various categories for the PVGeo
 filters are in the **Filters** menu such as **PVGeo General Filters**. Errors
