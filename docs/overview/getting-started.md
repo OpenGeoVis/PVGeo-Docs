@@ -1,11 +1,58 @@
 !!! info
-    If you have an idea for a macro, plugin, or would like to see how we would
-    address a geoscientific visualization problem with ParaView, please post
-    your thoughts on the [**issues page**](https://github.com/OpenGeoVis/PVGeo/issues)
-    or get involved with the *PVGeo* community on Slack to discuss adding new
-    features: <script async defer src="http://slack.pvgeo.org/slackin.js"></script>
+    There are two ways you can use PVGeo: in any standard Python 2 or 3
+    environment or directly in ParaView through the graphical user interface.
+    Be sure to follow the installation instructions for your use case.
 
-## A Brief Introduction to ParaView
+
+
+## Using PVGeo in a Python Environment
+
+If you'd like to use PVGeo in Python (2.7 or 3.x) without ParaView then simply
+install VTK and PVGeo to your active Python environment:
+
+Install PVGeo via [pip](https://pypi.org/project/PVGeo/):
+```bash
+$ pip install PVGeo
+```
+
+??? bug "Having trouble installing VTK?"
+    VTK should be installed along side PVGeo through the `vtki` dependency:
+    On Mac and Linux, VTK is available via `pip` regardless of your
+    Python version,
+    however, Windows can be tricky as the C++ backend of VTK has
+    dependencies that are not compatible with Python 2.x on Windows.
+
+    For simplicity, try Python 3.x and install VTK from anaconda
+    before installing PVGeo:
+
+    ```bash
+    $ conda install vtk
+    ```
+
+
+??? info "Optional dependencies for more features"
+    PVGeo has a few non-required dependencies that enable more algorithms and
+    features when available. All requirements can be found in the
+    [`requirements.txt`](https://github.com/OpenGeoVis/PVGeo/blob/master/requirements.txt)
+    file in the repo but the needed requirements for PVGeo to work will be installed
+    with PVGeo. Some useful dependencies:
+
+    - [`discretize`](https://pypi.org/project/discretize/): Adds algorithms that harnesses `discretize`'s finite volume code and file IO methods.
+    - [`pyproj`](https://pypi.org/project/pyproj/): Adds algorithms that can perform coordinate transformations
+
+
+-----
+
+## Using PVGeo in ParaView
+
+If you'd like to use PVGeo directly in ParaView's graphical user interface,
+you must follow the remaining steps in this section very carefully which set up
+an isolated Python 2.7 environment that will be shared with your installation of
+ParaView. Note that after you create this environment, you should leave it alone
+and install PVGeo using the steps in [the section above](#using-pvgeo-in-a-python-environment) to install PVGeo to the
+Python environments you use everyday.
+
+### A Brief Introduction to ParaView
 
 ParaView is an open-source platform that can visualize 2D, 3D, and 4D
 (time-varying) datasets. ParaView can process multiple very large data sets in
@@ -51,7 +98,7 @@ the software and its general capabilities.
 ----------
 
 
-## Install *PVGeo*
+### Install *PVGeo*
 
 We highly recommend using Anaconda to manage you Python virtual environments, and
 we know installation via Anaconda Python distributions will work on Mac, Windows,
@@ -75,7 +122,7 @@ $ source activate pvgeoenv
 (pvgeoenv) $ pip install PVGeo
 ```
 
-### Non-Windows Users
+#### Non-Windows Users
 
 Now you must install VTK to your virtual environment. For Linux and Mac users,
 simply install VTK through `pip`:
@@ -93,7 +140,7 @@ simply install VTK through `pip`:
 
 
 
-## Install PVGeo to ParaView
+### Install PVGeo to ParaView
 
 !!! warning "Use the latest release of ParaView"
     PVGeo is compatible only with version 5.6.x (and higher) of ParaView.
@@ -201,19 +248,20 @@ will be *immediately* addressed.
     you are encountering a bug.
 
 
-
-## Update *PVGeo*
-
-```bash
-(pvgeoenv) $ pip install --upgrade PVGeo
-```
-
-
---------------
-
-## Using Outside Modules
+### Using Outside Modules in ParaView
 
 If you installed *PVGeo* according to the instructions above, then any Python
 package installed through pip/conda in that virtual environment will be accessible in
 ParaView. For some further reading on using virtual environments with ParaView,
 see [this blog post](https://blog.kitware.com/using-pvpython-and-virtualenv/).
+
+
+-----
+
+## Update *PVGeo*
+
+Use pip to update PVGeo in your python environment(s):
+
+```bash
+(pvgeoenv) $ pip install --upgrade PVGeo
+```
