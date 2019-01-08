@@ -53,22 +53,25 @@ the software and its general capabilities.
 
 ## Install *PVGeo*
 
-We highly recommend using Anaconda to manage you Python virtual environments and
+We highly recommend using Anaconda to manage you Python virtual environments, and
 we know installation via Anaconda Python distributions will work on Mac, Windows,
- and Linux operating systems. To begin using the *PVGeo* Python package, create
- a new virtual environment and install *PVGeo* through pip.
+and Linux operating systems. To begin using the *PVGeo* Python package, create
+a new virtual environment and install *PVGeo* through pip.
 
 ```bash
-$ conda create -n PVGeoEnv python=2.7
+$ conda create -n pvgeoenv python=2.7
 ```
 
-!!! warning "Use Python 2.7!!!"
+??? warning "Use Python 2.7 for linking with ParaView"
     If you'd like to link PVGeo to ParaView, you must use a **Python 2.7**
-    virtual environment.
+    virtual environment. Once you create this 2.7 environment, you can opt never to use it again as it is only necessary for holding PVGeo and its
+    dependencies for ParaView to use. If you'd like to use PVGeo outside of
+    ParaView, any version of Python will work (except Python 2.x on Windows).
+
 
 ```bash
-$ source activate PVGeoEnv
-(PVGeoEnv) $ pip install PVGeo
+$ source activate pvgeoenv
+(pvgeoenv) $ pip install PVGeo
 ```
 
 ### Non-Windows Users
@@ -78,14 +81,21 @@ simply install VTK through `pip`:
 
 ```bash
 # Now install VTK
-(PVGeoEnv27) $ pip install vtk
+(pvgeoenv) $ pip install vtk
 ```
+
+??? hint "Why not on Windows"
+    If you are installing PVGeo for use in ParaView, the VTK Python package is
+    available under the ParaView installation and PVGeo will use that library.
+    Otherwise, if you'd like to use PVGeo on Windows outside of ParaView, you
+    must use a Python 3.x version and install VTK through `conda` or `pip`.
+
 
 
 ## Install PVGeo to ParaView
 
 !!! warning "Use the latest release of ParaView"
-    PVGeo is compatible only with version 5.6.x (and greater) of ParaView.
+    PVGeo is compatible only with version 5.6.x (and higher) of ParaView.
     You can find the ParaView downloads page [here](https://www.paraview.org/download/)
 
 To use the *PVGeo* library as plugins in ParaView, we must link the virtual
@@ -96,13 +106,13 @@ Graphical User Interface.
 
 ### Linking *PVGeo*
 
-First, lets link *PVGeo*'s virtual environment to ParaView by setting up a
+First, let's link *PVGeo*'s virtual environment to ParaView by setting up a
 `PYTHONPATH` and a `PV_PLUGIN_PATH` environmental variables. First, retrieve
-he needed paths from *PVGeo*. Do this by executing the following from your
+the needed paths from *PVGeo*. Do this by executing the following from your
 command line:
 
 ```bash
-(PVGeoEnv) $ python -m PVGeo install
+(pvgeoenv) $ python -m PVGeo install
 ```
 
 ??? bug "Having Trouble?"
@@ -110,14 +120,14 @@ command line:
     (this will help us if you create an issue):
 
     ```bash
-    (PVGeoEnv27) $ python -m PVGeo install echo
+    (pvgeoenv) $ python -m PVGeo install echo
     ```
 
 #### Mac OS Users
 
-That script will output the paths you need to set in the environmental variables
-moving forward. If you are on a Mac OS X computer then that script will output
-a shell command for you to execute for the install. If you are on a Mac, execute
+The above script will output the paths you need to set in the environmental variables
+moving forward. If you are on a Mac OS X computer, then that script will output
+a shell command for you to execute for the install. If you are on a Mac, run
 that command and skip to [Loading the Plugins](#loading-the-plugins)
 
 #### Windows Users
@@ -125,11 +135,11 @@ that command and skip to [Loading the Plugins](#loading-the-plugins)
 Setting up environmental variables is a bit involved for Windows. Remember how
 we ran `:::bash python -m PVGeo install`? Well this created a new file on your
 Desktop called `PVGeoLauncher.bat`. We will use this file to safely launch
-ParaView it is own environment with environmental variable set properly.
+ParaView it is own environment with environmental variables appropriately set.
 
 1. Go to your Desktop and right-click to select **New->Shortcut**.
 
-2. **Browse...** to the `PVGeoLauncher.bat` on your Desktop. Note sure where
+2. **Browse...** to the `PVGeoLauncher.bat` on your Desktop. Not sure where
 this file is? Check the output of the `install` command from above.
 
 3. Click **Next** and give your shortcut a meaningful name like
@@ -149,18 +159,16 @@ the top of the window. Paste this path into the **Start in** field.
 
 6. Test that the install worked: open the **Python Shell** and import the modules
 delivered in this repo by executing `import PVGeo` and `import pvmacros`.
-Errors should not arise but if they do, post to the
-[**issues page**](https://github.com/OpenGeoVis/PVGeo/issues) and the errors
-will be *immediately* addressed.
-
+Errors should not arise but if they do, seek help via
+[the Slack community](http://slack.pvgeo.org)!
 
 ### Loading the Plugins
 
 Now you must load the plugin files through ParaView's Plugin Manager. Select
 *Tools -> Manage Plugins* then select *Load New* on the bottom right of the
 popup dialog. Navigate to the directory declared in `PV_PLUGIN_PATH` and load
-the pluigns files. Note that we have included a file called `PVGeo_All.py`;
-this will load all of PVGeo's Plugins for conveinance. If you wish to only load
+the plugins files. Note that we have included a file called `PVGeo_All.py`;
+this will load all of PVGeo's Plugins for convenience. If you wish only to load
 specific suites, then load the desired suites by their individual plugin `.py`
 files. Once the plugins are loaded, expand them in the plugin
 manager and be sure to select *Auto Load*.
@@ -170,7 +178,7 @@ manager and be sure to select *Auto Load*.
     Re-run the install command with an additional argument `echo`:
 
     ```bash
-    (PVGeoEnv27) $ python -m PVGeo install echo
+    (pvgeoenv) $ python -m PVGeo install echo
     ```
 
 ![Plugin Manager](./images/plugin-manager.png) <!-- .element width="50%" -->
@@ -196,7 +204,7 @@ will be *immediately* addressed.
 ## Update *PVGeo*
 
 ```bash
-(PVGeoEnv) $ pip install --upgrade PVGeo
+(pvgeoenv) $ pip install --upgrade PVGeo
 ```
 
 
