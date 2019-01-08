@@ -64,7 +64,8 @@ $ conda create -n pvgeoenv python=2.7
 
 ??? warning "Use Python 2.7 for linking with ParaView"
     If you'd like to link PVGeo to ParaView, you must use a **Python 2.7**
-    virtual environment. Once you create this 2.7 environment, you can opt never to use it again as it is only necessary for holding PVGeo and its
+    virtual environment. Once you create this 2.7 environment, you can opt never
+    to use it again as it is only necessary for holding PVGeo and its
     dependencies for ParaView to use. If you'd like to use PVGeo outside of
     ParaView, any version of Python will work (except Python 2.x on Windows).
 
