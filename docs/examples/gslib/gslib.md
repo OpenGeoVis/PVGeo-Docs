@@ -4,17 +4,28 @@
 # GSLib Tables
 
 ## About this Format
-The GSLIB file format has headers lines followed by the data as a space delimited ASCI file (this filter is set up to allow you to choose any single character delimiter: default is a space). The first header line contains the title or necessary information and will be printed to the console. This line may have the dimensions for a grid to be made of the data. The second line is the number (n) of columns of data. The next n lines are the variable names for the data in each column. You are allowed up to ten characters for the variable name. The data follow with a space between each field (column).
+
+The GSLIB file format has headers lines followed by the data as a space
+delimited ASCI file (this filter is set up to allow you to choose any single
+character delimiter: default is a space). The first header line contains the
+title or necessary information and will be printed to the console. This line
+may have the dimensions for a grid to be made of the data.
+The second line is the number (n) of columns of data. The next n lines are the
+variable names for the data in each column. You are allowed up to ten characters
+for the variable name. The data follow with a space between each field (column).
 
 
 ## Reader
 
-The output of this reader is a `vtkTable` of the input data. The table will have all the same columns as the input file with the column/data names set to their respective names from the input file.
+The output of this reader is a `vtkTable` of the input data. The table will have
+all the same columns as the input file with the column/data names set to their
+respective names from the input file.
 
 !!! info "{lookup:PVGeo.gslib.gslib.GSLibReader}"
 
 ??? note "The GSLIB File Format"
-    Check out [this site][format1] and [this site][format2] for more information on the specifics of the file format. The general format is as follows:
+    Check out [this site][format1] and [this site][format2] for more information
+    on the specifics of the file format. The general format is as follows:
 
     ```txt
     Header
@@ -58,6 +69,7 @@ The output of this reader is a `vtkTable` of the input data. The table will have
 
 ## Writer
 
-The GSLib format writer takes `vtkTable`s as an input and saves them to the GSLib file format.
+The GSLib format writer takes `vtkTable`s as an input and saves them to the
+GSLib file format.
 
 {lookup:PVGeo.gslib.gslib.WriteTableToGSLib}
