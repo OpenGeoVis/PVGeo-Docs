@@ -50,7 +50,7 @@ you must follow the remaining steps in this section very carefully which set up
 an isolated Python 2.7 environment that will be shared with your installation of
 ParaView. Note that after you create this environment, you should leave it alone
 and install PVGeo using the steps in [the section above](#using-pvgeo-in-a-python-environment)
-to install PVGeo to the Python environments you use everyday.
+for the Python environments you use everyday.
 
 ### A Brief Introduction to ParaView
 
@@ -100,7 +100,7 @@ the software and its general capabilities.
 
 ### Install *PVGeo*
 
-We highly recommend using Anaconda to manage you Python virtual environments, and
+We highly recommend using Anaconda to manage your Python virtual environments, and
 we know installation via Anaconda Python distributions will work on Mac, Windows,
 and Linux operating systems. To begin using the *PVGeo* Python package, create
 a new virtual environment and install *PVGeo* through pip.
@@ -111,8 +111,8 @@ $ conda create -n pvgeoenv python=2.7
 
 ??? warning "Use Python 2.7 for linking with ParaView"
     If you'd like to link PVGeo to ParaView, you must use a **Python 2.7**
-    virtual environment. Once you create this 2.7 environment, you can opt never
-    to use it again as it is only necessary for holding PVGeo and its
+    virtual environment. Once you create this 2.7 environment, you can opt to
+    never use it again as it is only necessary for holding PVGeo and its
     dependencies for ParaView to use. If you'd like to use PVGeo outside of
     ParaView, any version of Python will work (except Python 2.x on Windows).
 
