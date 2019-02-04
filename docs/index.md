@@ -14,7 +14,7 @@ On this website, we provide several examples and tutorials of how to use *PVGeo*
 
 Feel free to join the *PVGeo* community on Slack to keep up with new features and for any help using the code library and follow us on Twitter to keep up:
 
-<script async defer src="http://slack.pvgeo.org/slackin.js?large"></script> <a href="https://twitter.com/pyPVGeo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @pyPVGeo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async defer src="http://slack.pvgeo.org/slackin.js?large"></script> <a href="https://twitter.com/OpenGeoVis?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @OpenGeoVis</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ??? question "Suggestions?"
@@ -75,4 +75,4 @@ Each macro produced in `pvmacros` will have a distinct purpose, be it to export 
 -->
 
 
-<a class="twitter-timeline" data-height="750" data-theme="light" href="https://twitter.com/pyPVGeo?ref_src=twsrc%5Etfw">Tweets by pyPVGeo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-height="750" data-theme="light" href="https://twitter.com/OpenGeoVis?ref_src=twsrc%5Etfw">Tweets by OpenGeoVis</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

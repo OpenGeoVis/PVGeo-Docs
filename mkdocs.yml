@@ -15,7 +15,7 @@ extra:
   disqus: 'pvgeo'
   social: # check https://fontawesome.com/icons?d=gallery for more icons
     - type: 'twitter'
-      link: 'https://twitter.com/pyPVGeo'
+      link: 'https://twitter.com/OpenGeoVis'
     - type: 'slack'
       link: 'http://slack.pvgeo.org'
     - type: 'github'

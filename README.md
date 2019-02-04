@@ -2,7 +2,7 @@
 
 [![Website Build](https://img.shields.io/travis/OpenGeoVis/PVGeo-Website/master.svg?label=website)](https://travis-ci.org/OpenGeoVis/PVGeo-Website)
 [![Slack Badge](https://img.shields.io/badge/Slack-PVGeo-4B0082.svg?logo=slack)](http://slack.pvgeo.org)
-![Twitter Follow](https://img.shields.io/twitter/follow/pyPVGeo.svg?style=social&label=Follow)
+![Twitter Follow](https://img.shields.io/twitter/follow/OpenGeoVis.svg?style=social&label=Follow)
 
 This repository contains the documentation for the [***PVGeo***](https://github.com/OpenGeoVis/PVGeo/) repository.
 
