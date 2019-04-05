@@ -10,6 +10,7 @@ from codecs import open
 from markdown.extensions import Extension
 from markdown.preprocessors import Preprocessor
 import zlib
+import sphobjinv as soi
 import sys
 if sys.version_info[0] >= 3:
     from urllib.request import urlopen
@@ -17,15 +18,14 @@ else:
     from urllib import urlopen
 
 print('INFO    -  Fetching docs inventory...')
-inv_lines = urlopen('http://pvgeo.readthedocs.io/en/latest/objects.inv').read().split(b'\n')
-inv = [ln for ln in inv_lines if b'#' not in ln[0:1]]
-raw_inv = zlib.decompress(b'\n'.join(inv))
+inv_lines = soi.decompress(urlopen('https://pvgeo.readthedocs.io/en/latest/objects.inv').read()).split(b'\n')
+raw_inv = [ln for ln in inv_lines if b'#' not in ln[0:1] and len(ln) > 0]
 
 def produceURL(att):
     return 'http://docs.pvgeo.org/en/latest/%s' % att[3].replace('$', att[0])
 
 LOOKUP = dict()
-for line in raw_inv.splitlines():
+for line in raw_inv:
     att = line.decode('utf-8').split()
     LOOKUP[att[0]] = produceURL(att)
 
