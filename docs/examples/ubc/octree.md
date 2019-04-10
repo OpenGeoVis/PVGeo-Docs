@@ -25,9 +25,9 @@ To use the plugin:
 - *Optional:* Click the **...** button next to the **File Name(s) Model** parameter field. You can select as many model files as you desire (each file will be appended as additional time steps for the same attribute defined by the **Data Name** parameter).
 - Click **Apply** and wait... the load for larger OcTrees takes about 30 seconds.
 
-!!! success "[Example Visualization](http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qybpnsn11lghnq9/OcTree.vtkjs?dl=0)"
+!!! success "[Example Visualization](http://viewer.vtki.org/?fileURL=https://dl.dropbox.com/s/qybpnsn11lghnq9/OcTree.vtkjs?dl=0)"
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-            <iframe src="http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qybpnsn11lghnq9/OcTree.vtkjs?dl=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+            <iframe src="http://viewer.vtki.org/?fileURL=https://dl.dropbox.com/s/qybpnsn11lghnq9/OcTree.vtkjs?dl=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 

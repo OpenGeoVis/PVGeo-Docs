@@ -20,13 +20,13 @@ Would not it be great to send your client or interested parties an interactive 3
 The vtk.js library has an open-source [standalone scene viewer](https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader/StandaloneSceneLoader.html) which they have a nice demo for [**here**](https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader.html). The first link can either be downloaded as an HTML file to be ran locally, or you can go to that link and run from the vtk.js server. vtk.js also published a scene export macro for ParaView that compresses a data scene in ParaView to a shareable format for viewing on the web. The macro from the vtk.js library can be found [**here**](https://raw.githubusercontent.com/Kitware/vtk-js/master/Utilities/ParaView/export-scene-macro.py) but we also deploy an updated (we think more robust) version of this export macro in the sub-module `export` of our Python module `pvmacros`.
 
 ### Demo Shareable Format
-Here are some samples to demonstrate the web viewer which we host on [viewer.pvgeo.org](http://viewer.pvgeo.org). We have included a few of our scenes and one of the vtk.js sample scenes for you to demo:
+Here are some samples to demonstrate the web viewer which we host on [viewer.vtki.org](http://viewer.vtki.org). We have included a few of our scenes and one of the vtk.js sample scenes for you to demo:
 
-- [Fluvial Channels](http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/qnahdwedjwndo7t/fluvsim_channels.vtkjs?dl=0)
+- [Fluvial Channels](http://viewer.vtki.org/?fileURL=https://dl.dropbox.com/s/qnahdwedjwndo7t/fluvsim_channels.vtkjs?dl=0)
 - [Volcano](http://volcano.pvgeo.org)
 - [Ripple](http://ripple.pvgeo.org)
 - [Tunnels](http://tunnels.pvgeo.org)
-- [vtk.js Sample Scene](http://viewer.pvgeo.org/?fileURL=https://data.kitware.com/api/v1/file/587003c38d777f05f44a5c93/download)
+- [vtk.js Sample Scene](http://viewer.vtki.org/?fileURL=https://data.kitware.com/api/v1/file/587003c38d777f05f44a5c93/download)
 
 
 -------
@@ -43,7 +43,7 @@ import pvmacros as pvm
 pvm.export.exportVTKjs(FileName='test_export')
 ```
 
-Now open the standalone web viewer by opening [viewer.pvgeo.org](http://viewer.pvgeo.org).
+Now open the standalone web viewer by opening [viewer.vtki.org](http://viewer.vtki.org).
 
 Select the exported scene as the input file for the web viewer from where you saved it (should be under `~/Dropbox/PVGeo_vtkjs/`). The export macro should have printed out the location of the saved scene in the Python Shell.
 
@@ -65,7 +65,7 @@ To share these exported scenes with non-technical stakeholders, we recommend the
 
 > Check out the data scene/model by downloading the attached file. Then go to the link below and open that downloaded file.
 
-> [http://viewer.pvgeo.org/](http://viewer.pvgeo.org)
+> [http://viewer.vtki.org/](http://viewer.vtki.org)
 
 
 ### A Bit More Robust
@@ -96,7 +96,7 @@ python get_vtkjs_url.py dropbox "https://www.dropbox.com/s/6m5ttdbv5bf4ngj/rippl
 <!-- Hidden
 #### Process to Generate Links on Your Own
 
-- Copy the url to the web browser which we have cloned and host on on of our repos: `http://viewer.pvgeo.org/`
+- Copy the url to the web browser which we have cloned and host on on of our repos: `http://viewer.vtki.org/`
 - Now appended `?fileURL=`
 - Then append that with the shareable link to your visualization file from your web file service:
     - For Dropbox, we will follow this method to get direct download file links
@@ -115,7 +115,7 @@ python get_vtkjs_url.py dropbox "https://www.dropbox.com/s/6m5ttdbv5bf4ngj/rippl
     - Now append the link for the web viewer hosted on our GitHub repo with the direct download link in the following manner:
 
     ```txt
-    http://viewer.pvgeo.org/?fileURL=https://dl.dropbox.com/s/6m5ttdbv5bf4ngj/ripple.vtkjs?dl=0
+    http://viewer.vtki.org/?fileURL=https://dl.dropbox.com/s/6m5ttdbv5bf4ngj/ripple.vtkjs?dl=0
     ```
 
 
