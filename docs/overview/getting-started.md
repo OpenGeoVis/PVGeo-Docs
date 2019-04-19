@@ -7,7 +7,7 @@
 
 ## Using PVGeo in a Python Environment
 
-If you'd like to use PVGeo in Python (2.7 or 3.x) without ParaView then simply
+If you'd like to use PVGeo in Python (>=3.6) without ParaView then simply
 install PVGeo to your active Python environment:
 
 Install PVGeo via [**pip**](https://pypi.org/project/PVGeo/):
@@ -47,7 +47,7 @@ pip install PVGeo
 
 If you'd like to use PVGeo directly in ParaView's graphical user interface,
 you must follow the remaining steps in this section very carefully which set up
-an isolated Python 2.7 environment that will be shared with your installation of
+an isolated **Python 2.7 environment** that will be shared with your installation of
 ParaView. Note that after you create this environment, you should leave it alone
 and install PVGeo using the steps in [the section above](#using-pvgeo-in-a-python-environment)
 for the Python environments you use everyday.
@@ -136,7 +136,7 @@ simply install VTK through `pip`:
     If you are installing PVGeo for use in ParaView, the VTK Python package is
     available under the ParaView installation and PVGeo will use that library.
     Otherwise, if you'd like to use PVGeo on Windows outside of ParaView, you
-    must use a Python 3.x version and install VTK through `conda` or `pip`.
+    must use a Python >=3.6 version and install VTK through `conda` or `pip`.
 
 
 
