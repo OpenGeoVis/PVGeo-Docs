@@ -1,0 +1,2150 @@
+<!-- Add icon library for downloads -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+    background-color: #607D8B;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: #546E7A;
+}
+
+</style>
+
+
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="PVGeo is a code base tailored to the visualization of spatially referenced data in the geosciences on the ParaView software platform. ">
+      
+      
+        <link rel="canonical" href="http://pvgeo.org/pvmacros/export/exportvtkjs/">
+      
+      
+        <meta name="author" content="Bane Sullivan">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../img/PVGeo_icon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Export as VTKjs - PVGeo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-115959679-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#motivation" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://pvgeo.org/" title="PVGeo" class="md-header-nav__button md-logo">
+          
+            <img src="../../../img/globe_small.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PVGeo
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Export as VTKjs
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/OpenGeoVis/PVGeo" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    PVGeo on GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../.." class="md-tabs__link">
+          Overview
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../examples/about-examples/" class="md-tabs__link">
+          Examples
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="http://docs.pvgeo.org" class="md-tabs__link">
+          Docs
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about-pvmacros/" class="md-tabs__link md-tabs__link--active">
+          PV Macros
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../resources/references/" class="md-tabs__link">
+          Resources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../dev-guide/contributing/" class="md-tabs__link">
+          Development Guide
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="http://hdf5.pvgeo.org" class="md-tabs__link">
+          HDF5
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://pvgeo.org/" title="PVGeo" class="md-nav__button md-logo">
+      
+        <img src="../../../img/globe_small.png" width="48" height="48">
+      
+    </a>
+    PVGeo
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/OpenGeoVis/PVGeo" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    PVGeo on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/why-pvgeo/" title="Why PVGeo?" class="md-nav__link">
+      Why PVGeo?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/featured/" title="Featured" class="md-nav__link">
+      Featured
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/upcoming/" title="Upcoming" class="md-nav__link">
+      Upcoming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/agu-2018/" title="AGU 2018" class="md-nav__link">
+      AGU 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/about-examples/" title="About Examples" class="md-nav__link">
+      About Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/contents/" title="Contents" class="md-nav__link">
+      Contents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      General Filters
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        General Filters
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/add-cell-connectivity-to-points/" title="Add Cell Connectivity to Points" class="md-nav__link">
+      Add Cell Connectivity to Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/append-cell-centers/" title="Append Cell Centers" class="md-nav__link">
+      Append Cell Centers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/array-math/" title="Array Math" class="md-nav__link">
+      Array Math
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/arrays-to-rgba/" title="Arrays to RGBA" class="md-nav__link">
+      Arrays to RGBA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/combine-tables/" title="Combine Tables" class="md-nav__link">
+      Combine Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/convert-units/" title="Convert Units" class="md-nav__link">
+      Convert Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/extract-array/" title="Extract Array" class="md-nav__link">
+      Extract Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/extract-cell-centers/" title="Extract Cell Centers" class="md-nav__link">
+      Extract Cell Centers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/extract-points/" title="Extract Points" class="md-nav__link">
+      Extract Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/iterate-over-points/" title="Iterate Over Points" class="md-nav__link">
+      Iterate Over Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/lonlat-to-utm/" title="Longitude/Latitude to UTM" class="md-nav__link">
+      Longitude/Latitude to UTM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/many-slices-along-axis/" title="Many Slices Along Axis" class="md-nav__link">
+      Many Slices Along Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/many-slices-along-points/" title="Many Slices Along Points" class="md-nav__link">
+      Many Slices Along Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/normalize-array/" title="Normalize Array" class="md-nav__link">
+      Normalize Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/percent-threshold/" title="Percent Threshold" class="md-nav__link">
+      Percent Threshold
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/points-to-tube/" title="Points to Tube" class="md-nav__link">
+      Points to Tube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/reshape-table/" title="Reshape Table" class="md-nav__link">
+      Reshape Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/rotate-points/" title="Rotate Points" class="md-nav__link">
+      Rotate Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/rotation-tool/" title="Rotation Tool" class="md-nav__link">
+      Rotation Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/slice-through-time/" title="Slice Through Time" class="md-nav__link">
+      Slice Through Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/slide-slice-along-points/" title="Slide Slice Along Points" class="md-nav__link">
+      Slide Slice Along Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/split-table-on-array/" title="Split Table On Array" class="md-nav__link">
+      Split Table On Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/filters-general/voxelize-points/" title="Voxelize Points" class="md-nav__link">
+      Voxelize Points
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      General Readers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        General Readers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/readers-general/binary-packed-data/" title="Binary Packed Data" class="md-nav__link">
+      Binary Packed Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/readers-general/delimited-text/" title="Delimited Text" class="md-nav__link">
+      Delimited Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/readers-general/madagascar-ssrsf/" title="Madagascar SSRSF" class="md-nav__link">
+      Madagascar SSRSF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/readers-general/xyz-reader/" title="XYZ Files" class="md-nav__link">
+      XYZ Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Grid Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Grid Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/esri-grid/" title="ESRI Grid Reader" class="md-nav__link">
+      ESRI Grid Reader
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/extract-topography/" title="Extract Topography" class="md-nav__link">
+      Extract Topography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/reverse-grid-axii/" title="Flip Grid Axii" class="md-nav__link">
+      Flip Grid Axii
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/raster/" title="Landsat Rasters" class="md-nav__link">
+      Landsat Rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/surfer-grid/" title="Surfer Grids" class="md-nav__link">
+      Surfer Grids
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/table-to-uniform-grid/" title="Table to Uniform Grid" class="md-nav__link">
+      Table to Uniform Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/translate-origin-of-grid/" title="Translate Origin of Grid" class="md-nav__link">
+      Translate Origin of Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/grids/write-cell-centers/" title="Write Cell Centers" class="md-nav__link">
+      Write Cell Centers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      GSLIB & SGeMS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        GSLIB & SGeMS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/gslib/gslib/" title="GSLib Tables" class="md-nav__link">
+      GSLib Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/gslib/sgems-grid/" title="SGeMS Grids" class="md-nav__link">
+      SGeMS Grids
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      Interface
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        Interface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/interface/points-to-polydata/" title="Points to PolyData" class="md-nav__link">
+      Points to PolyData
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8">
+    
+    <label class="md-nav__link" for="nav-2-8">
+      Model Building
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-8">
+        Model Building
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/model-building/create-earth-source/" title="Create Earth Source" class="md-nav__link">
+      Create Earth Source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/model-building/create-rectilinear-grid/" title="Create Rectilinear Grid" class="md-nav__link">
+      Create Rectilinear Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/model-building/create-uniform-grid/" title="Create Uniform Grid" class="md-nav__link">
+      Create Uniform Grid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-9" type="checkbox" id="nav-2-9">
+    
+    <label class="md-nav__link" for="nav-2-9">
+      Tunneling
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-9">
+        Tunneling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/tunneling/animate-tbm/" title="Animate TBM" class="md-nav__link">
+      Animate TBM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-10" type="checkbox" id="nav-2-10">
+    
+    <label class="md-nav__link" for="nav-2-10">
+      UBC Mesh Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-10">
+        UBC Mesh Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/add-model/" title="Append Model" class="md-nav__link">
+      Append Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/grav-obs/" title="Read Gravity Observations" class="md-nav__link">
+      Read Gravity Observations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/mag-obs/" title="Read Magnetics Observations" class="md-nav__link">
+      Read Magnetics Observations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/octree/" title="Read OcTree" class="md-nav__link">
+      Read OcTree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/tensor-grids/" title="Read Tensor Meshes" class="md-nav__link">
+      Read Tensor Meshes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/ubc/topo/" title="Read Topography" class="md-nav__link">
+      Read Topography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="http://docs.pvgeo.org" title="Docs" class="md-nav__link">
+      Docs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      PV Macros
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        PV Macros
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about-pvmacros/" title="About pvmacros" class="md-nav__link">
+      About pvmacros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Export
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Export
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Export as VTKjs
+      </label>
+    
+    <a href="./" title="Export as VTKjs" class="md-nav__link md-nav__link--active">
+      Export as VTKjs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtkjs" class="md-nav__link">
+    VTK.js
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-shareable-format" class="md-nav__link">
+    Demo Shareable Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-use" class="md-nav__link">
+    Example Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-share" class="md-nav__link">
+    How to Share
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-and-easy" class="md-nav__link">
+    Quick and Easy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-bit-more-robust" class="md-nav__link">
+    A Bit More Robust
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Vis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Vis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vis/camera/" title="Camera" class="md-nav__link">
+      Camera
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Resources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/references/" title="External References" class="md-nav__link">
+      External References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cmaps/" title="Color Maps" class="md-nav__link">
+      Color Maps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtual-reality/entering-virtual-reality/" title="Entering Virtual Reality" class="md-nav__link">
+      Entering Virtual Reality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/edit-axes/" title="Editing the Axes" class="md-nav__link">
+      Editing the Axes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/edit-render-view/" title="Editing the Render View" class="md-nav__link">
+      Editing the Render View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/save-camera-locations/" title="Save Camera Views" class="md-nav__link">
+      Save Camera Views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-7">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scripts/about-scripts/" title="About Scripts" class="md-nav__link">
+      About Scripts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scripts/example-script/" title="Example Script" class="md-nav__link">
+      Example Script
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/understand-vtk/" title="Understand VTK Data Types" class="md-nav__link">
+      Understand VTK Data Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Development Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Development Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/repo-structure/" title="Repo Structure" class="md-nav__link">
+      Repo Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/build-your-own-plugins/" title="Build Your Own Plugins" class="md-nav__link">
+      Build Your Own Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/style/" title="Style Guide" class="md-nav__link">
+      Style Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/templates/" title="Templates" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-guide/snippets/composite-data-writers/" title="Composite Writer" class="md-nav__link">
+      Composite Writer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      HDF5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        HDF5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="http://hdf5.pvgeo.org" title="HDF5" class="md-nav__link">
+      HDF5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtkjs" class="md-nav__link">
+    VTK.js
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-shareable-format" class="md-nav__link">
+    Demo Shareable Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-use" class="md-nav__link">
+    Example Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-share" class="md-nav__link">
+    How to Share
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-and-easy" class="md-nav__link">
+    Quick and Easy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-bit-more-robust" class="md-nav__link">
+    A Bit More Robust
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Export as VTKjs</h1>
+                
+                <div class="admonition info">
+<p class="admonition-title">Purpose</p>
+<p>On this page, we demonstrate how to quickly share a 3D rendering of your ParaView visualizations with anyone who has access to the internet so that that can explore the whole scene in a dynamic manner.</p>
+</div>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<p>In order to effectively communicate our geoscientific findings, we often need to share our 3D visualizations with interested stakeholders. These interested parties are likely not going to have ParaView or other visualization software at hand. Thus we desire to have a means to export our complex visualizations in ParaView to a simple, shareable format that anyone can view. To accomplish this, we will take advantage of vtk.js and its standalone web viewer for vtk.js formats.</p>
+<p>Would not it be great to send your client or interested parties an interactive 3D scene of your Geophysical findings like the example below?</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="http://tunnels.pvgeo.org/" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<hr />
+<h2 id="vtkjs">VTK.js<a class="headerlink" href="#vtkjs" title="Permanent link">&para;</a></h2>
+<p><a href="https://kitware.github.io/vtk-js/">vtk.js</a> is a rendering library made for scientific visualization on the web. This code base brings high performance rendering into anyone&rsquo;s web browser. This library allows us to export complex scenes from ParaView and share them with anyone that has a web browser like Safari or Google Chrome.</p>
+<p>The vtk.js library has an open-source <a href="https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader/StandaloneSceneLoader.html">standalone scene viewer</a> which they have a nice demo for <a href="https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader.html"><strong>here</strong></a>. The first link can either be downloaded as an HTML file to be ran locally, or you can go to that link and run from the vtk.js server. vtk.js also published a scene export macro for ParaView that compresses a data scene in ParaView to a shareable format for viewing on the web. The macro from the vtk.js library can be found <a href="https://raw.githubusercontent.com/Kitware/vtk-js/master/Utilities/ParaView/export-scene-macro.py"><strong>here</strong></a> but we also deploy an updated (we think more robust) version of this export macro in the sub-module <code class="codehilite"><span class="n">export</span></code> of our Python module <code class="codehilite"><span class="n">pvmacros</span></code>.</p>
+<h3 id="demo-shareable-format">Demo Shareable Format<a class="headerlink" href="#demo-shareable-format" title="Permanent link">&para;</a></h3>
+<p>Here are some samples to demonstrate the web viewer which we host on <a href="http://viewer.vtki.org">viewer.vtki.org</a>. We have included a few of our scenes and one of the vtk.js sample scenes for you to demo:</p>
+<ul>
+<li><a href="http://viewer.vtki.org/?fileURL=https://dl.dropbox.com/s/qnahdwedjwndo7t/fluvsim_channels.vtkjs?dl=0">Fluvial Channels</a></li>
+<li><a href="http://volcano.pvgeo.org">Volcano</a></li>
+<li><a href="http://ripple.pvgeo.org">Ripple</a></li>
+<li><a href="http://tunnels.pvgeo.org">Tunnels</a></li>
+<li><a href="http://viewer.vtki.org/?fileURL=https://data.kitware.com/api/v1/file/587003c38d777f05f44a5c93/download">vtk.js Sample Scene</a></li>
+</ul>
+<hr />
+<h2 id="example-use">Example Use<a class="headerlink" href="#example-use" title="Permanent link">&para;</a></h2>
+<p>First, make a complex scene in ParaView that you might like to share with someone. <!--For a simple example, download [**this**] folder and load the state file *(be sure to use relative file paths)*.--> Now that you have your scene loaded, open the python shell from&rsquo;View-&gt;Python Shell&rsquo; (or &lsquo;Tools-&gt;Python Shell&rsquo; depending on your ParaView version) within ParaView. From here, import our Python module delivered in the repository called <code class="codehilite"><span class="n">pvmacros</span></code>. From the <code class="codehilite"><span class="n">export</span></code> sub-module, there is a function called <code class="codehilite"><span class="k">def</span> <span class="nf">exportVTKjs</span><span class="p">()</span></code> which takes two optional arguments (<code class="codehilite"><span class="n">FileName</span></code> string and <code class="codehilite"><span class="n">compress</span></code> boolean). Execute this function and note the output text as it will describe where the exported scene was saved.</p>
+<div class="codehilite"><pre><span></span><span class="c1">## Import our ParaView Macros module:</span>
+<span class="kn">import</span> <span class="nn">pvmacros</span> <span class="kn">as</span> <span class="nn">pvm</span>
+
+<span class="c1">## Now run the exportVTKjs script from the export sub-module</span>
+<span class="n">pvm</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">exportVTKjs</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="s1">&#39;test_export&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Now open the standalone web viewer by opening <a href="http://viewer.vtki.org">viewer.vtki.org</a>.</p>
+<p>Select the exported scene as the input file for the web viewer from where you saved it (should be under <code class="codehilite"><span class="o">~/</span><span class="n">Dropbox</span><span class="o">/</span><span class="n">PVGeo_vtkjs</span><span class="o">/</span></code>). The export macro should have printed out the location of the saved scene in the Python Shell.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>If you have trouble post on our <a href="https://github.com/OpenGeoVis/PVGeo/issues"><strong>issues page</strong></a> or read the vtk.js documentation <a href="https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader.html"><strong>here</strong></a></p>
+</div>
+<hr />
+<h2 id="how-to-share">How to Share<a class="headerlink" href="#how-to-share" title="Permanent link">&para;</a></h2>
+<p>To share these exported scenes with non-technical stakeholders, we recommend the following processes:</p>
+<h3 id="quick-and-easy">Quick and Easy<a class="headerlink" href="#quick-and-easy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create your scene and export to the vtk.js format (follow process above)</li>
+<li>Quality control your visualization by viewing in web browser yourself (follow process above)</li>
+<li>Send an email with your visualization (<code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">vtkjs</span></code> file) and something along the lines of:</li>
+</ul>
+<blockquote>
+<p>Check out the data scene/model by downloading the attached file. Then go to the link below and open that downloaded file.</p>
+<p><a href="http://viewer.vtki.org">http://viewer.vtki.org/</a></p>
+</blockquote>
+<h3 id="a-bit-more-robust">A Bit More Robust<a class="headerlink" href="#a-bit-more-robust" title="Permanent link">&para;</a></h3>
+<p>Sometimes we might want to give someone a direct link to the web visualization so all they have to do is open the link on any device and they can see our visualization. Here is a method to share scenes that have a slightly easier process of viewing the file for the end user and will handle the case for mobile platforms.</p>
+<p>Unfortunately, making the experience for the end user simple means making your experience a bit more complicated. You will need to host your file on a web service like GitHub or Dropbox <em>(we have been unsuccessful in getting Google Drive to work)</em>. Then get a public link to the <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">vtkjs</span></code> file on that web service and append it to the web viewer URL.</p>
+<p>We have created a Python script to generate these links for you if you are sharing your data file on either Dropbox or GitHub. The script is delivered in the repository and can also be found <a href="https://github.com/OpenGeoVis/PVGeo/blob/master/get_vtkjs_url.py"><strong>here</strong></a>.</p>
+<p>The easiest way that we have found is to share the files on Dropbox. Use the desktop client for Dropbox and right-click your exported <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">vtkjs</span></code> file and select &ldquo;Copy Dropbox Link.&rdquo;</p>
+<p>Once you have that link, use the this script on your URLs in this manner:</p>
+<div class="codehilite"><pre><span></span><span class="c1">## Usage:</span>
+python get_vtkjs_url.py &lt;web file host&gt; &lt;file link&gt;
+
+<span class="c1">## Dropbox example:</span>
+python get_vtkjs_url.py dropbox <span class="s2">&quot;https://www.dropbox.com/s/6m5ttdbv5bf4ngj/ripple.vtkjs?dl=0&quot;</span>
+</pre></div>
+
+<iframe src="https://player.vimeo.com/video/257833915" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p><a href="https://vimeo.com/257833915">PVGeo Export Demo</a> from <a href="https://vimeo.com/user82050125">Bane Sullivan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<!-- Hidden
+#### Process to Generate Links on Your Own
+
+- Copy the url to the web browser which we have cloned and host on on of our repos: `http://viewer.vtki.org/`
+- Now appended `?fileURL=`
+- Then append that with the shareable link to your visualization file from your web file service:
+    - For Dropbox, we will follow this method to get direct download file links
+    - Shared links for Dropbox files will have this format:
+
+    <div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">dropbox</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">s</span><span class="o">/</span><span class="mi">6</span><span class="n">m5ttdbv5bf4ngj</span><span class="o">/</span><span class="n">ripple</span><span class="p">.</span><span class="n">vtkjs</span><span class="o">?</span><span class="n">dl</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+
+    - Change the 'www' to 'dl' in the link such that it looks like:
+
+    <div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="p">.</span><span class="n">dropbox</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">s</span><span class="o">/</span><span class="mi">6</span><span class="n">m5ttdbv5bf4ngj</span><span class="o">/</span><span class="n">ripple</span><span class="p">.</span><span class="n">vtkjs</span><span class="o">?</span><span class="n">dl</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+
+    - Now append the link for the web viewer hosted on our GitHub repo with the direct download link in the following manner:
+
+    <div class="codehilite"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">viewer</span><span class="p">.</span><span class="n">vtki</span><span class="p">.</span><span class="n">org</span><span class="o">/?</span><span class="n">fileURL</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="p">.</span><span class="n">dropbox</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">s</span><span class="o">/</span><span class="mi">6</span><span class="n">m5ttdbv5bf4ngj</span><span class="o">/</span><span class="n">ripple</span><span class="p">.</span><span class="n">vtkjs</span><span class="o">?</span><span class="n">dl</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+
+
+- This link can then be shared with anyone (on a computer, phone, or tablet)
+- Be sure to check the link yourself before sending to make sure everything worked
+-->
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://pvgeo.org/pvmacros/export/exportvtkjs/";
+      this.page.identifier =
+        "pvmacros/export/exportvtkjs/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//pvgeo.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../about-pvmacros/" title="About pvmacros" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                About pvmacros
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../vis/camera/" title="Camera" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Camera
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy 2017-2018, <a href="http://banesullivan.com">Bane Sullivan</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/OpenGeoVis" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="http://slack.pvgeo.org" class="md-footer-social__link fa fa-slack"></a>
+    
+      <a href="https://github.com/OpenGeoVis" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="mailto:info@pvgeo.org" class="md-footer-social__link fa fa-envelope"></a>
+    
+      <a href="https://vimeo.com/user82050125" class="md-footer-social__link fa fa-vimeo"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
